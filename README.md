@@ -21,3 +21,6 @@ Describe a potential real-life use-case of your project. Explain the challenge y
 Github repo:
 Project demo:
 …
+
+## Commit checker
+run `npm install`
