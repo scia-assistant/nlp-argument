@@ -3,6 +3,8 @@ on: [push, pull_request]
 jobs:
   python-lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     name: CI workflow
     steps:
     - name: checkout source repo
@@ -31,4 +33,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        branch: ${{ github.ref_name }}
