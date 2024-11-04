@@ -13,7 +13,7 @@ jobs:
     - name: linting
       uses: programmingwithalex/pylinter@main
       with:
-        python-root: '.'
+        python-root: './src'
         flake8-flags: ''
         mypy-flags: ''
         fail-on-isort: false
@@ -27,7 +27,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add -A && git diff-index --cached --quiet HEAD || git commit -m 'chore(isort)'
+        git add -A && git diff-index --cached --quiet HEAD || git commit -m 'refacto(isort): apply isort to code'
 
     - name: push isort changes
       uses: ad-m/github-push-action@master
