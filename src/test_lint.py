@@ -1,8 +1,10 @@
-import os
 import math
+import os
 
-def func1(a, b) -> str:
+
+def func1(a, b) -> int:
     return math.floor(a + b)
 
-def func2(a,b, c) -> int:
+
+def func2(a, b, c) -> str:
     return os.getcwd()
