@@ -17,7 +17,7 @@ class TestPipeline(unittest.TestCase):
 
     def test_division(self):
         """A simple test for division"""
-        self.assertEqual(10, 5)
+        self.assertEqual(10 / 2, 5)
 
 
 if __name__ == '__main__':
