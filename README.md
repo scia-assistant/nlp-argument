@@ -21,3 +21,13 @@ Describe a potential real-life use-case of your project. Explain the challenge y
 Github repo:
 Project demo:
 …
+
+## Setup
+
+To download commit checker and requirement:
+- `make dev-setup`
+
+## Check Test
+
+To check the unittest test suite:
+- `make check`
