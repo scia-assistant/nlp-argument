@@ -23,7 +23,11 @@ Project demo:
 …
 
 ## Setup
-make dev-setup
+
+To download commit checker and requirement:
+- `make dev-setup`
 
 ## Check Test
-make check
+
+To check the unittest test suite:
+- `make check`
