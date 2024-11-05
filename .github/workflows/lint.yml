@@ -29,6 +29,10 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A && git diff-index --cached --quiet HEAD || git commit -m 'refacto(isort): apply isort to code'
 
+    - name: Pull latest changes before push
+      run: |
+        git pull --rebase origin "refs/heads/${{ github.ref_name }}"
+
     - name: push isort changes
       uses: ad-m/github-push-action@master
       with:
