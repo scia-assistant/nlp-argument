@@ -22,5 +22,8 @@ Github repo:
 Project demo:
 …
 
-## Commit checker
-run `npm install`
+## Setup
+make dev-setup
+
+## Check Test
+make check
