@@ -29,16 +29,14 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A && git diff-index --cached --quiet HEAD || git commit -m 'refacto(isort): apply isort to code'
 
-    - name: Fetch latest changes
+    - name: Fetch latest changes and reset to remote state
       run: |
-        git fetch origin "refs/heads/${{ github.ref_name }}:refs/remotes/origin/${{ github.ref_name }}"
-
-    - name: Rebase on latest changes
-      run: |
-        git rebase "refs/remotes/origin/${{ github.ref_name }}"
+        git fetch origin "refs/heads/${{ github.ref_name }}"  # récupère le dernier état
+        git reset --hard "refs/remotes/origin/${{ github.ref_name }}"  # aligne l’historique local avec l’historique distant
 
     - name: push isort changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: refs/heads/${{ github.ref_name }}
+        force: true
