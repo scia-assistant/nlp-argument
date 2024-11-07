@@ -48,3 +48,13 @@ Project demo:
 - Léa Margery
 - Maxime Buisson
 - Sacha Hibon
+
+## Setup
+
+To download commit checker and requirement:
+- `make dev-setup`
+
+## Check Test
+
+To check the unittest test suite:
+- `make check`
