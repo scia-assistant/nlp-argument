@@ -19,24 +19,24 @@ jobs:
         fail-on-isort: false
         # skip-flake8: false
         # skip-mypy: false
-        # skip-isort: false
+        skip-isort: true
         # mypy-ignore-dirs-files: ''
         # requirements-file: ''
 
-    - name: commit isort changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A && git diff-index --cached --quiet HEAD || git commit -m 'refacto(isort): apply isort to code'
-
-    - name: Fetch latest changes and reset to remote state
-      run: |
-        git fetch origin "refs/heads/${{ github.ref_name }}"  # récupère le dernier état
-        git reset --hard "refs/remotes/origin/${{ github.ref_name }}"  # aligne l’historique local avec l’historique distant
-
-    - name: push isort changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: refs/heads/${{ github.ref_name }}
-        force: true
+    # - name: commit isort changes
+    #   run: |
+    #     git config --local user.email "action@github.com"
+    #     git config --local user.name "GitHub Action"
+    #     git add -A && git diff-index --cached --quiet HEAD || git commit -m 'refacto(isort): apply isort to code'
+    #
+    # - name: Fetch latest changes and reset to remote state
+    #   run: |
+    #     git fetch origin "refs/heads/${{ github.ref_name }}"  # récupère le dernier état
+    #     git reset --hard "refs/remotes/origin/${{ github.ref_name }}"  # aligne l’historique local avec l’historique distant
+    #
+    # - name: push isort changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: refs/heads/${{ github.ref_name }}
+    #     force: true
