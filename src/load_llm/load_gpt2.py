@@ -3,10 +3,10 @@
 from enum import Enum
 
 import torch
-from transformers import GPT2LMHeadModel, GPT2Tokenizer  # type: ignore
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 
-class GPT2_size(Enum):  # pylint: disable=invalid-name
+class GPT2Size(Enum):
     """The different size of GPT2 model that are available.
 
     Args:
@@ -20,10 +20,10 @@ class GPT2_size(Enum):  # pylint: disable=invalid-name
     XL = "gpt2-xl"  # using this one can crash your PC, it did with mine
 
 
-class GPT2_model:  # pylint: disable=invalid-name, too-few-public-methods
+class GPT2ModelWrappper:  # pylint: disable=too-few-public-methods
     """Wrapper class of the LLM GPT2 and its tokenizer"""
 
-    def __init__(self, gpt2_size: GPT2_size = GPT2_size.BASE, verbose: bool = True):
+    def __init__(self, gpt2_size: GPT2Size = GPT2Size.BASE, verbose: bool = True):
         if verbose:
             print("Loading tokenizer...")
         self.tokenizer = GPT2Tokenizer.from_pretrained(gpt2_size.value)
@@ -36,6 +36,7 @@ class GPT2_model:  # pylint: disable=invalid-name, too-few-public-methods
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model.to(self.device)
+        self.nb_parameters = sum(p.numel() for p in self.model.parameters())
 
     def generate_text(
         self, prompt: str, max_length: int = 100, verbose: bool = True, **kwargs
@@ -77,6 +78,6 @@ class GPT2_model:  # pylint: disable=invalid-name, too-few-public-methods
 
 
 if __name__ == "__main__":
-    text = GPT2_model(gpt2_size=GPT2_size.SMALL).generate_text("Once upon a time")
+    text = GPT2ModelWrappper(gpt2_size=GPT2Size.SMALL).generate_text("Once upon a time")
     print(len(text.split(" ")))
     print("Generated text :\n", text)
