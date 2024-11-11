@@ -24,8 +24,11 @@ Describe a potential real-life use-case of your project. Explain the challenge y
 	- **Chose Embedding Model**: Select an embedding model that can effectively convert text into dense vector representations, allowing for efficient similarity searches during retrieval.
 	- **Set Up Retriever**: Configure a retrieval system that can search through indexed embeddings and return the most relevant documents based on an input.
 	- **Chose Generation Model**: Choose an open-source, lightweight generative model capable of using the retrieved documents to generate coherent responses 
-- **Develop Analytical Logic for Language Model (LLM) Optimization** (sacha.hibon)
-	- **Create Custom Analytical Algorithms**: Implement logic that enhances the language model’s reasoning and output quality.
+- **Develop Analytical Logic for Large Language Model (LLM)** (sacha.hibon)
+	- **Structure pipeline** : Connect LLM to a logic based language.
+	- **Simple logic problem** : Test on simple math problem or problem with many variables...
+	- **Logic argument**: Test on simple and hard argument. The final model must be able to deduce the structure of the argument and test its truthfulness.
+	- **(Optional) Fine-tuning** : Fine-tune the used LLM on logic syntax. It may improve the LLM translation of natural language to logic language.
 - **Evaluate Language Model (LLM) Performance** (lea.margery)
 	- **Test Performance with RAG**: Conduct tests to assess how well the LLM performs when using RAG, measuring factors like accuracy and response time.
 	- **Test Performance without RAG**: Run parallel tests without RAG to establish a baseline and compare performance metrics.
