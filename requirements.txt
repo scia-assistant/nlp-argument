@@ -3,6 +3,5 @@ seaborn
 torch
 transformers
 types-tqdm
-types-transformers
 accelerate>=0.26.0
 bitsandbytes
