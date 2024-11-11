@@ -114,6 +114,7 @@ class LLMWrapper:  # pylint: disable=too-few-public-methods
         return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
 
     def get_max_context_length(self):
+        """Gets the max text length the LLM has been trained with."""
         if self.version.name.startswith("GPT2") or self.version.name.startswith("FLAN"):
             return self.model.config.n_positions
         if self.version.name.startswith("GPT_NEO"):
