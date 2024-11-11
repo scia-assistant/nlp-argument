@@ -1,4 +1,6 @@
-from typing import List, Optional, Union
+"""Module that contains the evaluation of the perplexity"""
+
+from typing import List, Union
 
 import torch
 from datasets import load_dataset
@@ -14,13 +16,25 @@ def _default_text() -> List[str]:
 def eval_perplexity(
     tokenizer,
     model,
+    max_context_length,
+    text_input: Union[str, List],
     device: str = "cpu",
-    text_input: Optional[Union[str, List]] = None,
     verbose: bool = True,
 ) -> float:
+    """Given a text and a LLM, compute its perplexity.
 
-    if text_input is None:
-        text_input = _default_text()
+    Args:
+        tokenizer (_type_): The llm tokenizer
+        model (_type_): The llm model
+        max_context_length (_type_): The max text length the llm has been trained with.
+        text_input (Union[str, List]): The text which will be use to compute the perplexity.
+        device (str, optional): Which device is used. Defaults to "cpu".
+        verbose (bool, optional): Display advancement of the pipeline if sets to True.
+        Defaults to True.
+
+    Returns:
+        float: The perplexity
+    """
 
     text_str: str = (
         text_input if isinstance(text_input, str) else "\n\n".join(text_input)
@@ -33,18 +47,17 @@ def eval_perplexity(
     encodings = tokenizer(text_str, return_tensors="pt")
     logging.set_verbosity_warning()
 
-    max_length = model.config.n_positions
-    stride = max_length
+    stride = max_context_length
     seq_len = encodings.input_ids.size(1)
 
     if verbose:
-        print("Model max context size :", max_length)
+        print("Model max context size :", max_context_length)
         print("Input size (number of token) :", seq_len)
 
     nlls = []
     prev_end_loc = 0
-    for begin_loc in tqdm(range(0, seq_len, stride)):
-        end_loc = min(begin_loc + max_length, seq_len)
+    for begin_loc in tqdm(range(0, seq_len, stride), desc="Compute perplexity"):
+        end_loc = min(begin_loc + max_context_length, seq_len)
         trg_len = end_loc - prev_end_loc  # may be different from stride on last loop
         input_ids = encodings.input_ids[:, begin_loc:end_loc].to(device)
         target_ids = input_ids.clone()
@@ -69,11 +82,15 @@ def eval_perplexity(
 
 
 def _main():
-    from src.load_llm.load_gpt2 import GPT2ModelWrappper
+    from load_llm.load_llm import LLMPretrained, LLMWrapper
 
-    model = GPT2ModelWrappper()
+    model = LLMWrapper(llm_pretrained=LLMPretrained.GPT2_SMALL)
+
     ppl = eval_perplexity(
-        tokenizer=model.tokenizer, model=model.model, text_input="Once upon a time"
+        tokenizer=model.tokenizer,
+        model=model.model,
+        max_context_length=model.get_max_context_length(),
+        text_input="Once upon a time",
     )
     print("Perplexity :", ppl)
 
