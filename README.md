@@ -21,9 +21,9 @@ Describe a potential real-life use-case of your project. Explain the challenge y
 	- **Implement Data Storage**: Set up the chosen storage solution and integrate it with the project.
 	- **Prepare Data for Retrieval-Augmented Generation (RAG)**: Organize and format data to be compatible with RAG requirements for efficient retrieval and processing.
 - **Implement (RAG)** (lea.margery)
-        - **Chose Embedding Model**: Select an embedding model that can effectively convert text into dense vector representations, allowing for efficient similarity searches during retrieval.
-        - **Set Up Retriever**: Configure a retrieval system that can search through indexed embeddings and return the most relevant documents based on an input.
-        - **Chose Generation Model**: Choose an open-source, lightweight generative model capable of using the retrieved documents to generate coherent responses 
+	- **Chose Embedding Model**: Select an embedding model that can effectively convert text into dense vector representations, allowing for efficient similarity searches during retrieval.
+	- **Set Up Retriever**: Configure a retrieval system that can search through indexed embeddings and return the most relevant documents based on an input.
+	- **Chose Generation Model**: Choose an open-source, lightweight generative model capable of using the retrieved documents to generate coherent responses 
 - **Develop Analytical Logic for Language Model (LLM) Optimization** (sacha.hibon)
 	- **Create Custom Analytical Algorithms**: Implement logic that enhances the language model’s reasoning and output quality.
 - **Evaluate Language Model (LLM) Performance** (lea.margery)
