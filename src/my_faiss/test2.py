@@ -5,7 +5,12 @@ from sentence_transformers import SentenceTransformer
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-client = MongoClient("mongodb://localhost:27017/")
+username = "admin"
+password = "admin123"
+
+uri = f"mongodb://{username}:{password}@localhost:27017/faiss_db?authSource=admin"
+client = MongoClient(uri)
+
 db = client["faiss_db"]
 
 # Load the Faiss index
@@ -33,6 +38,6 @@ for i in range(k):
     result = chunks_collection.find_one({"faiss_id": int(faiss_id)})  # Ensure faiss_id is an integer
     if result:
         print(f"Result {i+1}:")
-        print(f"File: {result['file_name']}, Chunk: {result['chunk_num']}")
+        print(f"File: {result['file_name']}, Chunk: {result['file_hash']}")
         print(f"Text: {result['text']}")
         print(f"Distance: {distances[0][i]}\n")
