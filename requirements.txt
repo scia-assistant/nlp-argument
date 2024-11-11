@@ -1,3 +1,4 @@
+black
 faiss-cpu
 numpy
 pdfplumber

@@ -3,7 +3,7 @@ import numpy as np
 from pymongo import MongoClient
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 username = "admin"
 password = "admin123"
@@ -35,7 +35,9 @@ for i in range(k):
     faiss_id = indices[0][i]
 
     # Retrieve metadata for the result chunk using faiss_id
-    result = chunks_collection.find_one({"faiss_id": int(faiss_id)})  # Ensure faiss_id is an integer
+    result = chunks_collection.find_one(
+        {"faiss_id": int(faiss_id)}
+    )  # Ensure faiss_id is an integer
     if result:
         print(f"Result {i+1}:")
         print(f"File: {result['file_name']}, Chunk: {result['file_hash']}")

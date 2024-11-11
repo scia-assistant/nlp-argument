@@ -10,19 +10,24 @@ from sentence_transformers import SentenceTransformer
 
 def get_pdf_text_hash(file_path):
     with pdfplumber.open(file_path) as pdf:
-        text = ''.join(page.extract_text() for page in pdf.pages if page.extract_text())
-    text_hash = hashlib.sha256(text.encode('utf-8')).hexdigest()
+        text = "".join(
+            page.extract_text() for page in pdf.pages if page.extract_text()
+        )
+    text_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()
     return text, text_hash
 
 
 def chunk_text(text, chunk_size):
     words = text.split()
-    chunks = [' '.join(words[i:i + chunk_size]) for i in range(0, len(words), chunk_size)]
+    chunks = [
+        " ".join(words[i : i + chunk_size])
+        for i in range(0, len(words), chunk_size)
+    ]
     return chunks
 
 
 def add_document_to_index(data_folder, db, index):
-    model = SentenceTransformer('all-MiniLM-L6-v2')
+    model = SentenceTransformer("all-MiniLM-L6-v2")
     chunk_size = 200
     chunks_collection = db["chunks"]
 
@@ -30,7 +35,7 @@ def add_document_to_index(data_folder, db, index):
     for file_name in os.listdir(data_folder):
         file_path = os.path.join(data_folder, file_name)
 
-        if file_name.endswith('.pdf'):
+        if file_name.endswith(".pdf"):
             text, text_hash = get_pdf_text_hash(file_path)
         else:
             continue
@@ -46,14 +51,17 @@ def add_document_to_index(data_folder, db, index):
                 faiss_id = index.ntotal
                 # Add to the index
                 index.add(embedding)
-                chunks_collection.insert_one({
-                    "file_name": file_name,
-                    "file_hash": text_hash,
-                    "faiss_id": faiss_id,
-                    "text": chunk
-                })
+                chunks_collection.insert_one(
+                    {
+                        "file_name": file_name,
+                        "file_hash": text_hash,
+                        "faiss_id": faiss_id,
+                        "text": chunk,
+                    }
+                )
 
     return index
+
 
 username = "admin"
 password = "admin123"
