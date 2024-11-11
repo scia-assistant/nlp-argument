@@ -1,4 +1,4 @@
-"""Module that loads different size of GPT2 LLM"""
+"""Module that loads different pre-trained LLM"""
 
 from enum import Enum
 from typing import Any, Callable, Tuple
@@ -15,7 +15,7 @@ from transformers import (
 
 
 class LLMPretrained(Enum):
-    """The different size of GPT2 model that are available.
+    """Different pre-trained LLM model.
 
     Args:
         Enum (str): Id of the model when loading it
@@ -36,7 +36,7 @@ class LLMPretrained(Enum):
 
 
 class LLMWrapper:  # pylint: disable=too-few-public-methods
-    """Wrapper class of the LLM GPT2 and its tokenizer"""
+    """Wrapper class of pre-trained LLM and their tokenizer"""
 
     def __init__(self, llm_pretrained: LLMPretrained, verbose: bool = True):
 
