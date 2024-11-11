@@ -20,7 +20,7 @@ Describe a potential real-life use-case of your project. Explain the challenge y
 	- **Select Storage Solutions and Frameworks**: Choose the appropriate storage technology (e.g., SQL, NoSQL, cloud storage, datalake) and framework based on project needs.
 	- **Implement Data Storage**: Set up the chosen storage solution and integrate it with the project.
 	- **Prepare Data for Retrieval-Augmented Generation (RAG)**: Organize and format data to be compatible with RAG requirements for efficient retrieval and processing.
-- **Implement (RAG)** (lea.margery)
+- **Implement (RAG)** (lea.margery && maxime.buisson)
 	- **Chose Embedding Model**: Select an embedding model that can effectively convert text into dense vector representations, allowing for efficient similarity searches during retrieval.
 	- **Set Up Retriever**: Configure a retrieval system that can search through indexed embeddings and return the most relevant documents based on an input.
 	- **Chose Generation Model**: Choose an open-source, lightweight generative model capable of using the retrieved documents to generate coherent responses 
