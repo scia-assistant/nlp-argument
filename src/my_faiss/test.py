@@ -66,7 +66,11 @@ def add_document_to_index(data_folder, db, index):
 username = "admin"
 password = "admin123"
 
-uri = f"mongodb://{username}:{password}@localhost:27017/faiss_db?authSource=admin"
+uri = (
+    f"mongodb://{username}:{password}@localhost:27017/"
+    f"faiss_db?authSource=admin"
+)
+
 client = MongoClient(uri)
 
 db = client["faiss_db"]

@@ -1,6 +1,7 @@
 black
 faiss-cpu
+flake8
 numpy
 pdfplumber
 pymongo
-sentence-transformers
+sentence-transformers 
