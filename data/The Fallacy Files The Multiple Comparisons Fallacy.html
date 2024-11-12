@@ -1,0 +1,351 @@
+<body>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <div id="body">
+  <div id="navigate">
+   <iframe align="left" frameborder="0" height="1500" scrolling="no" src="contents.html" width="25%">
+    (Sorry, your browser does not support inline frames.)
+   </iframe>
+  </div>
+  <div id="main">
+   <h1 class="title">
+    The Multiple Comparisons Fallacy
+   </h1>
+   <p>
+    <strong class="section">
+     Taxonomy:
+    </strong>
+    <a href="logifall.html">
+     Logical Fallacy
+    </a>
+    &gt;
+    <a href="formfall.html">
+     Formal Fallacy
+    </a>
+    &gt;
+    <a href="probfall.html">
+     Probabilistic Fallacy
+    </a>
+    &gt; The Multiple Comparisons Fallacy
+    <h3 class="section">
+     Etymology:
+    </h3>
+    <p>
+     The name "multiple comparisons fallacy" appears to come from the science of epidemiology, where comparisons may be made between a diseased group and a healthy group in order to find a difference between the two that might point to the cause of an epidemic.  For instance, if every member of the diseased group drank from a particular well and no member of the healthy group did so, that would suggest that the pathogen might be present in the well water.  In order to find the source of an epidemic, multiple comparisons between the groups may be drawn.
+     <h3 class="section">
+      Example:
+     </h3>
+     <blockquote>
+      …[I]n 1992, a landmark study appeared from Sweden.  A huge investigation, it enrolled everyone living within 300 meters of Sweden's high-voltage transmission line system over a 25-year period.  They went far beyond all previous studies in their efforts to measure magnetic fields, calculating the fields that the children were exposed to at the time of their cancer diagnosis and before.  This study reported an apparently clear association between magnetic field exposure and childhood leukemia, with a risk ratio for the most highly exposed of nearly 4.
+      <p class="noindent">
+       …Surely, here was the proof that power lines were dangerous, the proof that even the physicists and biological naysayers would have to accept.  But three years after the study was published, the Swedish research no longer looks so unassailable.  …[T]he original contractor's report…reveals the remarkable thoroughness of the Swedish team.  Unlike the published article, which just summarizes part of the data, the report shows everything they did in great detail, all the things they measured and all the comparisons they made.  …[N]early 800 risk ratios are in the report….
+       <sup>
+        <a href="#Note1">
+         1
+        </a>
+       </sup>
+      </p>
+     </blockquote>
+     <p class="centerbold">
+      <a href="#Analysis">
+       Analysis
+      </a>
+      <h3 class="section">
+       Exposition
+       <sup>
+        <a href="#Note2">
+         2
+        </a>
+       </sup>
+       :
+      </h3>
+      <p>
+       <p>
+        Though recognition of the multiple comparisons fallacy seems to have come from epidemiology, it's a danger in any statistical study that compares groups of things.  The kind of reasoning used to draw
+        <a href="glossary.html#Conclusion" title="The proposition in an argument for which evidence is offered.">
+         conclusion
+        </a>
+        s from such studies is called "
+        <a href="glossary.html#Inductive" title="Claiming a connection of probability between premisses and conclusion.">
+         inductive
+        </a>
+        ".  In inductive reasoning, there is always some chance that the conclusion will be false even if the evidence is true.  In other words, the connection between the
+        <a href="glossary.html#Premiss" title="The propositions in an argument that provide evidence for the conclusion.">
+         premisses
+        </a>
+        and conclusion is never 100%―that's only for
+        <a href="glossary.html#Inductive" title="Claiming a connection of necessity between premisses and conclusion.">
+         deductive
+        </a>
+        reasoning.  So, the question arises: what level of probability―called a "confidence level"―are we willing to accept in our reasoning?  In scientific contexts, the confidence level is usually set at 95%, and when a result occurs with a probability less than or equal to 5% it is said to be "statistically significant" at the 95% confidence level.
+        <p>
+         When the confidence level is set at 95%, there is a probability of one in twenty―that is, 5%―that a misleading result will occur simply by chance.  This has an important consequence that when overlooked leads to the multiple comparisons fallacy.  For instance, when comparisons are done in epidemiology, there is a one in twenty chance that such a comparison will show a statistically significant difference.  So, if twenty or more comparisons are made in a single study, it will likely get at least one statistically significant result just by chance.  Thus, it's necessary to use a higher confidence level in cases of multiple comparisons.
+         <p>
+          Actually, the situation is worse still: if the things being compared are statistically independent, then it takes only fourteen comparisons for it to be more likely than not to get a statistically significant result by chance.  This is a result of the multiplication rule of probability theory
+          <sup>
+           <a href="#Note3">
+            3
+           </a>
+          </sup>
+          .
+          <h3 class="section">
+           Exposure:
+          </h3>
+          <ul>
+           <li>
+            While this fallacy is a danger within individual studies that compare groups, it also is a danger between studies of the same subject.  That is, rather than a single study comparing two groups on twenty different variables, there might be twenty different studies each of which compares the two groups on a single variable, but each studying a different variable.  It would be likely that at least one such study would find a statistically significant result just by chance.
+            <p class="noindent">
+             Thus, in order to avoid the fallacy, it's not sufficient simply to avoid committing it within individual studies.  Instead, individual studies need to be evaluated within the context of all the research done on the same topic.  Unfortunately, this may be impossible due to what's called "the file drawer effect", or "publication bias"
+             <sup>
+              <a href="#Note4">
+               4
+              </a>
+             </sup>
+             which is the fact that scientific journals prefer to publish studies that get statistically significant results rather than those that do not.  As a result, studies that fail to reach statistical significance may simply be filed away in a drawer, unpublished, which makes it difficult to tell how many such studies have been performed.
+             <li>
+              The multiple comparisons fallacy is occasionally referred to as "the Texas sharpshooter's fallacy"
+              <sup>
+               <a href="#Note5">
+                5
+               </a>
+              </sup>
+              , but I use this name for a different type of mistake.  The anecdote that gives rise to the name is that a Texan shoots randomly at the side of a barn, then draws a bullseye around a cluster of bullet holes and claims to be a sharpshooter.  This story fits the mistake of jumping to the conclusion that a random cluster of data must be causally related better than it does the multiple comparisons fallacy.  A better anecdote for the latter would be a shooter who first draws the bullseye, then randomly shoots twenty times at the barn.  Having made one bullseye, the shooter then conceals the nineteen misses and claims to be a sharpshooter.
+             </li>
+            </p>
+           </li>
+          </ul>
+          <hr/>
+          <h3 class="section">
+           <a name="Analysis">
+            Analysis of the Example
+           </a>
+           :
+          </h3>
+          <blockquote>
+           <p class="noindent">
+            <strong>
+             Narrator
+            </strong>
+            : …When scientists saw how many things they had measured…they began accusing the Swedes of falling into one of the most fundamental errors in epidemiology, sometimes called the multiple comparisons fallacy.
+            <p class="noindent">
+             <strong>
+              John Moulder
+             </strong>
+             : The problem is, when you do as they did, hundreds and hundreds of comparisons, something in the neighborhood of 800 different comparisons, by the standard way we do statistics, we would expect 5 percent of those to be statistically elevated and 5 percent to be statistically decreased.  And now you have a problem.  If you find, by one measure of exposure, that leukemia is up in a group of kids, is that real, or is that the result of just random noise in the system?
+             <p class="noindent">
+              <strong>
+               Narrator
+              </strong>
+              : …  Even if nothing is going on due to power lines, if you measure hundreds of risk ratios, they will scatter by random chance around a mean of one.  Some will be above, and some below.  Risk ratios below one suggest that EMFs protect against cancer, above one, that they increase the cancer rate.  But the published article focused only on the strongest positive risk ratios.  The summary highlights a nearly fourfold increase in risk of childhood leukemia.  This is what the press picks up and the public hears.
+              <p class="noindent">
+               <strong>
+                John Moulder
+               </strong>
+               : It is not scientifically reasonable to do all the measurements, but then only pick out the ones that give you the answer you want for publication.  If I dredge through their original report, I can find situations which, looked at in isolation, without looking at the rest of the report, that if that was the only data I gave you, I could claim that that proved that power lines protected children against childhood leukemia.
+               <sup>
+                <a href="#Note1">
+                 1
+                </a>
+               </sup>
+              </p>
+             </p>
+            </p>
+           </p>
+          </blockquote>
+          <p>
+           Moulder appears to have misspoken in the second quote here: probably what he meant to say is that, given a 95% confidence level, there is a 5% probability of a "statistically significant" result, which breaks down to a 2.5% chance of a significantly low result and a 2.5% probability of a significantly high result, rather than a 5% chance in either direction.  Or, perhaps something was edited out of his interview that indicated the 90% confidence level was being discussed, in which case his percentages would be correct.
+           <sup>
+            <a href="#Note6">
+             6
+            </a>
+           </sup>
+           <p>
+            <strong>
+             Notes:
+            </strong>
+            <ol>
+             <li>
+              <a name="Note1">
+               "Currents of Fear"
+              </a>
+              ,
+              <cite>
+               Frontline
+              </cite>
+              , 1995
+              <li>
+               <a name="Note2">
+                Thanks to David Nichols for a couple of corrections in this section.
+               </a>
+               <li>
+                <a name="Note3">
+                 See the entry for Probabilistic Fallacy
+                </a>
+                : the multiplication rule is a consequence of Axiom 4.  Since .95
+                <sup>
+                 14
+                </sup>
+                = .49, the probability of a "statistically significant" result for fourteen comparisons is .51.
+                <li>
+                 <a name="Note4">
+                  <a href="archive052006.html#05062006">
+                   Publication Bias
+                  </a>
+                 </a>
+                 , 5/6/2006.
+                 <li>
+                  <a name="Note5">
+                   For an example
+                  </a>
+                  , see: Po Bronson,
+                  <a href="http://www.wired.com/wired/archive/10.12/prayer_pr.html" target="_blank">
+                   "A Prayer Before Dying"
+                  </a>
+                  ,
+                  <cite>
+                   Wired
+                  </cite>
+                  , 2002.  This is also an excellent example of the fallacy.
+                  <li>
+                   <a name="Note6">
+                    Thanks to Olof Ericson for this point.
+                   </a>
+                  </li>
+                 </li>
+                </li>
+               </li>
+              </li>
+             </li>
+            </ol>
+           </p>
+          </p>
+         </p>
+        </p>
+       </p>
+      </p>
+     </p>
+    </p>
+   </p>
+  </div>
+  <div id="sidebar">
+   <script type="text/javascript">
+    <!--
+google_ad_client = "ca-pub-5792838462578692";
+/* Contents2 */
+google_ad_slot = "8652921947";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+   </script>
+   <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+   </script>
+   <iframe border="0" frameborder="0" height="250" marginwidth="0" scrolling="no" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&amp;p=12&amp;l=ur1&amp;category=student_usa&amp;banner=1YW1K2VNGJMAXK0ETVR2&amp;f=ifr&amp;linkID=0c5432572416d12cd8b5decccf7d1238&amp;t=thefallacyfil-20&amp;tracking_id=thefallacyfil-20" style="border:none;" width="300">
+   </iframe>
+   <h3>
+    <a href="whatarff.html#AdPolicy" target="_top">
+     Advertise in
+     <cite>
+      The Fallacy Files
+     </cite>
+    </a>
+   </h3>
+   <hr/>
+   <h3>
+    Search
+    <cite>
+     The Fallacy Files
+    </cite>
+    :
+   </h3>
+   <!--------------------- SiteSearch Google Begins --------------------->
+   <form action="http://www.google.com/custom" method="get" target="_top">
+    <table align="center" bgcolor="FFFFEO" border="0">
+     <tr>
+      <td align="center" height="32" nowrap="nowrap" valign="top">
+      </td>
+      <td nowrap="nowrap">
+       <input name="domains" type="hidden" value="www.fallacyfiles.org"/>
+       <input maxlength="255" name="q" size="26" type="text" value=""/>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td nowrap="nowrap">
+       <table>
+        <tr>
+         <td>
+          <input name="sitesearch" type="radio" value=""/>
+          <font color="#000000" size="-1">
+           Web
+          </font>
+         </td>
+         <td>
+          <input checked="checked" name="sitesearch" type="radio" value="www.fallacyfiles.org"/>
+          <font color="#000000" size="-1">
+           www.fallacyfiles.org
+          </font>
+         </td>
+        </tr>
+       </table>
+       <input name="sa" type="submit" value="Google Search"/>
+       <input name="client" type="hidden" value="pub-5792838462578692"/>
+       <input name="forid" type="hidden" value="1"/>
+       <input name="ie" type="hidden" value="ISO-8859-1"/>
+       <input name="oe" type="hidden" value="ISO-8859-1"/>
+       <input name="safe" type="hidden" value="active"/>
+       <input name="cof" type="hidden" value="GALT:#009999;GL:1;DIV:#009900;VLC:006699;AH:center;BGC:FFFFCC;LBGC:009999;ALC:000000;LC:000000;T:009999;GFNT:006699;GIMP:006699;LH:0;LW:0;L:http://www.fallacyfiles.org/FileFolder.gif;S:http://www.fallacyfiles.org;FORID:1;"/>
+       <input name="hl" type="hidden" value="en"/>
+      </td>
+     </tr>
+    </table>
+   </form>
+   <!---------------------- SiteSearch Google Ends ---------------------->
+   <hr/>
+   <h3>
+    <a href="whatarff.html#Support" target="_top">
+     Support
+     <cite>
+      The Fallacy Files
+     </cite>
+    </a>
+   </h3>
+   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input name="cmd" type="hidden" value="_s-xclick"/>
+    <input name="hosted_button_id" type="hidden" value="2254872"/>
+    <input alt="Donate to The Fallacy Files" border="0" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" type="image"/>
+    <img alt="" border="0" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
+   </form>
+   <hr/>
+   <h3>
+    <a href="mailto:fallacist@fallacyfiles.org">
+     Email the Fallacist
+    </a>
+   </h3>
+   <h5>
+    © Copyright 2001-2017: Gary N. Curtis
+   </h5>
+   <h6>
+    Permission is granted for non-commercial use and replication of this material for educational purposes, provided that appropriate notice is included of both its authorship and copyrighted status.
+   </h6>
+  </div>
+  <div id="footer">
+   <iframe border="0" frameborder="0" height="90" marginwidth="0" scrolling="no" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&amp;p=48&amp;l=ur1&amp;category=amzn_kindle_tradein_2017&amp;banner=091S0EKHTBXYVZ837682&amp;f=ifr&amp;linkID=6509efe47e4e398ed41ab201ab583cf1&amp;t=thefallacyfil-20&amp;tracking_id=thefallacyfil-20" style="border:none;" width="728">
+   </iframe>
+   <script type="text/javascript">
+    <!--
+google_ad_client = "ca-pub-5792838462578692";
+/* Index */
+google_ad_slot = "8304009879";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+   </script>
+   <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+   </script>
+  </div>
+ </div>
+</body>

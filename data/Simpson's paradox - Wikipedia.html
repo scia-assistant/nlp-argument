@@ -1,0 +1,4228 @@
+<div aria-labelledby="firstHeading" class="vector-body" data-mw-ve-target-container="" id="bodyContent">
+ <div class="vector-body-before-content">
+  <div class="mw-indicators">
+  </div>
+  <div class="noprint" id="siteSub">
+   From Wikipedia, the free encyclopedia
+  </div>
+ </div>
+ <div id="contentSub">
+  <div id="mw-content-subtitle">
+  </div>
+ </div>
+ <div class="mw-body-content" id="mw-content-text">
+  <div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+   <div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">
+    Error in statistical reasoning with groups
+   </div>
+   <figure class="mw-default-size" typeof="mw:File/Thumb">
+    <a class="mw-file-description" href="/wiki/File:Simpson%27s_paradox_continuous.svg">
+     <img class="mw-file-element" data-file-height="260" data-file-width="390" decoding="async" height="147" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Simpson%27s_paradox_continuous.svg/220px-Simpson%27s_paradox_continuous.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Simpson%27s_paradox_continuous.svg/330px-Simpson%27s_paradox_continuous.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Simpson%27s_paradox_continuous.svg/440px-Simpson%27s_paradox_continuous.svg.png 2x" width="220"/>
+    </a>
+    <figcaption>
+     Simpson's paradox for quantitative data: a positive trend (
+     <span style="display:inline-block; vertical-align:middle; width:2em; height:0px; border-style:none; border-top:2px solid blue;">
+     </span>
+     ,
+     <span style="display:inline-block; vertical-align:middle; width:2em; height:0px; border-style:none; border-top:2px solid red;">
+     </span>
+     ) appears for two separate groups, whereas a negative trend (
+     <span style="display:inline-block; vertical-align:middle; width:2em; height:0px; border-style:none; border-top:2px dashed#000;">
+     </span>
+     ) appears when the groups are combined.
+    </figcaption>
+   </figure>
+   <figure class="mw-default-size" typeof="mw:File/Thumb">
+    <a class="mw-file-description" href="/wiki/File:Simpsons_paradox_-_animation.gif">
+     <img class="mw-file-element" data-file-height="500" data-file-width="700" decoding="async" height="157" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Simpsons_paradox_-_animation.gif/220px-Simpsons_paradox_-_animation.gif" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Simpsons_paradox_-_animation.gif/330px-Simpsons_paradox_-_animation.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Simpsons_paradox_-_animation.gif/440px-Simpsons_paradox_-_animation.gif 2x" width="220"/>
+    </a>
+    <figcaption>
+     Visualization of Simpson's paradox on data resembling real-world variability indicates that risk of misjudgment of true causal relationship can be hard to spot.
+    </figcaption>
+   </figure>
+   <p>
+    <b>
+     Simpson's paradox
+    </b>
+    is a phenomenon in
+    <a href="/wiki/Probability" title="Probability">
+     probability
+    </a>
+    and
+    <a href="/wiki/Statistics" title="Statistics">
+     statistics
+    </a>
+    in which a trend appears in several groups of data but disappears or reverses when the groups are combined. This result is often encountered in social-science and medical-science statistics,
+    <sup class="reference" id="cite_ref-1">
+     <a href="#cite_note-1">
+      <span class="cite-bracket">
+       [
+      </span>
+      1
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    <sup class="reference" id="cite_ref-2">
+     <a href="#cite_note-2">
+      <span class="cite-bracket">
+       [
+      </span>
+      2
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    <sup class="reference" id="cite_ref-VogelFranks2017_3-0">
+     <a href="#cite_note-VogelFranks2017-3">
+      <span class="cite-bracket">
+       [
+      </span>
+      3
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    and is particularly problematic when frequency data are unduly given
+    <a class="mw-redirect" href="/wiki/Causal" title="Causal">
+     causal
+    </a>
+    interpretations.
+    <sup class="reference" id="cite_ref-pearl_4-0">
+     <a href="#cite_note-pearl-4">
+      <span class="cite-bracket">
+       [
+      </span>
+      4
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    The paradox can be resolved when
+    <a class="mw-redirect" href="/wiki/Confounding_variable" title="Confounding variable">
+     confounding variables
+    </a>
+    and causal relations are appropriately addressed in the statistical modeling
+    <sup class="reference" id="cite_ref-pearl_4-1">
+     <a href="#cite_note-pearl-4">
+      <span class="cite-bracket">
+       [
+      </span>
+      4
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    <sup class="reference" id="cite_ref-5">
+     <a href="#cite_note-5">
+      <span class="cite-bracket">
+       [
+      </span>
+      5
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    (e.g., through
+    <a href="/wiki/Cluster_analysis" title="Cluster analysis">
+     cluster analysis
+    </a>
+    <sup class="reference" id="cite_ref-6">
+     <a href="#cite_note-6">
+      <span class="cite-bracket">
+       [
+      </span>
+      6
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    ).
+   </p>
+   <p>
+    Simpson's paradox has been used to illustrate the kind of misleading results that the
+    <a href="/wiki/Misuse_of_statistics" title="Misuse of statistics">
+     misuse of statistics
+    </a>
+    can generate.
+    <sup class="reference" id="cite_ref-7">
+     <a href="#cite_note-7">
+      <span class="cite-bracket">
+       [
+      </span>
+      7
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    <sup class="reference" id="cite_ref-8">
+     <a href="#cite_note-8">
+      <span class="cite-bracket">
+       [
+      </span>
+      8
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+   </p>
+   <p>
+    <a href="/wiki/Edward_H._Simpson" title="Edward H. Simpson">
+     Edward H. Simpson
+    </a>
+    first described this phenomenon in a technical paper in 1951,
+    <sup class="reference" id="cite_ref-9">
+     <a href="#cite_note-9">
+      <span class="cite-bracket">
+       [
+      </span>
+      9
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    but the statisticians
+    <a href="/wiki/Karl_Pearson" title="Karl Pearson">
+     Karl Pearson
+    </a>
+    (in 1899
+    <sup class="reference" id="cite_ref-10">
+     <a href="#cite_note-10">
+      <span class="cite-bracket">
+       [
+      </span>
+      10
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    ) and
+    <a href="/wiki/Udny_Yule" title="Udny Yule">
+     Udny Yule
+    </a>
+    (in 1903
+    <sup class="reference" id="cite_ref-yule_11-0">
+     <a href="#cite_note-yule-11">
+      <span class="cite-bracket">
+       [
+      </span>
+      11
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    ) had mentioned similar effects earlier. The name
+    <i>
+     Simpson's paradox
+    </i>
+    was introduced by Colin R. Blyth in 1972.
+    <sup class="reference" id="cite_ref-blyth-72_12-0">
+     <a href="#cite_note-blyth-72-12">
+      <span class="cite-bracket">
+       [
+      </span>
+      12
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+    It is also referred to as
+    <b>
+     Simpson's reversal
+    </b>
+    , the
+    <b>
+     Yule–Simpson effect
+    </b>
+    , the
+    <b>
+     amalgamation paradox
+    </b>
+    , or the
+    <b>
+     reversal paradox
+    </b>
+    .
+    <sup class="reference" id="cite_ref-13">
+     <a href="#cite_note-13">
+      <span class="cite-bracket">
+       [
+      </span>
+      13
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+   </p>
+   <p>
+    Mathematician
+    <a href="/wiki/Jordan_Ellenberg" title="Jordan Ellenberg">
+     Jordan Ellenberg
+    </a>
+    argues that Simpson's paradox is misnamed as "there's no contradiction involved, just two different ways to think about the same data" and suggests that its lesson "isn't really to tell us which viewpoint to take but to insist that we keep both the parts and the whole in mind at once."
+    <sup class="reference" id="cite_ref-14">
+     <a href="#cite_note-14">
+      <span class="cite-bracket">
+       [
+      </span>
+      14
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+   </p>
+   <meta property="mw:PageProp/toc">
+    <div class="mw-heading mw-heading2">
+     <h2 id="Examples">
+      Examples
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=1" title="Edit section: Examples">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <div class="mw-heading mw-heading3">
+     <h3 id="UC_Berkeley_gender_bias">
+      UC Berkeley gender bias
+     </h3>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=2" title="Edit section: UC Berkeley gender bias">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     One of the best-known examples of Simpson's paradox comes from a study of gender bias among graduate school admissions to
+     <a href="/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">
+      University of California, Berkeley
+     </a>
+     . The admission figures for the fall of 1973 showed that men applying were more likely than women to be admitted, and the difference was so large that it was unlikely to be due to chance.
+     <sup class="reference" id="cite_ref-freedman_15-0">
+      <a href="#cite_note-freedman-15">
+       <span class="cite-bracket">
+        [
+       </span>
+       15
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     <sup class="reference" id="cite_ref-Bickel_16-0">
+      <a href="#cite_note-Bickel-16">
+       <span class="cite-bracket">
+        [
+       </span>
+       16
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <table class="wikitable" style="margin-left:auto; margin-right:auto; border:none; text-align:right;">
+     <tbody>
+      <tr>
+       <th rowspan="2">
+       </th>
+       <th colspan="2">
+        All
+       </th>
+       <th colspan="2">
+        Men
+       </th>
+       <th colspan="2">
+        Women
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Applicants
+       </th>
+       <th>
+        Admitted
+       </th>
+       <th>
+        Applicants
+       </th>
+       <th>
+        Admitted
+       </th>
+       <th>
+        Applicants
+       </th>
+       <th>
+        Admitted
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Total
+       </th>
+       <td>
+        12,763
+       </td>
+       <td>
+        41%
+       </td>
+       <td>
+        8,442
+       </td>
+       <td style="background: #9EFF9E;">
+        44%
+       </td>
+       <td>
+        4,321
+       </td>
+       <td>
+        35%
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     However, when taking into account the information about departments being applied to, the different rejection percentages reveal the different difficulty of getting into the department, and at the same time it showed that women tended to apply to more competitive departments with lower rates of admission, even among qualified applicants (such as in the English department), whereas men tended to apply to less competitive departments with higher rates of admission (such as in the engineering department). The pooled and corrected data showed a "small but statistically significant bias in favor of women".
+     <sup class="reference" id="cite_ref-Bickel_16-1">
+      <a href="#cite_note-Bickel-16">
+       <span class="cite-bracket">
+        [
+       </span>
+       16
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <p>
+     The data from the six largest departments are listed below:
+    </p>
+    <table class="wikitable" style="margin-left:auto; margin-right:auto; border:none; text-align:right;">
+     <tbody>
+      <tr>
+       <th rowspan="2">
+        Department
+       </th>
+       <th colspan="2">
+        All
+       </th>
+       <th colspan="2">
+        Men
+       </th>
+       <th colspan="2">
+        Women
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Applicants
+       </th>
+       <th>
+        Admitted
+       </th>
+       <th>
+        Applicants
+       </th>
+       <th>
+        Admitted
+       </th>
+       <th>
+        Applicants
+       </th>
+       <th>
+        Admitted
+       </th>
+      </tr>
+      <tr>
+       <th>
+        A
+       </th>
+       <td>
+        933
+       </td>
+       <td>
+        64%
+       </td>
+       <td style="background: #FE9;">
+        <b>
+         825
+        </b>
+       </td>
+       <td>
+        62%
+       </td>
+       <td>
+        108
+       </td>
+       <td style="background: #9EFF9E;">
+        82%
+       </td>
+      </tr>
+      <tr>
+       <th>
+        B
+       </th>
+       <td>
+        585
+       </td>
+       <td>
+        63%
+       </td>
+       <td style="background: #FE9;">
+        <b>
+         560
+        </b>
+       </td>
+       <td>
+        63%
+       </td>
+       <td>
+        25
+       </td>
+       <td style="background: #9EFF9E;">
+        68%
+       </td>
+      </tr>
+      <tr>
+       <th>
+        C
+       </th>
+       <td>
+        918
+       </td>
+       <td>
+        35%
+       </td>
+       <td>
+        325
+       </td>
+       <td style="background: #9EFF9E;">
+        37%
+       </td>
+       <td style="background: #FE9;">
+        <b>
+         593
+        </b>
+       </td>
+       <td>
+        34%
+       </td>
+      </tr>
+      <tr>
+       <th>
+        D
+       </th>
+       <td>
+        792
+       </td>
+       <td>
+        34%
+       </td>
+       <td style="background: #FE9;">
+        417
+       </td>
+       <td>
+        33%
+       </td>
+       <td>
+        375
+       </td>
+       <td style="background: #9EFF9E;">
+        35%
+       </td>
+      </tr>
+      <tr>
+       <th>
+        E
+       </th>
+       <td>
+        584
+       </td>
+       <td>
+        25%
+       </td>
+       <td>
+        191
+       </td>
+       <td style="background: #9EFF9E;">
+        28%
+       </td>
+       <td style="background: #FE9;">
+        <b>
+         393
+        </b>
+       </td>
+       <td>
+        24%
+       </td>
+      </tr>
+      <tr>
+       <th>
+        F
+       </th>
+       <td>
+        714
+       </td>
+       <td>
+        6%
+       </td>
+       <td style="background: #FE9;">
+        373
+       </td>
+       <td>
+        6%
+       </td>
+       <td>
+        341
+       </td>
+       <td style="background: #9EFF9E;">
+        7%
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Total
+       </th>
+       <th>
+        4526
+       </th>
+       <th>
+        39%
+       </th>
+       <th>
+        2691
+       </th>
+       <th>
+        45%
+       </th>
+       <th>
+        1835
+       </th>
+       <th>
+        30%
+       </th>
+      </tr>
+      <tr>
+       <td colspan="7" style="text-align:left;">
+        <p>
+         Legend:
+         <br/>
+        </p>
+        <style data-mw-deduplicate="TemplateStyles:r981673959">
+         .mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}
+        </style>
+        <div class="legend">
+         <span class="legend-color mw-no-invert" style="background-color:#9EFF9E; color:black;">
+         </span>
+         greater percentage of successful applicants than the other gender
+        </div>
+        <link href="mw-data:TemplateStyles:r981673959" rel="mw-deduplicated-inline-style"/>
+        <div class="legend">
+         <span class="legend-color mw-no-invert" style="background-color:#FE9; color:black;">
+         </span>
+         greater number of applicants than the other gender
+        </div>
+        <p>
+         <b>
+          bold
+         </b>
+         - the two 'most applied for' departments for each gender
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     The entire data showed total of 4 out of 85 departments to be significantly biased against women, while 6 to be significantly biased against men (not all present in the 'six largest departments' table above). Notably, the numbers of biased departments were not the basis for the conclusion, but rather it was the gender admissions pooled across all departments, while weighing by each department's rejection rate across all of its applicants.
+     <sup class="reference" id="cite_ref-Bickel_16-2">
+      <a href="#cite_note-Bickel-16">
+       <span class="cite-bracket">
+        [
+       </span>
+       16
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <div class="mw-heading mw-heading3">
+     <h3 id="Kidney_stone_treatment">
+      Kidney stone treatment
+     </h3>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=3" title="Edit section: Kidney stone treatment">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     Another example comes from a real-life medical study
+     <sup class="reference" id="cite_ref-17">
+      <a href="#cite_note-17">
+       <span class="cite-bracket">
+        [
+       </span>
+       17
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     comparing the success rates of two treatments for
+     <a class="mw-redirect" href="/wiki/Kidney_stone" title="Kidney stone">
+      kidney stones
+     </a>
+     .
+     <sup class="reference" id="cite_ref-KidneyParadox_18-0">
+      <a href="#cite_note-KidneyParadox-18">
+       <span class="cite-bracket">
+        [
+       </span>
+       18
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     The table below shows the success rates (the term
+     <i>
+      success rate
+     </i>
+     here actually means the success proportion) and numbers of treatments for treatments involving both small and large kidney stones, where Treatment A includes open surgical procedures and Treatment B includes closed surgical procedures. The numbers in parentheses indicate the number of success cases over the total size of the group.
+    </p>
+    <table class="wikitable" style="margin-left:auto; margin-right:auto; border:none;" summary="results accounting for stone size">
+     <tbody>
+      <tr>
+       <th style="background:#EAECF0;background:linear-gradient(to top right,#EAECF0 49%,#AAA 49.5%,#AAA 50.5%,#EAECF0 51%);line-height:1.2;padding:0.1em 0.4em;">
+        <div style="margin-left:2em;text-align:right">
+         Treatment
+        </div>
+        <div style="margin-right:2em;text-align:left">
+         Stone size
+        </div>
+       </th>
+       <th>
+        Treatment A
+       </th>
+       <th>
+        Treatment B
+       </th>
+      </tr>
+      <tr align="center">
+       <th>
+        Small stones
+       </th>
+       <td>
+        <i>
+         Group 1
+        </i>
+        <br/>
+        <b>
+         93% (81/87)
+        </b>
+       </td>
+       <td>
+        <i>
+         Group 2
+        </i>
+        <br/>
+        87% (234/270)
+       </td>
+      </tr>
+      <tr align="center">
+       <th>
+        Large stones
+       </th>
+       <td>
+        <i>
+         Group 3
+        </i>
+        <br/>
+        <b>
+         73% (192/263)
+        </b>
+       </td>
+       <td>
+        <i>
+         Group 4
+        </i>
+        <br/>
+        69% (55/80)
+       </td>
+      </tr>
+      <tr align="center">
+       <th>
+        Both
+       </th>
+       <td>
+        78% (273/350)
+       </td>
+       <td>
+        <b>
+         83% (289/350)
+        </b>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     The paradoxical conclusion is that treatment A is more effective when used on small stones, and also when used on large stones, yet treatment B appears to be more effective when considering both sizes at the same time. In this example, the "lurking" variable (or
+     <a href="/wiki/Confounding" title="Confounding">
+      confounding variable
+     </a>
+     ) causing the paradox is the size of the stones, which was not previously known to researchers to be important until its effects were included.
+     <sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">
+      [
+      <i>
+       <a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">
+        <span title="This claim needs references to reliable sources. (April 2024)">
+         citation needed
+        </span>
+       </a>
+      </i>
+      ]
+     </sup>
+    </p>
+    <p>
+     Which treatment is considered better is determined by which success ratio (successes/total) is larger. The reversal of the inequality between the two ratios when considering the combined data, which creates Simpson's paradox, happens because two effects occur together:
+     <sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">
+      [
+      <i>
+       <a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">
+        <span title="This claim needs references to reliable sources. (April 2024)">
+         citation needed
+        </span>
+       </a>
+      </i>
+      ]
+     </sup>
+    </p>
+    <ol>
+     <li>
+      The sizes of the groups, which are combined when the lurking variable is ignored, are very different. Doctors tend to give cases with large stones the better treatment A, and the cases with small stones the inferior treatment B. Therefore, the totals are dominated by groups 3 and 2, and not by the two much smaller groups 1 and 4.
+     </li>
+     <li>
+      The lurking variable, stone size, has a large effect on the ratios; i.e., the success rate is more strongly influenced by the severity of the case than by the choice of treatment. Therefore, the group of patients with large stones using treatment A (group 3) does worse than the group with small stones, even if the latter used the inferior treatment B (group 2).
+     </li>
+    </ol>
+    <p>
+     Based on these effects, the paradoxical result is seen to arise because the effect of the size of the stones overwhelms the benefits of the better treatment (A). In short, the less effective treatment B appeared to be more effective because it was applied more frequently to the small stones cases, which were easier to treat.
+     <sup class="reference" id="cite_ref-KidneyParadox_18-1">
+      <a href="#cite_note-KidneyParadox-18">
+       <span class="cite-bracket">
+        [
+       </span>
+       18
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <p>
+     <a href="/wiki/Edwin_Thompson_Jaynes" title="Edwin Thompson Jaynes">
+      Jaynes
+     </a>
+     argues that the correct conclusion is that though treatment A remains noticeably better than treatment B, the kidney stone size is more important.
+     <sup class="reference" id="cite_ref-19">
+      <a href="#cite_note-19">
+       <span class="cite-bracket">
+        [
+       </span>
+       19
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <div class="mw-heading mw-heading3">
+     <h3 id="Batting_averages">
+      Batting averages
+     </h3>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=4" title="Edit section: Batting averages">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     A common example of Simpson's paradox involves the
+     <a href="/wiki/Batting_average_(baseball)" title="Batting average (baseball)">
+      batting averages
+     </a>
+     of players in
+     <a href="/wiki/Professional_baseball" title="Professional baseball">
+      professional baseball
+     </a>
+     . It is possible for one player to have a higher batting average than another player each year for a number of years, but to have a lower batting average across all of those years. This phenomenon can occur when there are large differences in the number of
+     <a href="/wiki/At_bat" title="At bat">
+      at bats
+     </a>
+     between the years. Mathematician
+     <a href="/wiki/Kenneth_A._Ross" title="Kenneth A. Ross">
+      Ken Ross
+     </a>
+     demonstrated this using the batting average of two baseball players,
+     <a href="/wiki/Derek_Jeter" title="Derek Jeter">
+      Derek Jeter
+     </a>
+     and
+     <a href="/wiki/David_Justice" title="David Justice">
+      David Justice
+     </a>
+     , during the years 1995 and 1996:
+     <sup class="reference" id="cite_ref-RossBaseball_20-0">
+      <a href="#cite_note-RossBaseball-20">
+       <span class="cite-bracket">
+        [
+       </span>
+       20
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     <sup class="reference" id="cite_ref-21">
+      <a href="#cite_note-21">
+       <span class="cite-bracket">
+        [
+       </span>
+       21
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <table class="wikitable" style="margin-left:auto; margin-right:auto; border:none;">
+     <tbody>
+      <tr>
+       <th style="background:#EAECF0;background:linear-gradient(to top right,#EAECF0 49%,#AAA 49.5%,#AAA 50.5%,#EAECF0 51%);line-height:1.2;padding:0.1em 0.4em;">
+        <div style="margin-left:2em;text-align:right">
+         Year
+        </div>
+        <div style="margin-right:2em;text-align:left">
+         Batter
+        </div>
+       </th>
+       <th colspan="2">
+        1995
+       </th>
+       <th colspan="2">
+        1996
+       </th>
+       <th colspan="2">
+        Combined
+       </th>
+      </tr>
+      <tr>
+       <td>
+        Derek Jeter
+       </td>
+       <td>
+        12/48
+       </td>
+       <td>
+        .250
+       </td>
+       <td>
+        183/582
+       </td>
+       <td>
+        .314
+       </td>
+       <td>
+        195/630
+       </td>
+       <td>
+        <b>
+         .310
+        </b>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        David Justice
+       </td>
+       <td>
+        104/411
+       </td>
+       <td>
+        <b>
+         .253
+        </b>
+       </td>
+       <td>
+        45/140
+       </td>
+       <td>
+        <b>
+         .321
+        </b>
+       </td>
+       <td>
+        149/551
+       </td>
+       <td>
+        .270
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     In both 1995 and 1996, Justice had a higher batting average (in bold type) than Jeter did. However, when the two baseball seasons are combined, Jeter shows a higher batting average than Justice. According to Ross, this phenomenon would be observed about once per year among the possible pairs of players.
+     <sup class="reference" id="cite_ref-RossBaseball_20-1">
+      <a href="#cite_note-RossBaseball-20">
+       <span class="cite-bracket">
+        [
+       </span>
+       20
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Vector_interpretation">
+      Vector interpretation
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=5" title="Edit section: Vector interpretation">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <figure class="mw-default-size" typeof="mw:File/Thumb">
+     <a class="mw-file-description" href="/wiki/File:Simpson_paradox_vectors.svg">
+      <img class="mw-file-element" data-file-height="284" data-file-width="512" decoding="async" height="122" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Simpson_paradox_vectors.svg/220px-Simpson_paradox_vectors.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Simpson_paradox_vectors.svg/330px-Simpson_paradox_vectors.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Simpson_paradox_vectors.svg/440px-Simpson_paradox_vectors.svg.png 2x" width="220"/>
+     </a>
+     <figcaption>
+      Vector interpretation of Simpson's paradox
+     </figcaption>
+    </figure>
+    <p>
+     Simpson's paradox can also be illustrated using a 2-dimensional
+     <a href="/wiki/Vector_space" title="Vector space">
+      vector space
+     </a>
+     .
+     <sup class="reference" id="cite_ref-22">
+      <a href="#cite_note-22">
+       <span class="cite-bracket">
+        [
+       </span>
+       22
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     A success rate of
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\textstyle {\frac {p}{q}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="false" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mi>
+              p
+             </mi>
+             <mi>
+              q
+             </mi>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\textstyle {\frac {p}{q}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\textstyle {\frac {p}{q}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c397ad17b7e3f7fc729917de5e232d377001a4aa" style="vertical-align: -1.338ex; width:1.663ex; height:3.676ex;"/>
+     </span>
+     (i.e.,
+     <i>
+      successes/attempts
+     </i>
+     ) can be represented by a
+     <a class="mw-redirect" href="/wiki/Vector_(geometry)" title="Vector (geometry)">
+      vector
+     </a>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {A}}=(q,p)}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mover>
+              <mi>
+               A
+              </mi>
+              <mo stretchy="false">
+               →
+               <!-- → -->
+              </mo>
+             </mover>
+            </mrow>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            q
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            p
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {A}}=(q,p)}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {A}}=(q,p)}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a90e0a52a4344e502e3594adb30fe8495f3e723f" style="vertical-align: -0.838ex; width:9.924ex; height:3.509ex;"/>
+     </span>
+     , with a
+     <a href="/wiki/Slope" title="Slope">
+      slope
+     </a>
+     of
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\textstyle {\frac {p}{q}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="false" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mi>
+              p
+             </mi>
+             <mi>
+              q
+             </mi>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\textstyle {\frac {p}{q}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\textstyle {\frac {p}{q}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c397ad17b7e3f7fc729917de5e232d377001a4aa" style="vertical-align: -1.338ex; width:1.663ex; height:3.676ex;"/>
+     </span>
+     . A steeper vector then represents a greater success rate. If two rates
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\textstyle {\frac {p_{1}}{q_{1}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="false" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <msub>
+              <mi>
+               p
+              </mi>
+              <mrow class="MJX-TeXAtom-ORD">
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <msub>
+              <mi>
+               q
+              </mi>
+              <mrow class="MJX-TeXAtom-ORD">
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\textstyle {\frac {p_{1}}{q_{1}}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\textstyle {\frac {p_{1}}{q_{1}}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d44f68c00f83caa6c0d1d0e3ee4625f2ee69f236" style="vertical-align: -1.505ex; width:2.495ex; height:3.843ex;"/>
+     </span>
+     and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\textstyle {\frac {p_{2}}{q_{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="false" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <msub>
+              <mi>
+               p
+              </mi>
+              <mrow class="MJX-TeXAtom-ORD">
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+             <msub>
+              <mi>
+               q
+              </mi>
+              <mrow class="MJX-TeXAtom-ORD">
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\textstyle {\frac {p_{2}}{q_{2}}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\textstyle {\frac {p_{2}}{q_{2}}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c3442f046526c1ba4a01215f00bcc0a9d989a59" style="vertical-align: -1.505ex; width:2.495ex; height:3.843ex;"/>
+     </span>
+     are combined, as in the examples given above, the result can be represented by the sum of the vectors
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle (q_{1},p_{1})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi>
+             p
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle (q_{1},p_{1})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle (q_{1},p_{1})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45c51e78a7807e640a7812b0aed132c44ed8efe9" style="vertical-align: -0.838ex; width:7.158ex; height:2.843ex;"/>
+     </span>
+     and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle (q_{2},p_{2})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi>
+             p
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle (q_{2},p_{2})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle (q_{2},p_{2})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2d9cc6f49f6d44ff6259c71eb1c354e5de82d044" style="vertical-align: -0.838ex; width:7.158ex; height:2.843ex;"/>
+     </span>
+     , which according to the
+     <a class="mw-redirect" href="/wiki/Parallelogram_rule" title="Parallelogram rule">
+      parallelogram rule
+     </a>
+     is the vector
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle (q_{1}+q_{2},p_{1}+p_{2})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi>
+             p
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             p
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle (q_{1}+q_{2},p_{1}+p_{2})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle (q_{1}+q_{2},p_{1}+p_{2})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d038de36b188adf784455b6d1b2e2cd302cfdbee" style="vertical-align: -0.838ex; width:17.154ex; height:2.843ex;"/>
+     </span>
+     , with slope
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\textstyle {\frac {p_{1}+p_{2}}{q_{1}+q_{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="false" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mrow>
+              <msub>
+               <mi>
+                p
+               </mi>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mn>
+                 1
+                </mn>
+               </mrow>
+              </msub>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mi>
+                p
+               </mi>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mn>
+                 2
+                </mn>
+               </mrow>
+              </msub>
+             </mrow>
+             <mrow>
+              <msub>
+               <mi>
+                q
+               </mi>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mn>
+                 1
+                </mn>
+               </mrow>
+              </msub>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mi>
+                q
+               </mi>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mn>
+                 2
+                </mn>
+               </mrow>
+              </msub>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\textstyle {\frac {p_{1}+p_{2}}{q_{1}+q_{2}}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\textstyle {\frac {p_{1}+p_{2}}{q_{1}+q_{2}}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3372cef291da5115a42ab7b218b74f13fe93169" style="vertical-align: -1.505ex; width:5.432ex; height:4.176ex;"/>
+     </span>
+     .
+    </p>
+    <p>
+     Simpson's paradox says that even if a vector
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {L}}_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                L
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {L}}_{1}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {L}}_{1}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ed9036854c76a8301527b47d95c46ef5b1557fdb" style="vertical-align: -0.671ex; width:2.637ex; height:3.176ex;"/>
+     </span>
+     (in orange in figure) has a smaller slope than another vector
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {B}}_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                B
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {B}}_{1}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {B}}_{1}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cbee09705bc97f67527b36a7596d3102cc8ab5f8" style="vertical-align: -0.671ex; width:2.818ex; height:3.176ex;"/>
+     </span>
+     (in blue), and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {L}}_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                L
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {L}}_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {L}}_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b0777f2814eff5a60f939802651004eb08fbed12" style="vertical-align: -0.671ex; width:2.637ex; height:3.176ex;"/>
+     </span>
+     has a smaller slope than
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {B}}_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                B
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {B}}_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {B}}_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7e12b9fa9d99623b6eb14d2840b5cd9e276659d0" style="vertical-align: -0.671ex; width:2.818ex; height:3.176ex;"/>
+     </span>
+     , the sum of the two vectors
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {L}}_{1}+{\vec {L}}_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                L
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                L
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {L}}_{1}+{\vec {L}}_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {L}}_{1}+{\vec {L}}_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/35a5f178db4693ecf5ca4c0dd1781fa8adf99a37" style="vertical-align: -0.671ex; width:8.115ex; height:3.176ex;"/>
+     </span>
+     can potentially still have a larger slope than the sum of the two vectors
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {B}}_{1}+{\vec {B}}_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                B
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                B
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {B}}_{1}+{\vec {B}}_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {B}}_{1}+{\vec {B}}_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f06a5e904687d727d687f74367b2319c71c119c" style="vertical-align: -0.671ex; width:8.477ex; height:3.176ex;"/>
+     </span>
+     , as shown in the example.  For this to occur one of the orange vectors must have a greater slope than one of the blue vectors (here
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {L}}_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                L
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {L}}_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {L}}_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b0777f2814eff5a60f939802651004eb08fbed12" style="vertical-align: -0.671ex; width:2.637ex; height:3.176ex;"/>
+     </span>
+     and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\vec {B}}_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+               <mi>
+                B
+               </mi>
+               <mo stretchy="false">
+                →
+                <!-- → -->
+               </mo>
+              </mover>
+             </mrow>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\vec {B}}_{1}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\vec {B}}_{1}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cbee09705bc97f67527b36a7596d3102cc8ab5f8" style="vertical-align: -0.671ex; width:2.818ex; height:3.176ex;"/>
+     </span>
+     ), and these will generally be longer than the alternatively subscripted vectors – thereby dominating the overall comparison.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Correlation_between_variables">
+      Correlation between variables
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=6" title="Edit section: Correlation between variables">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     Simpson's reversal can also arise in
+     <a href="/wiki/Correlation" title="Correlation">
+      correlations
+     </a>
+     ,  in which two variables appear to have (say) a positive correlation towards one another, when in fact they have a negative correlation, the reversal having been brought about by a "lurking" confounder.  Berman et al.
+     <sup class="reference" id="cite_ref-23">
+      <a href="#cite_note-23">
+       <span class="cite-bracket">
+        [
+       </span>
+       23
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     give an example from economics, where a dataset suggests overall demand is positively correlated with price (that is, higher prices lead to
+     <i>
+      more
+     </i>
+     demand), in contradiction of expectation.   Analysis reveals time to be the confounding variable: plotting both price and demand against time reveals the expected negative correlation over various periods, which then reverses to become positive if the influence of time is ignored by simply plotting demand against price.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Psychology">
+      Psychology
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=7" title="Edit section: Psychology">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     Psychological interest in Simpson's paradox seeks to explain why people
+     <sup class="noprint Inline-Template" style="white-space:nowrap;">
+      [
+      <i>
+       <a href="/wiki/Wikipedia:Manual_of_Style/Words_to_watch#Unsupported_attributions" title="Wikipedia:Manual of Style/Words to watch">
+        <span title="The material near this tag possibly uses too-vague attribution or weasel words. (August 2024)">
+         who?
+        </span>
+       </a>
+      </i>
+      ]
+     </sup>
+     deem sign reversal to be impossible at first.
+     <sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">
+      [
+      <i>
+       <a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">
+        <span title="The text near this tag may need clarification or removal of jargon. (August 2024)">
+         clarification needed
+        </span>
+       </a>
+      </i>
+      ]
+     </sup>
+     The question is where people get this strong
+     <a href="/wiki/Intuition" title="Intuition">
+      intuition
+     </a>
+     from, and how it is encoded in the
+     <a href="/wiki/Mind" title="Mind">
+      mind
+     </a>
+     .
+    </p>
+    <p>
+     Simpson's paradox demonstrates that this intuition cannot be derived from either
+     <a href="/wiki/Classical_logic" title="Classical logic">
+      classical logic
+     </a>
+     or
+     <a class="mw-redirect" href="/wiki/Probability_calculus" title="Probability calculus">
+      probability calculus
+     </a>
+     alone, and thus led
+     <a class="mw-redirect" href="/wiki/Philosopher" title="Philosopher">
+      philosophers
+     </a>
+     to speculate that it is supported by an innate causal logic that guides people in reasoning about actions and their consequences.
+     <sup class="reference" id="cite_ref-pearl_4-2">
+      <a href="#cite_note-pearl-4">
+       <span class="cite-bracket">
+        [
+       </span>
+       4
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     Savage's
+     <a href="/wiki/Sure-thing_principle" title="Sure-thing principle">
+      sure-thing principle
+     </a>
+     <sup class="reference" id="cite_ref-blyth-72_12-1">
+      <a href="#cite_note-blyth-72-12">
+       <span class="cite-bracket">
+        [
+       </span>
+       12
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     is an example of what such logic may entail. A qualified version of Savage's sure thing principle can indeed be derived from Pearl's
+     <i>
+      do
+     </i>
+     -calculus
+     <sup class="reference" id="cite_ref-pearl_4-3">
+      <a href="#cite_note-pearl-4">
+       <span class="cite-bracket">
+        [
+       </span>
+       4
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     and reads: "An action
+     <i>
+      A
+     </i>
+     that increases the probability of an event
+     <i>
+      B
+     </i>
+     in each subpopulation
+     <i>
+      C
+      <sub>
+       i
+      </sub>
+     </i>
+     of
+     <i>
+      C
+     </i>
+     must also increase the probability of
+     <i>
+      B
+     </i>
+     in the population as a whole, provided that the action does not change the distribution of the subpopulations." This suggests that knowledge about actions and consequences is stored in a form resembling Causal
+     <a class="mw-redirect" href="/wiki/Bayesian_Networks" title="Bayesian Networks">
+      Bayesian Networks
+     </a>
+     .
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Probability">
+      Probability
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=8" title="Edit section: Probability">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     A paper by Pavlides and Perlman presents a proof, due to Hadjicostas, that in a random 2 × 2 × 2 table with uniform distribution, Simpson's paradox will occur with a
+     <a href="/wiki/Probability" title="Probability">
+      probability
+     </a>
+     of exactly
+     <style data-mw-deduplicate="TemplateStyles:r1154941027">
+      .mw-parser-output .frac{white-space:nowrap}.mw-parser-output .frac .num,.mw-parser-output .frac .den{font-size:80%;line-height:0;vertical-align:super}.mw-parser-output .frac .den{vertical-align:sub}.mw-parser-output .sr-only{border:0;clip:rect(0,0,0,0);clip-path:polygon(0px 0px,0px 0px,0px 0px);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+     </style>
+     <span class="frac">
+      <span class="num">
+       1
+      </span>
+      ⁄
+      <span class="den">
+       60
+      </span>
+     </span>
+     .
+     <sup class="reference" id="cite_ref-24">
+      <a href="#cite_note-24">
+       <span class="cite-bracket">
+        [
+       </span>
+       24
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     A study by Kock suggests that the probability that Simpson's paradox would occur at random in path models (i.e., models generated by
+     <a href="/wiki/Path_analysis_(statistics)" title="Path analysis (statistics)">
+      path analysis
+     </a>
+     ) with two predictors and one criterion variable is approximately 12.8 percent; slightly higher than 1 occurrence per 8 path models.
+     <sup class="reference" id="cite_ref-25">
+      <a href="#cite_note-25">
+       <span class="cite-bracket">
+        [
+       </span>
+       25
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Simpson's_second_paradox">
+      <span id="Simpson.27s_second_paradox">
+      </span>
+      Simpson's second paradox
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=9" title="Edit section: Simpson's second paradox">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     A second, less well-known paradox was also discussed in Simpson's 1951 paper. It can occur when the "sensible interpretation" is not necessarily found in the separated data, like in the Kidney Stone example, but can instead reside in the combined data. Whether the partitioned or combined form of the data should be used hinges on the process giving rise to the data, meaning the correct interpretation of the data cannot always be determined by simply observing the tables.
+     <sup class="reference" id="cite_ref-26">
+      <a href="#cite_note-26">
+       <span class="cite-bracket">
+        [
+       </span>
+       26
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <p>
+     <a href="/wiki/Judea_Pearl" title="Judea Pearl">
+      Judea Pearl
+     </a>
+     has shown that, in order for the partitioned data to represent the correct causal relationships between any two variables,
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            X
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle X}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle X}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/>
+     </span>
+     and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle Y}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            Y
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle Y}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle Y}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;"/>
+     </span>
+     , the partitioning variables must satisfy a graphical condition called "back-door criterion":
+     <sup class="reference" id="cite_ref-27">
+      <a href="#cite_note-27">
+       <span class="cite-bracket">
+        [
+       </span>
+       27
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     <sup class="reference" id="cite_ref-28">
+      <a href="#cite_note-28">
+       <span class="cite-bracket">
+        [
+       </span>
+       28
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <ol>
+     <li>
+      They must block all spurious paths between
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mi>
+             X
+            </mi>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle X}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle X}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/>
+      </span>
+      and
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle Y}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mi>
+             Y
+            </mi>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle Y}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle Y}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;"/>
+      </span>
+     </li>
+     <li>
+      No variable can be affected by
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mi>
+             X
+            </mi>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle X}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle X}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/>
+      </span>
+     </li>
+    </ol>
+    <p>
+     This criterion provides an algorithmic solution to Simpson's second paradox, and explains why the correct interpretation cannot be determined by data alone; two different graphs, both compatible with the data, may dictate two different back-door criteria.
+    </p>
+    <p>
+     When the back-door criterion is satisfied by a set
+     <i>
+      Z
+     </i>
+     of covariates, the adjustment formula (see
+     <a href="/wiki/Confounding" title="Confounding">
+      Confounding
+     </a>
+     ) gives the correct causal effect of
+     <i>
+      X
+     </i>
+     on
+     <i>
+      Y
+     </i>
+     . If no such set exists, Pearl's
+     <i>
+      do
+     </i>
+     -calculus can be invoked to discover other ways of estimating the causal effect.
+     <sup class="reference" id="cite_ref-pearl_4-4">
+      <a href="#cite_note-pearl-4">
+       <span class="cite-bracket">
+        [
+       </span>
+       4
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     <sup class="reference" id="cite_ref-pearl-bow_29-0">
+      <a href="#cite_note-pearl-bow-29">
+       <span class="cite-bracket">
+        [
+       </span>
+       29
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     The completeness of
+     <i>
+      do
+     </i>
+     -calculus
+     <sup class="reference" id="cite_ref-30">
+      <a href="#cite_note-30">
+       <span class="cite-bracket">
+        [
+       </span>
+       30
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     <sup class="reference" id="cite_ref-pearl-bow_29-1">
+      <a href="#cite_note-pearl-bow-29">
+       <span class="cite-bracket">
+        [
+       </span>
+       29
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     can be viewed as offering a complete resolution of the Simpson's paradox.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Criticism">
+      Criticism
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=10" title="Edit section: Criticism">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     One criticism is that the paradox is not really a paradox at all, but rather a failure to properly account for confounding variables or to consider causal relationships between variables.
+     <sup class="reference" id="cite_ref-31">
+      <a href="#cite_note-31">
+       <span class="cite-bracket">
+        [
+       </span>
+       31
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <p>
+     Another criticism of the apparent Simpson's paradox is that it may be a result of the specific way that data is stratified or grouped. The phenomenon may disappear or even reverse if the data is stratified differently or if different confounding variables are considered. Simpson's example actually highlighted a phenomenon called noncollapsibility,
+     <sup class="reference" id="cite_ref-32">
+      <a href="#cite_note-32">
+       <span class="cite-bracket">
+        [
+       </span>
+       32
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     which occurs when subgroups with high proportions do not make simple averages when combined. This suggests that the paradox may not be a universal phenomenon, but rather a specific instance of a more general statistical issue.
+    </p>
+    <p>
+     Critics of the apparent Simpson's paradox also argue that the focus on the paradox may distract from more important statistical issues, such as the need for careful consideration of confounding variables and causal relationships when interpreting data.
+     <sup class="reference" id="cite_ref-33">
+      <a href="#cite_note-33">
+       <span class="cite-bracket">
+        [
+       </span>
+       33
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <p>
+     Despite these criticisms, the apparent Simpson's paradox remains a popular and intriguing topic in statistics and data analysis. It continues to be studied and debated by researchers and practitioners in a wide range of fields, and it serves as a valuable reminder of the importance of careful statistical analysis and the potential pitfalls of simplistic interpretations of data.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="See_also">
+      See also
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=11" title="Edit section: See also">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <ul>
+     <li>
+      <a href="/wiki/Aliasing" title="Aliasing">
+       Aliasing
+      </a>
+      – Signal processing effect
+     </li>
+     <li>
+      <a href="/wiki/Anscombe%27s_quartet" title="Anscombe's quartet">
+       Anscombe's quartet
+      </a>
+      – Four data sets with the same descriptive statistics, yet very different distributions
+     </li>
+     <li>
+      <a href="/wiki/Berkson%27s_paradox" title="Berkson's paradox">
+       Berkson's paradox
+      </a>
+      – Tendency to misinterpret statistical experiments involving conditional probabilities
+     </li>
+     <li>
+      <a href="/wiki/Cherry_picking" title="Cherry picking">
+       Cherry picking
+      </a>
+      – Fallacy of incomplete evidence
+     </li>
+     <li>
+      <a href="/wiki/Condorcet_paradox" title="Condorcet paradox">
+       Condorcet paradox
+      </a>
+      – Self-contradiction of majority rule
+     </li>
+     <li>
+      <a href="/wiki/Ecological_fallacy" title="Ecological fallacy">
+       Ecological fallacy
+      </a>
+      – Logical fallacy that occurs when group characteristics are applied to individuals
+     </li>
+     <li>
+      <a href="/wiki/Gerrymandering" title="Gerrymandering">
+       Gerrymandering
+      </a>
+      – Form of political manipulation
+     </li>
+     <li>
+      <a href="/wiki/Low_birth-weight_paradox" title="Low birth-weight paradox">
+       Low birth-weight paradox
+      </a>
+      – Statistical quirk of babies' birth weights
+     </li>
+     <li>
+      <a href="/wiki/Modifiable_areal_unit_problem" title="Modifiable areal unit problem">
+       Modifiable areal unit problem
+      </a>
+      – Source of statistical bias
+     </li>
+     <li>
+      <a class="mw-redirect" href="/wiki/Prosecutor%27s_fallacy" title="Prosecutor's fallacy">
+       Prosecutor's fallacy
+      </a>
+      – Error in thinking which involves under-valuing base rate information
+      <span class="category-annotation-with-redirected-description" style="display:none">
+       Pages displaying short descriptions of redirect targets
+      </span>
+     </li>
+     <li>
+      <a href="/wiki/Will_Rogers_phenomenon" title="Will Rogers phenomenon">
+       Will Rogers phenomenon
+      </a>
+      – Statistical phenomenon and paradox
+     </li>
+     <li>
+      <a class="mw-redirect" href="/wiki/Spurious_correlation" title="Spurious correlation">
+       Spurious correlation
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Omitted-variable_bias" title="Omitted-variable bias">
+       Omitted-variable bias
+      </a>
+     </li>
+    </ul>
+    <div class="mw-heading mw-heading2">
+     <h2 id="References">
+      References
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=12" title="Edit section: References">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <style data-mw-deduplicate="TemplateStyles:r1239543626">
+     .mw-parser-output .reflist{margin-bottom:0.5em;list-style-type:decimal}@media screen{.mw-parser-output .reflist{font-size:90%}}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}
+    </style>
+    <div class="reflist">
+     <div class="mw-references-wrap mw-references-columns">
+      <ol class="references">
+       <li id="cite_note-1">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-1">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <style data-mw-deduplicate="TemplateStyles:r1238218222">
+          .mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain;padding:0 1em 0 0}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:var(--color-error,#d33)}.mw-parser-output .cs1-visible-error{color:var(--color-error,#d33)}.mw-parser-output .cs1-maint{display:none;color:#085;margin-left:0.3em}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}@media screen{.mw-parser-output .cs1-format{font-size:95%}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911f}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911f}}
+         </style>
+         <cite class="citation journal cs1" id="CITEREFClifford_H._Wagner1982">
+          Clifford H. Wagner (February 1982). "Simpson's Paradox in Real Life".
+          <i>
+           <a href="/wiki/The_American_Statistician" title="The American Statistician">
+            The American Statistician
+           </a>
+          </i>
+          .
+          <b>
+           36
+          </b>
+          (1): 46–48.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.2307%2F2684093" rel="nofollow">
+           10.2307/2684093
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">
+           JSTOR
+          </a>
+          <a class="external text" href="https://www.jstor.org/stable/2684093" rel="nofollow">
+           2684093
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Statistician&amp;rft.atitle=Simpson%27s+Paradox+in+Real+Life&amp;rft.volume=36&amp;rft.issue=1&amp;rft.pages=46-48&amp;rft.date=1982-02&amp;rft_id=info%3Adoi%2F10.2307%2F2684093&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F2684093%23id-name%3DJSTOR&amp;rft.au=Clifford+H.+Wagner&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-2">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-2">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Holt, G. B. (2016).
+         <a class="external text" href="http://jco.ascopubs.org/content/34/9/1016.1.full" rel="nofollow">
+          Potential Simpson's paradox in multicenter study of intraperitoneal chemotherapy for ovarian cancer.
+         </a>
+         Journal of Clinical Oncology, 34(9), 1016–1016.
+        </span>
+       </li>
+       <li id="cite_note-VogelFranks2017-3">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-VogelFranks2017_3-0">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFFranksAiroldiSlavov2017">
+          Franks, Alexander;
+          <a href="/wiki/Edoardo_Airoldi" title="Edoardo Airoldi">
+           Airoldi, Edoardo
+          </a>
+          ; Slavov, Nikolai (2017).
+          <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5440056" rel="nofollow">
+           "Post-transcriptional regulation across human tissues"
+          </a>
+          .
+          <i>
+           PLOS Computational Biology
+          </i>
+          .
+          <b>
+           13
+          </b>
+          (5): e1005535.
+          <a class="mw-redirect" href="/wiki/ArXiv_(identifier)" title="ArXiv (identifier)">
+           arXiv
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://arxiv.org/abs/1506.00219" rel="nofollow">
+            1506.00219
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/Bibcode_(identifier)" title="Bibcode (identifier)">
+           Bibcode
+          </a>
+          :
+          <a class="external text" href="https://ui.adsabs.harvard.edu/abs/2017PLSCB..13E5535F" rel="nofollow">
+           2017PLSCB..13E5535F
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://doi.org/10.1371%2Fjournal.pcbi.1005535" rel="nofollow">
+            10.1371/journal.pcbi.1005535
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+           ISSN
+          </a>
+          <a class="external text" href="https://search.worldcat.org/issn/1553-7358" rel="nofollow">
+           1553-7358
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/PMC_(identifier)" title="PMC (identifier)">
+           PMC
+          </a>
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5440056" rel="nofollow">
+            5440056
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+           PMID
+          </a>
+          <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/28481885" rel="nofollow">
+           28481885
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=PLOS+Computational+Biology&amp;rft.atitle=Post-transcriptional+regulation+across+human+tissues&amp;rft.volume=13&amp;rft.issue=5&amp;rft.pages=e1005535&amp;rft.date=2017&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5440056%23id-name%3DPMC&amp;rft_id=info%3Abibcode%2F2017PLSCB..13E5535F&amp;rft_id=info%3Aarxiv%2F1506.00219&amp;rft.issn=1553-7358&amp;rft_id=info%3Adoi%2F10.1371%2Fjournal.pcbi.1005535&amp;rft_id=info%3Apmid%2F28481885&amp;rft.aulast=Franks&amp;rft.aufirst=Alexander&amp;rft.au=Airoldi%2C+Edoardo&amp;rft.au=Slavov%2C+Nikolai&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5440056&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-pearl-4">
+        <span class="mw-cite-backlink">
+         ^
+         <a href="#cite_ref-pearl_4-0">
+          <sup>
+           <i>
+            <b>
+             a
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-pearl_4-1">
+          <sup>
+           <i>
+            <b>
+             b
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-pearl_4-2">
+          <sup>
+           <i>
+            <b>
+             c
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-pearl_4-3">
+          <sup>
+           <i>
+            <b>
+             d
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-pearl_4-4">
+          <sup>
+           <i>
+            <b>
+             e
+            </b>
+           </i>
+          </sup>
+         </a>
+        </span>
+        <span class="reference-text">
+         <a href="/wiki/Judea_Pearl" title="Judea Pearl">
+          Judea Pearl
+         </a>
+         .
+         <i>
+          Causality: Models, Reasoning, and Inference
+         </i>
+         , Cambridge University Press (2000, 2nd edition 2009).
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+          ISBN
+         </a>
+         <a href="/wiki/Special:BookSources/0-521-77362-8" title="Special:BookSources/0-521-77362-8">
+          0-521-77362-8
+         </a>
+         .
+        </span>
+       </li>
+       <li id="cite_note-5">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-5">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Kock, N., &amp; Gaskins, L. (2016).
+         <a class="external text" href="http://cits.tamiu.edu/kock/pubs/journals/2016JournalIJANS_ModJCveNetCorrp/Kock_Gaskins_2016_IJANS_SimpPdox.pdf" rel="nofollow">
+          Simpson's paradox, moderation and the emergence of quadratic relationships in path models: An information systems illustration.
+         </a>
+         International Journal of Applied Nonlinear Science, 2(3), 200–234.
+        </span>
+       </li>
+       <li id="cite_note-6">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-6">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Rogier A. Kievit, Willem E. Frankenhuis, Lourens J. Waldorp and Denny Borsboom, Simpson's paradox in psychological science: a practical guide
+         <a class="external free" href="https://doi.org/10.3389/fpsyg.2013.00513" rel="nofollow">
+          https://doi.org/10.3389/fpsyg.2013.00513
+         </a>
+        </span>
+       </li>
+       <li id="cite_note-7">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-7">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Robert L. Wardrop (February 1995). "Simpson's Paradox and the Hot Hand in Basketball".
+         <i>
+          The American Statistician
+         </i>
+         ,
+         <b>
+          49 (1)
+         </b>
+         : pp. 24–28.
+        </span>
+       </li>
+       <li id="cite_note-8">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-8">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <a href="/wiki/Alan_Agresti" title="Alan Agresti">
+          Alan Agresti
+         </a>
+         (2002). "Categorical Data Analysis" (Second edition).
+         <a class="mw-redirect" href="/wiki/John_Wiley_and_Sons" title="John Wiley and Sons">
+          John Wiley and Sons
+         </a>
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+          ISBN
+         </a>
+         <a href="/wiki/Special:BookSources/0-471-36093-7" title="Special:BookSources/0-471-36093-7">
+          0-471-36093-7
+         </a>
+        </span>
+       </li>
+       <li id="cite_note-9">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-9">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFSimpson,_Edward_H.1951">
+          Simpson, Edward H. (1951). "The Interpretation of Interaction in Contingency Tables".
+          <i>
+           Journal of the Royal Statistical Society, Series B
+          </i>
+          .
+          <b>
+           13
+          </b>
+          (2): 238–241.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1111%2Fj.2517-6161.1951.tb00088.x" rel="nofollow">
+           10.1111/j.2517-6161.1951.tb00088.x
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Royal+Statistical+Society%2C+Series+B&amp;rft.atitle=The+Interpretation+of+Interaction+in+Contingency+Tables&amp;rft.volume=13&amp;rft.issue=2&amp;rft.pages=238-241&amp;rft.date=1951&amp;rft_id=info%3Adoi%2F10.1111%2Fj.2517-6161.1951.tb00088.x&amp;rft.au=Simpson%2C+Edward+H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-10">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-10">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFPearsonLeeBramley-Moore1899">
+          <a href="/wiki/Karl_Pearson" title="Karl Pearson">
+           Pearson, Karl
+          </a>
+          ; Lee, Alice; Bramley-Moore, Lesley (1899).
+          <a class="external text" href="https://doi.org/10.1098%2Frsta.1899.0006" rel="nofollow">
+           "Genetic (reproductive) selection: Inheritance of fertility in man, and of fecundity in thoroughbred racehorses"
+          </a>
+          .
+          <i>
+           <a href="/wiki/Philosophical_Transactions_of_the_Royal_Society_A" title="Philosophical Transactions of the Royal Society A">
+            Philosophical Transactions of the Royal Society A
+           </a>
+          </i>
+          .
+          <b>
+           192
+          </b>
+          : 257–330.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://doi.org/10.1098%2Frsta.1899.0006" rel="nofollow">
+            10.1098/rsta.1899.0006
+           </a>
+          </span>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Philosophical+Transactions+of+the+Royal+Society+A&amp;rft.atitle=Genetic+%28reproductive%29+selection%3A+Inheritance+of+fertility+in+man%2C+and+of+fecundity+in+thoroughbred+racehorses&amp;rft.volume=192&amp;rft.pages=257-330&amp;rft.date=1899&amp;rft_id=info%3Adoi%2F10.1098%2Frsta.1899.0006&amp;rft.aulast=Pearson&amp;rft.aufirst=Karl&amp;rft.au=Lee%2C+Alice&amp;rft.au=Bramley-Moore%2C+Lesley&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1098%252Frsta.1899.0006&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-yule-11">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-yule_11-0">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFG._U._Yule1903">
+          G. U. Yule (1903).
+          <a class="external text" href="https://zenodo.org/record/1431599" rel="nofollow">
+           "Notes on the Theory of Association of Attributes in Statistics"
+          </a>
+          .
+          <i>
+           <a href="/wiki/Biometrika" title="Biometrika">
+            Biometrika
+           </a>
+          </i>
+          .
+          <b>
+           2
+          </b>
+          (2): 121–134.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1093%2Fbiomet%2F2.2.121" rel="nofollow">
+           10.1093/biomet/2.2.121
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Biometrika&amp;rft.atitle=Notes+on+the+Theory+of+Association+of+Attributes+in+Statistics&amp;rft.volume=2&amp;rft.issue=2&amp;rft.pages=121-134&amp;rft.date=1903&amp;rft_id=info%3Adoi%2F10.1093%2Fbiomet%2F2.2.121&amp;rft.au=G.+U.+Yule&amp;rft_id=https%3A%2F%2Fzenodo.org%2Frecord%2F1431599&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-blyth-72-12">
+        <span class="mw-cite-backlink">
+         ^
+         <a href="#cite_ref-blyth-72_12-0">
+          <sup>
+           <i>
+            <b>
+             a
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-blyth-72_12-1">
+          <sup>
+           <i>
+            <b>
+             b
+            </b>
+           </i>
+          </sup>
+         </a>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFColin_R._Blyth1972">
+          Colin R. Blyth (June 1972). "On Simpson's Paradox and the Sure-Thing Principle".
+          <i>
+           Journal of the American Statistical Association
+          </i>
+          .
+          <b>
+           67
+          </b>
+          (338): 364–366.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.2307%2F2284382" rel="nofollow">
+           10.2307/2284382
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">
+           JSTOR
+          </a>
+          <a class="external text" href="https://www.jstor.org/stable/2284382" rel="nofollow">
+           2284382
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+American+Statistical+Association&amp;rft.atitle=On+Simpson%27s+Paradox+and+the+Sure-Thing+Principle&amp;rft.volume=67&amp;rft.issue=338&amp;rft.pages=364-366&amp;rft.date=1972-06&amp;rft_id=info%3Adoi%2F10.2307%2F2284382&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F2284382%23id-name%3DJSTOR&amp;rft.au=Colin+R.+Blyth&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-13">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-13">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFI._J._Good,_Y._Mittal1987">
+          <a href="/wiki/I._J._Good" title="I. J. Good">
+           I. J. Good
+          </a>
+          ,
+          <a href="/wiki/Yash_Mittal" title="Yash Mittal">
+           Y. Mittal
+          </a>
+          (June 1987).
+          <a class="external text" href="https://doi.org/10.1214%2Faos%2F1176350369" rel="nofollow">
+           "The Amalgamation and Geometry of Two-by-Two Contingency Tables"
+          </a>
+          .
+          <i>
+           <a class="mw-redirect" href="/wiki/The_Annals_of_Statistics" title="The Annals of Statistics">
+            The Annals of Statistics
+           </a>
+          </i>
+          .
+          <b>
+           15
+          </b>
+          (2): 694–711.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://doi.org/10.1214%2Faos%2F1176350369" rel="nofollow">
+            10.1214/aos/1176350369
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+           ISSN
+          </a>
+          <a class="external text" href="https://search.worldcat.org/issn/0090-5364" rel="nofollow">
+           0090-5364
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">
+           JSTOR
+          </a>
+          <a class="external text" href="https://www.jstor.org/stable/2241334" rel="nofollow">
+           2241334
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Annals+of+Statistics&amp;rft.atitle=The+Amalgamation+and+Geometry+of+Two-by-Two+Contingency+Tables&amp;rft.volume=15&amp;rft.issue=2&amp;rft.pages=694-711&amp;rft.date=1987-06&amp;rft.issn=0090-5364&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F2241334%23id-name%3DJSTOR&amp;rft_id=info%3Adoi%2F10.1214%2Faos%2F1176350369&amp;rft.au=I.+J.+Good%2C+Y.+Mittal&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1214%252Faos%252F1176350369&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-14">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-14">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation book cs1" id="CITEREFEllenberg2021">
+          Ellenberg, Jordan (May 25, 2021).
+          <a class="external text" href="https://www.worldcat.org/oclc/1226171979" rel="nofollow">
+           <i>
+            Shape: The Hidden Geometry of Information, Biology, Strategy, Democracy and Everything Else
+           </i>
+          </a>
+          . New York:
+          <a class="mw-redirect" href="/wiki/Penguin_Press" title="Penguin Press">
+           Penguin Press
+          </a>
+          . p. 228.
+          <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+           ISBN
+          </a>
+          <a href="/wiki/Special:BookSources/978-1-9848-7905-9" title="Special:BookSources/978-1-9848-7905-9">
+           <bdi>
+            978-1-9848-7905-9
+           </bdi>
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/OCLC_(identifier)" title="OCLC (identifier)">
+           OCLC
+          </a>
+          <a class="external text" href="https://search.worldcat.org/oclc/1226171979" rel="nofollow">
+           1226171979
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Shape%3A+The+Hidden+Geometry+of+Information%2C+Biology%2C+Strategy%2C+Democracy+and+Everything+Else&amp;rft.place=New+York&amp;rft.pages=228&amp;rft.pub=Penguin+Press&amp;rft.date=2021-05-25&amp;rft_id=info%3Aoclcnum%2F1226171979&amp;rft.isbn=978-1-9848-7905-9&amp;rft.aulast=Ellenberg&amp;rft.aufirst=Jordan&amp;rft_id=https%3A%2F%2Fwww.worldcat.org%2Foclc%2F1226171979&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-freedman-15">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-freedman_15-0">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <a href="/wiki/David_A._Freedman" title="David A. Freedman">
+          David Freedman
+         </a>
+         , Robert Pisani, and Roger Purves (2007),
+         <i>
+          Statistics
+         </i>
+         (4th edition),
+         <a href="/wiki/W._W._Norton_%26_Company" title="W. W. Norton &amp; Company">
+          W. W. Norton
+         </a>
+         .
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+          ISBN
+         </a>
+         <a href="/wiki/Special:BookSources/0-393-92972-8" title="Special:BookSources/0-393-92972-8">
+          0-393-92972-8
+         </a>
+         .
+        </span>
+       </li>
+       <li id="cite_note-Bickel-16">
+        <span class="mw-cite-backlink">
+         ^
+         <a href="#cite_ref-Bickel_16-0">
+          <sup>
+           <i>
+            <b>
+             a
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-Bickel_16-1">
+          <sup>
+           <i>
+            <b>
+             b
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-Bickel_16-2">
+          <sup>
+           <i>
+            <b>
+             c
+            </b>
+           </i>
+          </sup>
+         </a>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFP.J._Bickel,_E.A._Hammel_and_J.W._O'Connell1975">
+          <a href="/wiki/Peter_J._Bickel" title="Peter J. Bickel">
+           P.J. Bickel
+          </a>
+          , E.A. Hammel and J.W. O'Connell (1975).
+          <a class="external text" href="http://homepage.stat.uiowa.edu/~mbognar/1030/Bickel-Berkeley.pdf" rel="nofollow">
+           "Sex Bias in Graduate Admissions: Data From Berkeley"
+          </a>
+          <span class="cs1-format">
+           (PDF)
+          </span>
+          .
+          <i>
+           <a href="/wiki/Science_(journal)" title="Science (journal)">
+            Science
+           </a>
+          </i>
+          .
+          <b>
+           187
+          </b>
+          (4175): 398–404.
+          <a class="mw-redirect" href="/wiki/Bibcode_(identifier)" title="Bibcode (identifier)">
+           Bibcode
+          </a>
+          :
+          <a class="external text" href="https://ui.adsabs.harvard.edu/abs/1975Sci...187..398B" rel="nofollow">
+           1975Sci...187..398B
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1126%2Fscience.187.4175.398" rel="nofollow">
+           10.1126/science.187.4175.398
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+           PMID
+          </a>
+          <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/17835295" rel="nofollow">
+           17835295
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/S2CID_(identifier)" title="S2CID (identifier)">
+           S2CID
+          </a>
+          <a class="external text" href="https://api.semanticscholar.org/CorpusID:15278703" rel="nofollow">
+           15278703
+          </a>
+          .
+          <a class="external text" href="https://web.archive.org/web/20160604220121/http://homepage.stat.uiowa.edu/~mbognar/1030/Bickel-Berkeley.pdf" rel="nofollow">
+           Archived
+          </a>
+          <span class="cs1-format">
+           (PDF)
+          </span>
+          from the original on 2016-06-04.
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Science&amp;rft.atitle=Sex+Bias+in+Graduate+Admissions%3A+Data+From+Berkeley&amp;rft.volume=187&amp;rft.issue=4175&amp;rft.pages=398-404&amp;rft.date=1975&amp;rft_id=info%3Adoi%2F10.1126%2Fscience.187.4175.398&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A15278703%23id-name%3DS2CID&amp;rft_id=info%3Apmid%2F17835295&amp;rft_id=info%3Abibcode%2F1975Sci...187..398B&amp;rft.au=P.J.+Bickel%2C+E.A.+Hammel+and+J.W.+O%27Connell&amp;rft_id=http%3A%2F%2Fhomepage.stat.uiowa.edu%2F~mbognar%2F1030%2FBickel-Berkeley.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-17">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-17">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFC._R._CharigD._R._WebbS._R._PayneJ._E._Wickham1986">
+          C. R. Charig; D. R. Webb; S. R. Payne; J. E. Wickham (29 March 1986).
+          <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1339981" rel="nofollow">
+           "Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy"
+          </a>
+          .
+          <i>
+           <a class="mw-redirect" href="/wiki/Br_Med_J_(Clin_Res_Ed)" title="Br Med J (Clin Res Ed)">
+            Br Med J (Clin Res Ed)
+           </a>
+          </i>
+          .
+          <b>
+           292
+          </b>
+          (6524): 879–882.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1136%2Fbmj.292.6524.879" rel="nofollow">
+           10.1136/bmj.292.6524.879
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/PMC_(identifier)" title="PMC (identifier)">
+           PMC
+          </a>
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1339981" rel="nofollow">
+            1339981
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+           PMID
+          </a>
+          <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/3083922" rel="nofollow">
+           3083922
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Br+Med+J+%28Clin+Res+Ed%29&amp;rft.atitle=Comparison+of+treatment+of+renal+calculi+by+open+surgery%2C+percutaneous+nephrolithotomy%2C+and+extracorporeal+shockwave+lithotripsy&amp;rft.volume=292&amp;rft.issue=6524&amp;rft.pages=879-882&amp;rft.date=1986-03-29&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC1339981%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F3083922&amp;rft_id=info%3Adoi%2F10.1136%2Fbmj.292.6524.879&amp;rft.au=C.+R.+Charig&amp;rft.au=D.+R.+Webb&amp;rft.au=S.+R.+Payne&amp;rft.au=J.+E.+Wickham&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC1339981&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-KidneyParadox-18">
+        <span class="mw-cite-backlink">
+         ^
+         <a href="#cite_ref-KidneyParadox_18-0">
+          <sup>
+           <i>
+            <b>
+             a
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-KidneyParadox_18-1">
+          <sup>
+           <i>
+            <b>
+             b
+            </b>
+           </i>
+          </sup>
+         </a>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFSteven_A._JuliousMark_A._Mullee1994">
+          Steven A. Julious; Mark A. Mullee (3 December 1994).
+          <a class="external text" href="http://bmj.bmjjournals.com/cgi/content/full/309/6967/1480" rel="nofollow">
+           "Confounding and Simpson's paradox"
+          </a>
+          .
+          <i>
+           <a class="mw-redirect" href="/wiki/BMJ" title="BMJ">
+            BMJ
+           </a>
+          </i>
+          .
+          <b>
+           309
+          </b>
+          (6967): 1480–1481.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1136%2Fbmj.309.6967.1480" rel="nofollow">
+           10.1136/bmj.309.6967.1480
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/PMC_(identifier)" title="PMC (identifier)">
+           PMC
+          </a>
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2541623" rel="nofollow">
+            2541623
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+           PMID
+          </a>
+          <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/7804052" rel="nofollow">
+           7804052
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BMJ&amp;rft.atitle=Confounding+and+Simpson%27s+paradox&amp;rft.volume=309&amp;rft.issue=6967&amp;rft.pages=1480-1481&amp;rft.date=1994-12-03&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2541623%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F7804052&amp;rft_id=info%3Adoi%2F10.1136%2Fbmj.309.6967.1480&amp;rft.au=Steven+A.+Julious&amp;rft.au=Mark+A.+Mullee&amp;rft_id=http%3A%2F%2Fbmj.bmjjournals.com%2Fcgi%2Fcontent%2Ffull%2F309%2F6967%2F1480&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-19">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-19">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation book cs1" id="CITEREFJaynesBretthorst2003">
+          Jaynes, E. T.; Bretthorst, G. Larry (2003). "8.10 Pooling the data".
+          <i>
+           Probability theory: the logic of science
+          </i>
+          . Cambridge, UK ; New York, NY: Cambridge University Press.
+          <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+           ISBN
+          </a>
+          <a href="/wiki/Special:BookSources/978-0-521-59271-0" title="Special:BookSources/978-0-521-59271-0">
+           <bdi>
+            978-0-521-59271-0
+           </bdi>
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=8.10+Pooling+the+data&amp;rft.btitle=Probability+theory%3A+the+logic+of+science&amp;rft.place=Cambridge%2C+UK+%3B+New+York%2C+NY&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2003&amp;rft.isbn=978-0-521-59271-0&amp;rft.aulast=Jaynes&amp;rft.aufirst=E.+T.&amp;rft.au=Bretthorst%2C+G.+Larry&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-RossBaseball-20">
+        <span class="mw-cite-backlink">
+         ^
+         <a href="#cite_ref-RossBaseball_20-0">
+          <sup>
+           <i>
+            <b>
+             a
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-RossBaseball_20-1">
+          <sup>
+           <i>
+            <b>
+             b
+            </b>
+           </i>
+          </sup>
+         </a>
+        </span>
+        <span class="reference-text">
+         Ken Ross. "
+         <i>
+          A Mathematician at the Ballpark: Odds and Probabilities for Baseball Fans (Paperback)
+         </i>
+         " Pi Press, 2004.
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+          ISBN
+         </a>
+         <a href="/wiki/Special:BookSources/0-13-147990-3" title="Special:BookSources/0-13-147990-3">
+          0-13-147990-3
+         </a>
+         . 12–13
+        </span>
+       </li>
+       <li id="cite_note-21">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-21">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Statistics available from
+         <a class="mw-redirect" href="/wiki/Baseball-Reference.com" title="Baseball-Reference.com">
+          Baseball-Reference.com
+         </a>
+         :
+         <a class="external text" href="https://www.baseball-reference.com/j/jeterde01.shtml" rel="nofollow">
+          Data for Derek Jeter
+         </a>
+         ;
+         <a class="external text" href="https://www.baseball-reference.com/j/justida01.shtml" rel="nofollow">
+          Data for David Justice
+         </a>
+         .
+        </span>
+       </li>
+       <li id="cite_note-22">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-22">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFKocik_Jerzy2001">
+          Kocik Jerzy (2001).
+          <a class="external text" href="http://www.math.siu.edu/kocik/papers/simpson2.pdf" rel="nofollow">
+           "Proofs without Words: Simpson's Paradox"
+          </a>
+          <span class="cs1-format">
+           (PDF)
+          </span>
+          .
+          <i>
+           <a href="/wiki/Mathematics_Magazine" title="Mathematics Magazine">
+            Mathematics Magazine
+           </a>
+          </i>
+          .
+          <b>
+           74
+          </b>
+          (5): 399.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.2307%2F2691038" rel="nofollow">
+           10.2307/2691038
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">
+           JSTOR
+          </a>
+          <a class="external text" href="https://www.jstor.org/stable/2691038" rel="nofollow">
+           2691038
+          </a>
+          .
+          <a class="external text" href="https://web.archive.org/web/20100612220747/http://www.math.siu.edu/kocik/papers/simpson2.pdf" rel="nofollow">
+           Archived
+          </a>
+          <span class="cs1-format">
+           (PDF)
+          </span>
+          from the original on 2010-06-12.
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Mathematics+Magazine&amp;rft.atitle=Proofs+without+Words%3A+Simpson%27s+Paradox&amp;rft.volume=74&amp;rft.issue=5&amp;rft.pages=399&amp;rft.date=2001&amp;rft_id=info%3Adoi%2F10.2307%2F2691038&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F2691038%23id-name%3DJSTOR&amp;rft.au=Kocik+Jerzy&amp;rft_id=http%3A%2F%2Fwww.math.siu.edu%2Fkocik%2Fpapers%2Fsimpson2.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-23">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-23">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Berman, S. DalleMule, L.  Greene, M., Lucker, J. (2012), "
+         <a class="external text" href="http://www.statslife.org.uk/the-statistics-dictionary/2012-simpson-s-paradox-a-cautionary-tale-in-advanced-analytics" rel="nofollow">
+          Simpson's Paradox: A Cautionary Tale in Advanced Analytics
+         </a>
+         <a class="external text" href="https://web.archive.org/web/20200510171740/https://www.statslife.org.uk/the-statistics-dictionary/2012-simpson-s-paradox-a-cautionary-tale-in-advanced-analytics" rel="nofollow">
+          Archived
+         </a>
+         2020-05-10 at the
+         <a href="/wiki/Wayback_Machine" title="Wayback Machine">
+          Wayback Machine
+         </a>
+         ",
+         <i>
+          <a href="/wiki/Significance_(magazine)" title="Significance (magazine)">
+           Significance
+          </a>
+         </i>
+         .
+        </span>
+       </li>
+       <li id="cite_note-24">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-24">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFMarios_G._PavlidesMichael_D._Perlman2009">
+          Marios G. Pavlides &amp; Michael D. Perlman (August 2009). "How Likely is Simpson's Paradox?".
+          <i>
+           <a href="/wiki/The_American_Statistician" title="The American Statistician">
+            The American Statistician
+           </a>
+          </i>
+          .
+          <b>
+           63
+          </b>
+          (3): 226–233.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1198%2Ftast.2009.09007" rel="nofollow">
+           10.1198/tast.2009.09007
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/S2CID_(identifier)" title="S2CID (identifier)">
+           S2CID
+          </a>
+          <a class="external text" href="https://api.semanticscholar.org/CorpusID:17481510" rel="nofollow">
+           17481510
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Statistician&amp;rft.atitle=How+Likely+is+Simpson%27s+Paradox%3F&amp;rft.volume=63&amp;rft.issue=3&amp;rft.pages=226-233&amp;rft.date=2009-08&amp;rft_id=info%3Adoi%2F10.1198%2Ftast.2009.09007&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A17481510%23id-name%3DS2CID&amp;rft.au=Marios+G.+Pavlides&amp;rft.au=Michael+D.+Perlman&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-25">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-25">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         Kock, N. (2015).
+         <a class="external text" href="http://cits.tamiu.edu/kock/pubs/journals/2015JournalIJeC/Kock_2015_IJeC_SimpPdox.pdf" rel="nofollow">
+          How likely is Simpson's paradox in path models?
+         </a>
+         International Journal of e-Collaboration, 11(1), 1–7.
+        </span>
+       </li>
+       <li id="cite_note-26">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-26">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFNortonDivine2015">
+          Norton, H. James; Divine, George (August 2015).
+          <a class="external text" href="https://doi.org/10.1111%2Fj.1740-9713.2015.00844.x" rel="nofollow">
+           "Simpson's paradox ... and how to avoid it"
+          </a>
+          .
+          <i>
+           Significance
+          </i>
+          .
+          <b>
+           12
+          </b>
+          (4): 40–43.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://doi.org/10.1111%2Fj.1740-9713.2015.00844.x" rel="nofollow">
+            10.1111/j.1740-9713.2015.00844.x
+           </a>
+          </span>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Significance&amp;rft.atitle=Simpson%27s+paradox+...+and+how+to+avoid+it&amp;rft.volume=12&amp;rft.issue=4&amp;rft.pages=40-43&amp;rft.date=2015-08&amp;rft_id=info%3Adoi%2F10.1111%2Fj.1740-9713.2015.00844.x&amp;rft.aulast=Norton&amp;rft.aufirst=H.+James&amp;rft.au=Divine%2C+George&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1111%252Fj.1740-9713.2015.00844.x&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-27">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-27">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFPearl2014">
+          Pearl, Judea (2014). "Understanding Simpson's Paradox".
+          <i>
+           The American Statistician
+          </i>
+          .
+          <b>
+           68
+          </b>
+          (1): 8–13.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.2139%2Fssrn.2343788" rel="nofollow">
+           10.2139/ssrn.2343788
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/S2CID_(identifier)" title="S2CID (identifier)">
+           S2CID
+          </a>
+          <a class="external text" href="https://api.semanticscholar.org/CorpusID:2626833" rel="nofollow">
+           2626833
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Statistician&amp;rft.atitle=Understanding+Simpson%27s+Paradox&amp;rft.volume=68&amp;rft.issue=1&amp;rft.pages=8-13&amp;rft.date=2014&amp;rft_id=info%3Adoi%2F10.2139%2Fssrn.2343788&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A2626833%23id-name%3DS2CID&amp;rft.aulast=Pearl&amp;rft.aufirst=Judea&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-28">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-28">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFPearl1993">
+          Pearl, Judea (1993).
+          <a class="external text" href="https://doi.org/10.1214%2Fss%2F1177010894" rel="nofollow">
+           "Graphical Models, Causality, and Intervention"
+          </a>
+          .
+          <i>
+           Statistical Science
+          </i>
+          .
+          <b>
+           8
+          </b>
+          (3): 266–269.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://doi.org/10.1214%2Fss%2F1177010894" rel="nofollow">
+            10.1214/ss/1177010894
+           </a>
+          </span>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Statistical+Science&amp;rft.atitle=Graphical+Models%2C+Causality%2C+and+Intervention&amp;rft.volume=8&amp;rft.issue=3&amp;rft.pages=266-269&amp;rft.date=1993&amp;rft_id=info%3Adoi%2F10.1214%2Fss%2F1177010894&amp;rft.aulast=Pearl&amp;rft.aufirst=Judea&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1214%252Fss%252F1177010894&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-pearl-bow-29">
+        <span class="mw-cite-backlink">
+         ^
+         <a href="#cite_ref-pearl-bow_29-0">
+          <sup>
+           <i>
+            <b>
+             a
+            </b>
+           </i>
+          </sup>
+         </a>
+         <a href="#cite_ref-pearl-bow_29-1">
+          <sup>
+           <i>
+            <b>
+             b
+            </b>
+           </i>
+          </sup>
+         </a>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation book cs1" id="CITEREFPearlMackenzie2018">
+          Pearl, J.; Mackenzie, D. (2018).
+          <i>
+           The Book of Why: The New Science of Cause and Effect
+          </i>
+          . New York, NY: Basic Books.
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Book+of+Why%3A+The+New+Science+of+Cause+and+Effect&amp;rft.place=New+York%2C+NY&amp;rft.pub=Basic+Books&amp;rft.date=2018&amp;rft.aulast=Pearl&amp;rft.aufirst=J.&amp;rft.au=Mackenzie%2C+D.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-30">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-30">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFShpitserPearl2006">
+          Shpitser, I.; Pearl, J. (2006). Dechter, R.; Richardson, T.S. (eds.). "Identification of Conditional Interventional Distributions".
+          <i>
+           Proceedings of the Twenty-Second Conference on Uncertainty in Artificial Intelligence
+          </i>
+          . Corvallis, OR: AUAI Press: 437–444.
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+Twenty-Second+Conference+on+Uncertainty+in+Artificial+Intelligence&amp;rft.atitle=Identification+of+Conditional+Interventional+Distributions&amp;rft.pages=437-444&amp;rft.date=2006&amp;rft.aulast=Shpitser&amp;rft.aufirst=I.&amp;rft.au=Pearl%2C+J.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-31">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-31">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFBlyth1972">
+          Blyth, Colin R. (June 1972).
+          <a class="external text" href="http://www.tandfonline.com/doi/abs/10.1080/01621459.1972.10482387" rel="nofollow">
+           "On Simpson's Paradox and the Sure-Thing Principle"
+          </a>
+          .
+          <i>
+           Journal of the American Statistical Association
+          </i>
+          .
+          <b>
+           67
+          </b>
+          (338): 364–366.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1080%2F01621459.1972.10482387" rel="nofollow">
+           10.1080/01621459.1972.10482387
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+           ISSN
+          </a>
+          <a class="external text" href="https://search.worldcat.org/issn/0162-1459" rel="nofollow">
+           0162-1459
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+American+Statistical+Association&amp;rft.atitle=On+Simpson%27s+Paradox+and+the+Sure-Thing+Principle&amp;rft.volume=67&amp;rft.issue=338&amp;rft.pages=364-366&amp;rft.date=1972-06&amp;rft_id=info%3Adoi%2F10.1080%2F01621459.1972.10482387&amp;rft.issn=0162-1459&amp;rft.aulast=Blyth&amp;rft.aufirst=Colin+R.&amp;rft_id=http%3A%2F%2Fwww.tandfonline.com%2Fdoi%2Fabs%2F10.1080%2F01621459.1972.10482387&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-32">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-32">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFGreenland2021">
+          Greenland, Sander (2021-11-01).
+          <a class="external text" href="https://www.jclinepi.com/article/S0895-4356(21)00182-7/fulltext" rel="nofollow">
+           "Noncollapsibility, confounding, and sparse-data bias. Part 2: What should researchers make of persistent controversies about the odds ratio?"
+          </a>
+          .
+          <i>
+           Journal of Clinical Epidemiology
+          </i>
+          .
+          <b>
+           139
+          </b>
+          : 264–268.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://doi.org/10.1016%2Fj.jclinepi.2021.06.004" rel="nofollow">
+            10.1016/j.jclinepi.2021.06.004
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+           ISSN
+          </a>
+          <a class="external text" href="https://search.worldcat.org/issn/0895-4356" rel="nofollow">
+           0895-4356
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+           PMID
+          </a>
+          <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/34119647" rel="nofollow">
+           34119647
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Clinical+Epidemiology&amp;rft.atitle=Noncollapsibility%2C+confounding%2C+and+sparse-data+bias.+Part+2%3A+What+should+researchers+make+of+persistent+controversies+about+the+odds+ratio%3F&amp;rft.volume=139&amp;rft.pages=264-268&amp;rft.date=2021-11-01&amp;rft.issn=0895-4356&amp;rft_id=info%3Apmid%2F34119647&amp;rft_id=info%3Adoi%2F10.1016%2Fj.jclinepi.2021.06.004&amp;rft.aulast=Greenland&amp;rft.aufirst=Sander&amp;rft_id=https%3A%2F%2Fwww.jclinepi.com%2Farticle%2FS0895-4356%2821%2900182-7%2Ffulltext&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+       <li id="cite_note-33">
+        <span class="mw-cite-backlink">
+         <b>
+          <a href="#cite_ref-33">
+           ^
+          </a>
+         </b>
+        </span>
+        <span class="reference-text">
+         <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+         <cite class="citation journal cs1" id="CITEREFHernánClaytonKeiding2011">
+          Hernán, Miguel A.; Clayton, David; Keiding, Niels (June 2011).
+          <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3147074" rel="nofollow">
+           "The Simpson's paradox unraveled"
+          </a>
+          .
+          <i>
+           International Journal of Epidemiology
+          </i>
+          .
+          <b>
+           40
+          </b>
+          (3): 780–785.
+          <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+           doi
+          </a>
+          :
+          <a class="external text" href="https://doi.org/10.1093%2Fije%2Fdyr041" rel="nofollow">
+           10.1093/ije/dyr041
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+           ISSN
+          </a>
+          <a class="external text" href="https://search.worldcat.org/issn/1464-3685" rel="nofollow">
+           1464-3685
+          </a>
+          .
+          <a class="mw-redirect" href="/wiki/PMC_(identifier)" title="PMC (identifier)">
+           PMC
+          </a>
+          <span class="id-lock-free" title="Freely accessible">
+           <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3147074" rel="nofollow">
+            3147074
+           </a>
+          </span>
+          .
+          <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+           PMID
+          </a>
+          <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/21454324" rel="nofollow">
+           21454324
+          </a>
+          .
+         </cite>
+         <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Epidemiology&amp;rft.atitle=The+Simpson%27s+paradox+unraveled&amp;rft.volume=40&amp;rft.issue=3&amp;rft.pages=780-785&amp;rft.date=2011-06&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3147074%23id-name%3DPMC&amp;rft.issn=1464-3685&amp;rft_id=info%3Apmid%2F21454324&amp;rft_id=info%3Adoi%2F10.1093%2Fije%2Fdyr041&amp;rft.aulast=Hern%C3%A1n&amp;rft.aufirst=Miguel+A.&amp;rft.au=Clayton%2C+David&amp;rft.au=Keiding%2C+Niels&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3147074&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimpson%27s+paradox">
+         </span>
+        </span>
+       </li>
+      </ol>
+     </div>
+    </div>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Bibliography">
+      Bibliography
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=13" title="Edit section: Bibliography">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <ul>
+     <li>
+      <a href="/wiki/Leila_Schneps" title="Leila Schneps">
+       Leila Schneps
+      </a>
+      and
+      <a href="/wiki/Coralie_Colmez" title="Coralie Colmez">
+       Coralie Colmez
+      </a>
+      ,
+      <i>
+       <a href="/wiki/Math_on_Trial" title="Math on Trial">
+        Math on trial. How numbers get used and abused in the courtroom
+       </a>
+      </i>
+      , Basic Books, 2013.
+      <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+      <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+       ISBN
+      </a>
+      <a href="/wiki/Special:BookSources/978-0-465-03292-1" title="Special:BookSources/978-0-465-03292-1">
+       978-0-465-03292-1
+      </a>
+      . (Sixth chapter: "Math error number 6: Simpson's paradox. The Berkeley sex bias case: discrimination detection").
+     </li>
+    </ul>
+    <div class="mw-heading mw-heading2">
+     <h2 id="External_links">
+      External links
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Simpson%27s_paradox&amp;action=edit&amp;section=14" title="Edit section: External links">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <style data-mw-deduplicate="TemplateStyles:r1235681985">
+     .mw-parser-output .side-box{margin:4px 0;box-sizing:border-box;border:1px solid #aaa;font-size:88%;line-height:1.25em;background-color:var(--background-color-interactive-subtle,#f8f9fa);display:flow-root}.mw-parser-output .side-box-abovebelow,.mw-parser-output .side-box-text{padding:0.25em 0.9em}.mw-parser-output .side-box-image{padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .side-box-imageright{padding:2px 0.9em 2px 0;text-align:center}@media(min-width:500px){.mw-parser-output .side-box-flex{display:flex;align-items:center}.mw-parser-output .side-box-text{flex:1;min-width:0}}@media(min-width:720px){.mw-parser-output .side-box{width:238px}.mw-parser-output .side-box-right{clear:right;float:right;margin-left:1em}.mw-parser-output .side-box-left{margin-right:1em}}
+    </style>
+    <style data-mw-deduplicate="TemplateStyles:r1237033735">
+     @media print{body.ns-0 .mw-parser-output .sistersitebox{display:none!important}}@media screen{html.skin-theme-clientpref-night .mw-parser-output .sistersitebox img[src*="Wiktionary-logo-en-v2.svg"]{background-color:white}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .sistersitebox img[src*="Wiktionary-logo-en-v2.svg"]{background-color:white}}
+    </style>
+    <div class="side-box side-box-right plainlinks sistersitebox">
+     <style data-mw-deduplicate="TemplateStyles:r1126788409">
+      .mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}
+     </style>
+     <div class="side-box-flex">
+      <div class="side-box-image">
+       <span class="noviewer" typeof="mw:File">
+        <span>
+         <img alt="" class="mw-file-element" data-file-height="1376" data-file-width="1024" decoding="async" height="40" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" width="30"/>
+        </span>
+       </span>
+      </div>
+      <div class="side-box-text plainlist">
+       Wikimedia Commons has media related to
+       <span style="font-weight: bold; font-style: italic;">
+        <a class="extiw" href="https://commons.wikimedia.org/wiki/Category:Simpson%27s_paradox" title="commons:Category:Simpson's paradox">
+         Simpson's paradox
+        </a>
+       </span>
+       .
+      </div>
+     </div>
+    </div>
+    <ul>
+     <li>
+      <a class="external text" href="http://plato.stanford.edu/entries/paradox-simpson/" rel="nofollow">
+       Simpson's Paradox
+      </a>
+      at the
+      <a href="/wiki/Stanford_Encyclopedia_of_Philosophy" title="Stanford Encyclopedia of Philosophy">
+       Stanford Encyclopedia of Philosophy
+      </a>
+      , by Jan Sprenger and Naftali Weinberger.
+     </li>
+     <li>
+      <a class="external text" href="http://ed.ted.com/lessons/how-statistics-can-be-misleading-mark-liddell" rel="nofollow">
+       How statistics can be misleading – Mark Liddell
+      </a>
+      – TED-Ed video and lesson.
+     </li>
+     <li>
+      <a href="/wiki/Judea_Pearl" title="Judea Pearl">
+       Pearl, Judea
+      </a>
+      ,
+      <a class="external text" href="https://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf" rel="nofollow">
+       "Understanding Simpson's Paradox"
+      </a>
+      (PDF)
+     </li>
+     <li>
+      <a class="external text" href="http://www.cut-the-knot.org/Curriculum/Algebra/SimpsonParadox.shtml" rel="nofollow">
+       Simpson's Paradox
+      </a>
+      , a short article by
+      <a href="/wiki/Alexander_Bogomolny" title="Alexander Bogomolny">
+       Alexander Bogomolny
+      </a>
+      on the vector interpretation of Simpson's paradox
+     </li>
+     <li>
+      <a class="external text" href="https://www.wsj.com/articles/SB125970744553071829" rel="nofollow">
+       The Wall Street Journal column "The Numbers Guy"
+      </a>
+      for December 2, 2009 dealt with recent instances of Simpson's paradox in the news. Notably a Simpson's paradox in the comparison of unemployment rates of the 2009 recession with the 1983 recession.
+     </li>
+     <li>
+      <a class="external text" href="http://www.stateoftheusa.org/content/at-the-plate-a-statistical-puz.php" rel="nofollow">
+       At the Plate, a Statistical Puzzler: Understanding Simpson's Paradox
+      </a>
+      by Arthur Smith, August 20, 2010
+     </li>
+     <li>
+      <a class="external text" href="https://www.youtube.com/watch?v=ebEkn-BiW5k" rel="nofollow">
+       Simpson's Paradox
+      </a>
+      , a video by Henry Reich of
+      <a href="/wiki/MinutePhysics" title="MinutePhysics">
+       MinutePhysics
+      </a>
+     </li>
+    </ul>
+    <style data-mw-deduplicate="TemplateStyles:r1130092004">
+     .mw-parser-output .portal-bar{font-size:88%;font-weight:bold;display:flex;justify-content:center;align-items:baseline}.mw-parser-output .portal-bar-bordered{padding:0 2em;background-color:#fdfdfd;border:1px solid #a2a9b1;clear:both;margin:1em auto 0}.mw-parser-output .portal-bar-related{font-size:100%;justify-content:flex-start}.mw-parser-output .portal-bar-unbordered{padding:0 1.7em;margin-left:0}.mw-parser-output .portal-bar-header{margin:0 1em 0 0.5em;flex:0 0 auto;min-height:24px}.mw-parser-output .portal-bar-content{display:flex;flex-flow:row wrap;flex:0 1 auto;padding:0.15em 0;column-gap:1em;align-items:baseline;margin:0;list-style:none}.mw-parser-output .portal-bar-content-related{margin:0;list-style:none}.mw-parser-output .portal-bar-item{display:inline-block;margin:0.15em 0.2em;min-height:24px;line-height:24px}@media screen and (max-width:768px){.mw-parser-output .portal-bar{font-size:88%;font-weight:bold;display:flex;flex-flow:column wrap;align-items:baseline}.mw-parser-output .portal-bar-header{text-align:center;flex:0;padding-left:0.5em;margin:0 auto}.mw-parser-output .portal-bar-related{font-size:100%;align-items:flex-start}.mw-parser-output .portal-bar-content{display:flex;flex-flow:row wrap;align-items:center;flex:0;column-gap:1em;border-top:1px solid #a2a9b1;margin:0 auto;list-style:none}.mw-parser-output .portal-bar-content-related{border-top:none;margin:0;list-style:none}}.mw-parser-output .navbox+link+.portal-bar,.mw-parser-output .navbox+style+.portal-bar,.mw-parser-output .navbox+link+.portal-bar-bordered,.mw-parser-output .navbox+style+.portal-bar-bordered,.mw-parser-output .sister-bar+link+.portal-bar,.mw-parser-output .sister-bar+style+.portal-bar,.mw-parser-output .portal-bar+.navbox-styles+.navbox,.mw-parser-output .portal-bar+.navbox-styles+.sister-bar{margin-top:-1px}
+    </style>
+    <div aria-label="Portals" class="portal-bar noprint metadata noviewer portal-bar-bordered" role="navigation">
+     <span class="portal-bar-header">
+      <a href="/wiki/Wikipedia:Contents/Portals" title="Wikipedia:Contents/Portals">
+       Portal
+      </a>
+      :
+     </span>
+     <ul class="portal-bar-content">
+      <li class="portal-bar-item">
+       <span class="nowrap">
+        <span typeof="mw:File">
+         <a class="mw-file-description" href="/wiki/File:Nuvola_apps_edu_mathematics_blue-p.svg">
+          <img alt="icon" class="mw-file-element" data-file-height="128" data-file-width="128" decoding="async" height="19" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/19px-Nuvola_apps_edu_mathematics_blue-p.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/29px-Nuvola_apps_edu_mathematics_blue-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/38px-Nuvola_apps_edu_mathematics_blue-p.svg.png 2x" width="19"/>
+         </a>
+        </span>
+       </span>
+       <a href="/wiki/Portal:Mathematics" title="Portal:Mathematics">
+        Mathematics
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.main‐5476bd94cd‐phswd
+Cached time: 20241111120256
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.672 seconds
+Real time usage: 0.966 seconds
+Preprocessor visited node count: 5248/1000000
+Post‐expand include size: 71238/2097152 bytes
+Template argument size: 4229/2097152 bytes
+Highest expansion depth: 16/100
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 110380/5000000 bytes
+Lua time usage: 0.403/10.000 seconds
+Lua memory usage: 16230821/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+    <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  811.750      1 -total
+ 33.99%  275.927      1 Template:Reflist
+ 28.00%  227.273     11 Template:Annotated_link
+ 21.77%  176.717     19 Template:Cite_journal
+  9.40%   76.284      1 Template:Short_description
+  7.59%   61.574      1 Template:Commons_category
+  7.26%   58.959      1 Template:Sister_project
+  6.45%   52.382      2 Template:Cn
+  6.32%   51.308      3 Template:Fix
+  5.84%   47.425      2 Template:Pagetype
+-->
+    <!-- Saved in parser cache with key enwiki:pcache:idhash:46096-0!canonical and timestamp 20241111120256 and revision id 1243969217. Rendering was triggered because: page-view
+ -->
+   </meta>
+  </div>
+  <!--esi <esi:include src="/esitest-fa8a495983347898/content" /> -->
+  <noscript>
+   <img alt="" height="1" src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" width="1"/>
+  </noscript>
+  <div class="printfooter" data-nosnippet="">
+   Retrieved from "
+   <a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Simpson%27s_paradox&amp;oldid=1243969217">
+    https://en.wikipedia.org/w/index.php?title=Simpson%27s_paradox&amp;oldid=1243969217
+   </a>
+   "
+  </div>
+ </div>
+ <div class="catlinks" data-mw="interface" id="catlinks">
+  <div class="mw-normal-catlinks" id="mw-normal-catlinks">
+   <a href="/wiki/Help:Category" title="Help:Category">
+    Categories
+   </a>
+   :
+   <ul>
+    <li>
+     <a href="/wiki/Category:Probability_theory_paradoxes" title="Category:Probability theory paradoxes">
+      Probability theory paradoxes
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Statistical_paradoxes" title="Category:Statistical paradoxes">
+      Statistical paradoxes
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Causal_inference" title="Category:Causal inference">
+      Causal inference
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:1951_introductions" title="Category:1951 introductions">
+      1951 introductions
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">
+   Hidden categories:
+   <ul>
+    <li>
+     <a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">
+      Webarchive template wayback links
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">
+      Articles with short description
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">
+      Short description is different from Wikidata
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">
+      All articles with unsourced statements
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Articles_with_unsourced_statements_from_April_2024" title="Category:Articles with unsourced statements from April 2024">
+      Articles with unsourced statements from April 2024
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:All_articles_with_specifically_marked_weasel-worded_phrases" title="Category:All articles with specifically marked weasel-worded phrases">
+      All articles with specifically marked weasel-worded phrases
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_August_2024" title="Category:Articles with specifically marked weasel-worded phrases from August 2024">
+      Articles with specifically marked weasel-worded phrases from August 2024
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_August_2024" title="Category:Wikipedia articles needing clarification from August 2024">
+      Wikipedia articles needing clarification from August 2024
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Pages_displaying_short_descriptions_of_redirect_targets_via_Module:Annotated_link" title="Category:Pages displaying short descriptions of redirect targets via Module:Annotated link">
+      Pages displaying short descriptions of redirect targets via Module:Annotated link
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">
+      Commons category link is on Wikidata
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
