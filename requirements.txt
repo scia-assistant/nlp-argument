@@ -1,0 +1,8 @@
+langchain
+langchain-community
+faiss-cpu==1.7.4
+beautifulsoup4
+boto3
+langchain_huggingface
+gpt4all
+unstructured
