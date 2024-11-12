@@ -1,3 +1,4 @@
+import gc
 import hashlib
 import os
 
@@ -10,9 +11,7 @@ from sentence_transformers import SentenceTransformer
 
 def get_pdf_text_hash(file_path):
     with pdfplumber.open(file_path) as pdf:
-        text = "".join(
-            page.extract_text() for page in pdf.pages if page.extract_text()
-        )
+        text = "".join(page.extract_text() for page in pdf.pages if page.extract_text())
     text_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()
     return text, text_hash
 
@@ -20,14 +19,13 @@ def get_pdf_text_hash(file_path):
 def chunk_text(text, chunk_size):
     words = text.split()
     chunks = [
-        " ".join(words[i : i + chunk_size])
-        for i in range(0, len(words), chunk_size)
+        " ".join(words[i : i + chunk_size]) for i in range(0, len(words), chunk_size)
     ]
     return chunks
 
 
 def add_document_to_index(data_folder, db, index):
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
     chunk_size = 200
     chunks_collection = db["chunks"]
 
@@ -40,25 +38,30 @@ def add_document_to_index(data_folder, db, index):
         else:
             continue
 
-        if not chunks_collection.find_one({"file_hash": text_hash}):
-            chunks = chunk_text(text, chunk_size)
+        if chunks_collection.find_one({"file_hash": text_hash}):
+            continue
 
-            # Process each chunk
-            for chunk_num, chunk in enumerate(chunks):
-                # Generate embedding for each chunk
-                embedding = model.encode([chunk]).astype(np.float32)
+        chunks = chunk_text(text, chunk_size)
+        documents = []
 
-                faiss_id = index.ntotal
-                # Add to the index
-                index.add(embedding)
-                chunks_collection.insert_one(
-                    {
-                        "file_name": file_name,
-                        "file_hash": text_hash,
-                        "faiss_id": faiss_id,
-                        "text": chunk,
-                    }
-                )
+        # Process each chunk
+        for chunk_num, chunk in enumerate(chunks):
+            # Generate embedding for each chunk
+            embedding = model.encode([chunk]).astype(np.float32)
+
+            faiss_id = index.ntotal
+            # Add to the index
+            index.add(embedding)
+            documents.append(
+                {
+                    "file_name": file_name,
+                    "file_hash": text_hash,
+                    "faiss_id": faiss_id,
+                    "text": chunk,
+                }
+            )
+        chunks_collection.insert_many(documents)
+        gc.collect()
 
     return index
 
