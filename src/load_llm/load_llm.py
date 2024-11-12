@@ -10,6 +10,7 @@ from transformers import (
     AutoTokenizer,
     GPT2LMHeadModel,
     GPT2Tokenizer,
+    GPTNeoXForCausalLM,
     PreTrainedModel,
 )
 
@@ -30,9 +31,21 @@ class LLMPretrained(Enum):
     # GPT NEO
     GPT_NEO_SMALL = "EleutherAI/gpt-neo-125M"
     GPT_NEO_LARGE = "EleutherAI/gpt-neo-1.3B"
+    # pythia
+    PYTHIA_14M = "EleutherAI/pythia-14m"
+    PYTHIA_410M = "EleutherAI/pythia-410m"
+    PYTHIA_1B = "EleutherAI/pythia-1b"
+    PYTHIA_1_4B = "EleutherAI/pythia-1.4b"  # may take time
+    PYTHIA_2_8B = "EleutherAI/pythia-2.8b"  # dangerous
+    PYTHIA_6_9B = "EleutherAI/pythia-6.9b"  # suicidal
+    PYTHIA_12B = "EleutherAI/pythia-12b"  # we are not in a fairy tail ok !
     # flan
     FLAN_SMALL = "google/flan-t5-small"
     FLAN_BASE = "google/flan-t5-base"
+    # olmo
+    OLMO = "allenai/OLMo-1B-0724-hf"
+    # TinyLlama
+    TINY_LLAMA = "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T"
 
 
 class LLMWrapper:  # pylint: disable=too-few-public-methods
@@ -72,6 +85,15 @@ class LLMWrapper:  # pylint: disable=too-few-public-methods
                 AutoTokenizer.from_pretrained,
                 AutoModelForSeq2SeqLM.from_pretrained,
             )
+
+        if llm_pretrained.name.startswith("OLMO"):
+            return (AutoTokenizer.from_pretrained, AutoModelForCausalLM.from_pretrained)
+
+        if llm_pretrained.name.startswith("PYTHIA"):
+            return (AutoTokenizer.from_pretrained, GPTNeoXForCausalLM.from_pretrained)
+
+        if llm_pretrained.name.startswith("TINY_LLAMA"):
+            return (AutoTokenizer.from_pretrained, AutoModelForCausalLM.from_pretrained)
 
         raise ValueError(f"LLMLoader '{llm_pretrained.name}' has not loaders")
 
@@ -125,7 +147,7 @@ class LLMWrapper:  # pylint: disable=too-few-public-methods
 
 
 if __name__ == "__main__":
-    text = LLMWrapper(llm_pretrained=LLMPretrained.FLAN_SMALL).generate_text(
+    text = LLMWrapper(llm_pretrained=LLMPretrained.TINY_LLAMA).generate_text(
         "Once upon a time"
     )
     print("Generated text :\n", text)
