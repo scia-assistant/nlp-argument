@@ -1,0 +1,3722 @@
+<div aria-labelledby="firstHeading" class="vector-body" data-mw-ve-target-container="" id="bodyContent">
+ <div class="vector-body-before-content">
+  <div class="mw-indicators">
+  </div>
+  <div class="noprint" id="siteSub">
+   From Wikipedia, the free encyclopedia
+  </div>
+ </div>
+ <div id="contentSub">
+  <div id="mw-content-subtitle">
+  </div>
+ </div>
+ <div class="mw-body-content" id="mw-content-text">
+  <div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+   <div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">
+    Concept of probability theory and gambling
+   </div>
+   <p class="mw-empty-elt">
+   </p>
+   <style data-mw-deduplicate="TemplateStyles:r1236090951">
+    .mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}@media print{body.ns-0 .mw-parser-output .hatnote{display:none!important}}
+   </style>
+   <div class="hatnote navigation-not-searchable" role="note">
+    For the mistaken belief that statistical outcomes can become "due", see
+    <a href="/wiki/Gambler%27s_fallacy" title="Gambler's fallacy">
+     gambler's fallacy
+    </a>
+    .
+   </div>
+   <p>
+    In
+    <a href="/wiki/Statistics" title="Statistics">
+     statistics
+    </a>
+    ,
+    <b>
+     gambler's ruin
+    </b>
+    is the fact that a
+    <a href="/wiki/Gambling" title="Gambling">
+     gambler
+    </a>
+    playing a game with negative
+    <a href="/wiki/Expected_value" title="Expected value">
+     expected value
+    </a>
+    will eventually go
+    <a href="/wiki/Bankruptcy" title="Bankruptcy">
+     bankrupt
+    </a>
+    , regardless of their betting system.
+   </p>
+   <p>
+    The concept was initially stated: A persistent gambler who raises his bet to a fixed fraction of the gambler's bankroll after a win, but does not reduce it after a loss, will eventually and inevitably go broke, even if each bet has a positive expected value.
+    <sup class="reference" id="cite_ref-1">
+     <a href="#cite_note-1">
+      <span class="cite-bracket">
+       [
+      </span>
+      1
+      <span class="cite-bracket">
+       ]
+      </span>
+     </a>
+    </sup>
+   </p>
+   <p>
+    Another statement of the concept is that a persistent gambler with finite wealth, playing a fair game (that is, each bet has expected value of zero to both sides) will eventually and inevitably go broke against an opponent with infinite wealth. Such a situation can be modeled by a
+    <a href="/wiki/Random_walk" title="Random walk">
+     random walk
+    </a>
+    on the real number line. In that context, it is probable that the gambler will, with virtual certainty, return to their point of origin, which means going broke, and is ruined an infinite number of times if the random walk continues forever. This is a
+    <a href="/wiki/Corollary" title="Corollary">
+     corollary
+    </a>
+    of a general theorem by
+    <a href="/wiki/Christiaan_Huygens" title="Christiaan Huygens">
+     Christiaan Huygens
+    </a>
+    , which is also known as gambler's ruin. That theorem shows how to compute the probability of each player winning a series of bets that continues until one's entire initial stake is lost, given the initial stakes of the two players and the constant probability of winning. This is the oldest
+    <i>
+     mathematical
+    </i>
+    idea that goes by the name gambler's ruin, but not the first idea to which the name was applied. The term's common usage today is another corollary to Huygens's result.
+   </p>
+   <p>
+    The concept has specific relevance for gamblers. However it also leads to mathematical
+    <a href="/wiki/Theorem" title="Theorem">
+     theorems
+    </a>
+    with wide application and many related results in
+    <a href="/wiki/Probability" title="Probability">
+     probability
+    </a>
+    and
+    <a href="/wiki/Statistics" title="Statistics">
+     statistics
+    </a>
+    . Huygens's result in particular led to important advances in the mathematical theory of probability.
+   </p>
+   <meta property="mw:PageProp/toc">
+    <div class="mw-heading mw-heading2">
+     <h2 id="History">
+      History
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=1" title="Edit section: History">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     The earliest known mention of the gambler's ruin problem is a letter from
+     <a href="/wiki/Blaise_Pascal" title="Blaise Pascal">
+      Blaise Pascal
+     </a>
+     to
+     <a class="mw-redirect" href="/wiki/Pierre_Fermat" title="Pierre Fermat">
+      Pierre Fermat
+     </a>
+     in 1656 (two years after the more famous correspondence on the
+     <a href="/wiki/Problem_of_points" title="Problem of points">
+      problem of points
+     </a>
+     ).
+     <sup class="reference" id="cite_ref-2">
+      <a href="#cite_note-2">
+       <span class="cite-bracket">
+        [
+       </span>
+       2
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     Pascal's version was summarized in a 1656 letter from
+     <a href="/wiki/Pierre_de_Carcavi" title="Pierre de Carcavi">
+      Pierre de Carcavi
+     </a>
+     to Huygens:
+    </p>
+    <blockquote>
+     <p>
+      Let two men play with three dice, the first player scoring a point whenever 11 is thrown, and the second whenever 14 is thrown. But instead of the points accumulating in the ordinary way, let a point be added to a player's score only if his opponent's score is nil, but otherwise let it be subtracted from his opponent's score. It is as if opposing points form pairs, and annihilate each other, so that the trailing player always has zero points. The winner is the first to reach twelve points; what are the relative chances of each player winning?
+      <sup class="reference" id="cite_ref-3">
+       <a href="#cite_note-3">
+        <span class="cite-bracket">
+         [
+        </span>
+        3
+        <span class="cite-bracket">
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+    </blockquote>
+    <p>
+     Huygens reformulated the problem and published it in
+     <i>
+      De ratiociniis in ludo aleae
+     </i>
+     ("On Reasoning in Games of Chance", 1657):
+    </p>
+    <blockquote>
+     <p>
+      Problem (2-1) Each player starts with 12 points, and a successful roll of the three dice for a player (getting an 11 for the first player or a 14 for the second) adds one to that player's score and subtracts one from the other player's score; the loser of the game is the first to reach zero points. What is the probability of victory for each player?
+      <sup class="reference" id="cite_ref-4">
+       <a href="#cite_note-4">
+        <span class="cite-bracket">
+         [
+        </span>
+        4
+        <span class="cite-bracket">
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+    </blockquote>
+    <p>
+     This is the classic gambler's ruin formulation: two players begin with fixed stakes, transferring points until one or the other is "ruined" by getting to zero points. However, the term "gambler's ruin" was not applied until many years later.
+     <sup class="reference" id="cite_ref-5">
+      <a href="#cite_note-5">
+       <span class="cite-bracket">
+        [
+       </span>
+       5
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <p>
+     The gambler's ruin problem is often applied to gamblers with finite capital playing against a
+     <a href="/wiki/Bookmaker" title="Bookmaker">
+      bookie
+     </a>
+     or
+     <a href="/wiki/Casino" title="Casino">
+      casino
+     </a>
+     assumed to have an “infinite” or much larger amount of capital available. It can then be proven that the probability of the gambler's eventual ruin tends to 1 even in the scenario where the game is fair or what mathematically is defined as a
+     <a href="/wiki/Martingale_(probability_theory)" title="Martingale (probability theory)">
+      martingale
+     </a>
+     .
+     <sup class="reference" id="cite_ref-6">
+      <a href="#cite_note-6">
+       <span class="cite-bracket">
+        [
+       </span>
+       6
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Reasons_for_the_four_results">
+      Reasons for the four results
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=2" title="Edit section: Reasons for the four results">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     Let
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle d}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            d
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle d}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle d}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e85ff03cbe0c7341af6b982e47e9f90d235c66ab" style="vertical-align: -0.338ex; width:1.216ex; height:2.176ex;"/>
+     </span>
+     be the amount of money a gambler has at their disposal at any moment, and let
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle N}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            N
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle N}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle N}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5e3890c981ae85503089652feb48b191b57aae3" style="vertical-align: -0.338ex; width:2.064ex; height:2.176ex;"/>
+     </span>
+     be any positive integer. Suppose that they raise their stake to
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\frac {d}{N}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mi>
+              d
+             </mi>
+             <mi>
+              N
+             </mi>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\frac {d}{N}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\frac {d}{N}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fdb2624a8cb3ccc199a1c390299351dce4d543e" style="vertical-align: -1.838ex; width:2.9ex; height:5.343ex;"/>
+     </span>
+     when they win, but do not reduce their stake when they lose (this general pattern is not uncommon among real gamblers). Under this betting scheme, it will take at most
+     <i>
+      N
+     </i>
+     losing bets in a row to bankrupt them. If their probability of winning each bet is less than 1 (if it is 1, then they are no gambler), they are virtually certain to eventually lose
+     <i>
+      N
+     </i>
+     bets in a row, however big
+     <i>
+      N
+     </i>
+     is. It is not necessary that they follow the precise rule, just that they increase their bet fast enough as they win. This is true even if the expected value of each bet is positive.
+    </p>
+    <p>
+     The gambler playing a fair game (with probability
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\frac {1}{2}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mn>
+              2
+             </mn>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\frac {1}{2}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\frac {1}{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a11cfb2fdb143693b1daf78fcb5c11a023cb1c55" style="vertical-align: -1.838ex; width:1.999ex; height:5.176ex;"/>
+     </span>
+     of winning) will eventually either go broke or double their wealth. By symmetry, they have a
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\frac {1}{2}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mn>
+              2
+             </mn>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\frac {1}{2}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\frac {1}{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a11cfb2fdb143693b1daf78fcb5c11a023cb1c55" style="vertical-align: -1.838ex; width:1.999ex; height:5.176ex;"/>
+     </span>
+     chance of going broke before doubling their money. If they double their money, they repeat this process and they again have a
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\frac {1}{2}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mn>
+              2
+             </mn>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\frac {1}{2}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\frac {1}{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a11cfb2fdb143693b1daf78fcb5c11a023cb1c55" style="vertical-align: -1.838ex; width:1.999ex; height:5.176ex;"/>
+     </span>
+     chance of doubling their money before going broke. After the second process, they have a
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle \left({\frac {1}{2}}\right)^{2}={\frac {1}{4}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msup>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msup>
+           <mo>
+            =
+           </mo>
+           <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mn>
+              4
+             </mn>
+            </mfrac>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle \left({\frac {1}{2}}\right)^{2}={\frac {1}{4}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle \left({\frac {1}{2}}\right)^{2}={\frac {1}{4}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c385be530afd6ff9edbaa5723c1def2fd18616a5" style="vertical-align: -2.505ex; width:11.571ex; height:6.509ex;"/>
+     </span>
+     chance that they have not gone broke yet.  Continuing this way, their chance of not going broke after
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            n
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle n}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" style="vertical-align: -0.338ex; width:1.395ex; height:1.676ex;"/>
+     </span>
+     processes is
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle \left({\frac {1}{2}}\right)^{n}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msup>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msup>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle \left({\frac {1}{2}}\right)^{n}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle \left({\frac {1}{2}}\right)^{n}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7b02387caab502d21e8711df39c0a90941cb6315" style="vertical-align: -2.505ex; width:6.638ex; height:6.176ex;"/>
+     </span>
+     , which approaches
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle 0}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mn>
+            0
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle 0}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle 0}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;"/>
+     </span>
+     , and their chance of going broke after
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            n
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle n}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" style="vertical-align: -0.338ex; width:1.395ex; height:1.676ex;"/>
+     </span>
+     successive processes is
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle \sum _{i=1}^{n}\left({\frac {1}{2}}\right)^{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <munderover>
+            <mo>
+             ∑
+             <!-- ∑ -->
+            </mo>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              i
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </munderover>
+           <msup>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              i
+             </mi>
+            </mrow>
+           </msup>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle \sum _{i=1}^{n}\left({\frac {1}{2}}\right)^{i}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle \sum _{i=1}^{n}\left({\frac {1}{2}}\right)^{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b276eb4736a5d9b31846179aa2fb34dceacbe014" style="vertical-align: -3.005ex; width:9.962ex; height:7.009ex;"/>
+     </span>
+     which approaches
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle 1}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mn>
+            1
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle 1}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle 1}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/92d98b82a3778f043108d4e20960a9193df57cbf" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;"/>
+     </span>
+     .
+    </p>
+    <p>
+     <a href="/wiki/Christiaan_Huygens" title="Christiaan Huygens">
+      Huygens's
+     </a>
+     result is illustrated in the next section.
+    </p>
+    <p>
+     The eventual fate of a player at a game with negative
+     <a href="/wiki/Expected_value" title="Expected value">
+      expected value
+     </a>
+     cannot be better than the player at a fair game, so they will go broke as well.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Example_of_Huygens's_result">
+      <span id="Example_of_Huygens.27s_result">
+      </span>
+      Example of Huygens's result
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=3" title="Edit section: Example of Huygens's result">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <div class="mw-heading mw-heading3">
+     <h3 id="Fair_coin_flipping">
+      Fair coin flipping
+     </h3>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=4" title="Edit section: Fair coin flipping">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     Consider a coin-flipping game with two players where each player has a 50% chance of winning with each flip of the coin. After each flip of the coin the loser transfers one penny to the winner. The game ends when one player has all the pennies.
+    </p>
+    <p>
+     If there are no other limitations on the number of flips, the probability that the game will eventually end this way is 1. (One way to see this is as follows. Any given finite string of heads and tails will eventually be flipped with certainty: the probability of not seeing this string, while high at first, decays exponentially.  In particular, the players would eventually flip a string of heads as long as the total number of pennies in play, by which time the game must have already ended.)
+    </p>
+    <p>
+     If player one has
+     <i>
+      n
+     </i>
+     <sub>
+      1
+     </sub>
+     pennies and player two
+     <i>
+      n
+     </i>
+     <sub>
+      2
+     </sub>
+     pennies, the probabilities
+     <i>
+      P
+     </i>
+     <sub>
+      1
+     </sub>
+     and
+     <i>
+      P
+     </i>
+     <sub>
+      2
+     </sub>
+     that players one and two, respectively, will end penniless are:
+    </p>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {n_{2}}{n_{1}+n_{2}}}\\[5pt]P_{2}&amp;={\frac {n_{1}}{n_{1}+n_{2}}}\end{aligned}}}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.8em 0.3em">
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <msub>
+                  <mi>
+                   n
+                  </mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mn>
+                    2
+                   </mn>
+                  </mrow>
+                 </msub>
+                 <mrow>
+                  <msub>
+                   <mi>
+                    n
+                   </mi>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <mn>
+                     1
+                    </mn>
+                   </mrow>
+                  </msub>
+                  <mo>
+                   +
+                  </mo>
+                  <msub>
+                   <mi>
+                    n
+                   </mi>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <mn>
+                     2
+                    </mn>
+                   </mrow>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mrow>
+              </mtd>
+             </mtr>
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <msub>
+                  <mi>
+                   n
+                  </mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mn>
+                    1
+                   </mn>
+                  </mrow>
+                 </msub>
+                 <mrow>
+                  <msub>
+                   <mi>
+                    n
+                   </mi>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <mn>
+                     1
+                    </mn>
+                   </mrow>
+                  </msub>
+                  <mo>
+                   +
+                  </mo>
+                  <msub>
+                   <mi>
+                    n
+                   </mi>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <mn>
+                     2
+                    </mn>
+                   </mrow>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mrow>
+              </mtd>
+             </mtr>
+            </mtable>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\begin{aligned}P_{1}&amp;={\frac {n_{2}}{n_{1}+n_{2}}}\\[5pt]P_{2}&amp;={\frac {n_{1}}{n_{1}+n_{2}}}\end{aligned}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {n_{2}}{n_{1}+n_{2}}}\\[5pt]P_{2}&amp;={\frac {n_{1}}{n_{1}+n_{2}}}\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/513a5b456446a5f8a9d3c4cf5c035ad47e2ab351" style="vertical-align: -5.171ex; width:14.971ex; height:11.509ex;"/>
+     </span>
+    </p>
+    <p>
+     Two examples of this are if one player has more pennies than the other; and if both players have the same number of pennies.
+In the first case say player one
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle (P_{1})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             P
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle (P_{1})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle (P_{1})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/be50a4fecf69cdf1ac930f60eb9f95c71e51c0bf" style="vertical-align: -0.838ex; width:4.356ex; height:2.843ex;"/>
+     </span>
+     has 8 pennies and player two (
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             P
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87858df7457aa93caaef5a316db87a7240cc8c29" style="vertical-align: -0.671ex; width:2.547ex; height:2.509ex;"/>
+     </span>
+     ) were to have 5 pennies then the probability of each losing is:
+    </p>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {5}{8+5}}={\frac {5}{13}}=0.3846{\text{ or }}38.46\%\\[6pt]P_{2}&amp;={\frac {8}{8+5}}={\frac {8}{13}}=0.6154{\text{ or }}61.54\%\end{aligned}}}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.9em 0.3em">
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  5
+                 </mn>
+                 <mrow>
+                  <mn>
+                   8
+                  </mn>
+                  <mo>
+                   +
+                  </mo>
+                  <mn>
+                   5
+                  </mn>
+                 </mrow>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  5
+                 </mn>
+                 <mn>
+                  13
+                 </mn>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0.3846
+               </mn>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mtext>
+                 or
+                </mtext>
+               </mrow>
+               <mn>
+                38.46
+               </mn>
+               <mi mathvariant="normal">
+                %
+                <!-- % -->
+               </mi>
+              </mtd>
+             </mtr>
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  8
+                 </mn>
+                 <mrow>
+                  <mn>
+                   8
+                  </mn>
+                  <mo>
+                   +
+                  </mo>
+                  <mn>
+                   5
+                  </mn>
+                 </mrow>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  8
+                 </mn>
+                 <mn>
+                  13
+                 </mn>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0.6154
+               </mn>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mtext>
+                 or
+                </mtext>
+               </mrow>
+               <mn>
+                61.54
+               </mn>
+               <mi mathvariant="normal">
+                %
+                <!-- % -->
+               </mi>
+              </mtd>
+             </mtr>
+            </mtable>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\begin{aligned}P_{1}&amp;={\frac {5}{8+5}}={\frac {5}{13}}=0.3846{\text{ or }}38.46\%\\[6pt]P_{2}&amp;={\frac {8}{8+5}}={\frac {8}{13}}=0.6154{\text{ or }}61.54\%\end{aligned}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {5}{8+5}}={\frac {5}{13}}=0.3846{\text{ or }}38.46\%\\[6pt]P_{2}&amp;={\frac {8}{8+5}}={\frac {8}{13}}=0.6154{\text{ or }}61.54\%\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7bac0b3695ebbc3b99e457ccbea778a9de5abd08" style="vertical-align: -5.671ex; width:38.683ex; height:12.509ex;"/>
+     </span>
+    </p>
+    <p>
+     It follows that even with equal odds of winning the player that starts with fewer pennies is more likely to fail.
+    </p>
+    <p>
+     In the second case where both players have the same number of pennies (in this case 6) the likelihood of each losing is:
+    </p>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {6}{6+6}}={\frac {6}{12}}={\frac {1}{2}}=0.5\\[5pt]P_{2}&amp;={\frac {6}{6+6}}={\frac {6}{12}}={\frac {1}{2}}=0.5\end{aligned}}}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.8em 0.3em">
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  6
+                 </mn>
+                 <mrow>
+                  <mn>
+                   6
+                  </mn>
+                  <mo>
+                   +
+                  </mo>
+                  <mn>
+                   6
+                  </mn>
+                 </mrow>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  6
+                 </mn>
+                 <mn>
+                  12
+                 </mn>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  1
+                 </mn>
+                 <mn>
+                  2
+                 </mn>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0.5
+               </mn>
+              </mtd>
+             </mtr>
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  6
+                 </mn>
+                 <mrow>
+                  <mn>
+                   6
+                  </mn>
+                  <mo>
+                   +
+                  </mo>
+                  <mn>
+                   6
+                  </mn>
+                 </mrow>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  6
+                 </mn>
+                 <mn>
+                  12
+                 </mn>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mn>
+                  1
+                 </mn>
+                 <mn>
+                  2
+                 </mn>
+                </mfrac>
+               </mrow>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0.5
+               </mn>
+              </mtd>
+             </mtr>
+            </mtable>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\begin{aligned}P_{1}&amp;={\frac {6}{6+6}}={\frac {6}{12}}={\frac {1}{2}}=0.5\\[5pt]P_{2}&amp;={\frac {6}{6+6}}={\frac {6}{12}}={\frac {1}{2}}=0.5\end{aligned}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {6}{6+6}}={\frac {6}{12}}={\frac {1}{2}}=0.5\\[5pt]P_{2}&amp;={\frac {6}{6+6}}={\frac {6}{12}}={\frac {1}{2}}=0.5\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ad88409393d26094bd2fc844369dd886d37234be" style="vertical-align: -5.505ex; width:29.825ex; height:12.176ex;"/>
+     </span>
+    </p>
+    <div class="mw-heading mw-heading3">
+     <h3 id="Unfair_coin_flipping">
+      Unfair coin flipping
+     </h3>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=5" title="Edit section: Unfair coin flipping">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     In the event of an unfair coin, where player one wins each toss with probability p, and player two wins with probability
+     <i>
+      q
+     </i>
+     = 1 −
+     <i>
+      p
+     </i>
+     , then the probability of each ending penniless is:
+    </p>
+    <figure class="mw-default-size" typeof="mw:File/Thumb">
+     <a class="mw-file-description" href="/wiki/File:Gambler%27s_Victoire.png">
+      <img class="mw-file-element" data-file-height="804" data-file-width="1639" decoding="async" height="108" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gambler%27s_Victoire.png/220px-Gambler%27s_Victoire.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gambler%27s_Victoire.png/330px-Gambler%27s_Victoire.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gambler%27s_Victoire.png/440px-Gambler%27s_Victoire.png 2x" width="220"/>
+     </a>
+     <figcaption>
+      Simulations for player
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle 1}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mn>
+             1
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle 1}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle 1}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/92d98b82a3778f043108d4e20960a9193df57cbf" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;"/>
+      </span>
+      with
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle P=0.6}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mi>
+             P
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0.6
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle P=0.6}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle P=0.6}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a5f5080dfd5c40d7036397ecf5f203aeb003dd8b" style="vertical-align: -0.338ex; width:7.816ex; height:2.176ex;"/>
+      </span>
+      starting with
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle 5}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mn>
+             5
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle 5}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle 5}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/29483407999b8763f0ea335cf715a6a5e809f44b" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;"/>
+      </span>
+      pennies and player
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle 2}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mn>
+             2
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle 2}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle 2}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/901fc910c19990d0dbaaefe4726ceb1a4e217a0f" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;"/>
+      </span>
+      with
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle 10}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mn>
+             10
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle 10}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle 10}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4ec811eb07dcac7ea67b413c5665390a1671ecb0" style="vertical-align: -0.338ex; width:2.325ex; height:2.176ex;"/>
+      </span>
+      . The probability of this stochastic process hitting level
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle 15}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mn>
+             15
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle 15}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle 15}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ea331af19ed2ccc36bb864409b6c305e18cff30f" style="vertical-align: -0.338ex; width:2.325ex; height:2.176ex;"/>
+      </span>
+      prior to
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle 0}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mn>
+             0
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle 0}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle 0}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;"/>
+      </span>
+      is
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle {\frac {59049}{67849}}\approx 0.8703}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mfrac>
+              <mn>
+               59049
+              </mn>
+              <mn>
+               67849
+              </mn>
+             </mfrac>
+            </mrow>
+            <mo>
+             ≈
+             <!-- ≈ -->
+            </mo>
+            <mn>
+             0.8703
+            </mn>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle {\frac {59049}{67849}}\approx 0.8703}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle {\frac {59049}{67849}}\approx 0.8703}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4ee44875277c8a92e31720f1b6b2ebdb4795184" style="vertical-align: -2.005ex; width:16.206ex; height:5.343ex;"/>
+      </span>
+      and the sloped line depicts the expected value around which most of the
+      <a class="mw-redirect" href="/wiki/Probability_mass" title="Probability mass">
+       probability mass
+      </a>
+      is clustered. The variance of a
+      <a href="/wiki/Bernoulli_process" title="Bernoulli process">
+       Bernoulli process
+      </a>
+      i.e. a
+      <a href="/wiki/Binomial_distribution" title="Binomial distribution">
+       binomial distribution
+      </a>
+      is
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle np(1-p)=npq}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mi>
+             n
+            </mi>
+            <mi>
+             p
+            </mi>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             −
+             <!-- − -->
+            </mo>
+            <mi>
+             p
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+            <mo>
+             =
+            </mo>
+            <mi>
+             n
+            </mi>
+            <mi>
+             p
+            </mi>
+            <mi>
+             q
+            </mi>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle np(1-p)=npq}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle np(1-p)=npq}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/911cf569af3d45d403620644001421228ea7961b" style="vertical-align: -0.838ex; width:16.278ex; height:2.843ex;"/>
+      </span>
+      and proportion
+      <span class="mwe-math-element">
+       <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+        <math alttext="{\displaystyle {\frac {pq}{n}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow class="MJX-TeXAtom-ORD">
+           <mstyle displaystyle="true" scriptlevel="0">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mfrac>
+              <mrow>
+               <mi>
+                p
+               </mi>
+               <mi>
+                q
+               </mi>
+              </mrow>
+              <mi>
+               n
+              </mi>
+             </mfrac>
+            </mrow>
+           </mstyle>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           {\displaystyle {\frac {pq}{n}}}
+          </annotation>
+         </semantics>
+        </math>
+       </span>
+       <img alt="{\displaystyle {\frac {pq}{n}}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e4338ca0b3148dffbff944517430e9a4c8b3c548" style="vertical-align: -1.838ex; width:3.075ex; height:4.843ex;"/>
+      </span>
+      .
+     </figcaption>
+    </figure>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {1-({\frac {p}{q}})^{n_{2}}}{1-({\frac {p}{q}})^{n_{1}+n_{2}}}}\\[5pt]P_{2}&amp;={\frac {1-({\frac {q}{p}})^{n_{1}}}{1-({\frac {q}{p}})^{n_{1}+n_{2}}}}\end{aligned}}}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.8em 0.3em">
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mrow>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   −
+                   <!-- − -->
+                  </mo>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mfrac>
+                    <mi>
+                     p
+                    </mi>
+                    <mi>
+                     q
+                    </mi>
+                   </mfrac>
+                  </mrow>
+                  <msup>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <msub>
+                     <mi>
+                      n
+                     </mi>
+                     <mrow class="MJX-TeXAtom-ORD">
+                      <mn>
+                       2
+                      </mn>
+                     </mrow>
+                    </msub>
+                   </mrow>
+                  </msup>
+                 </mrow>
+                 <mrow>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   −
+                   <!-- − -->
+                  </mo>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mfrac>
+                    <mi>
+                     p
+                    </mi>
+                    <mi>
+                     q
+                    </mi>
+                   </mfrac>
+                  </mrow>
+                  <msup>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <msub>
+                     <mi>
+                      n
+                     </mi>
+                     <mrow class="MJX-TeXAtom-ORD">
+                      <mn>
+                       1
+                      </mn>
+                     </mrow>
+                    </msub>
+                    <mo>
+                     +
+                    </mo>
+                    <msub>
+                     <mi>
+                      n
+                     </mi>
+                     <mrow class="MJX-TeXAtom-ORD">
+                      <mn>
+                       2
+                      </mn>
+                     </mrow>
+                    </msub>
+                   </mrow>
+                  </msup>
+                 </mrow>
+                </mfrac>
+               </mrow>
+              </mtd>
+             </mtr>
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                 <mrow>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   −
+                   <!-- − -->
+                  </mo>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mfrac>
+                    <mi>
+                     q
+                    </mi>
+                    <mi>
+                     p
+                    </mi>
+                   </mfrac>
+                  </mrow>
+                  <msup>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <msub>
+                     <mi>
+                      n
+                     </mi>
+                     <mrow class="MJX-TeXAtom-ORD">
+                      <mn>
+                       1
+                      </mn>
+                     </mrow>
+                    </msub>
+                   </mrow>
+                  </msup>
+                 </mrow>
+                 <mrow>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   −
+                   <!-- − -->
+                  </mo>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mfrac>
+                    <mi>
+                     q
+                    </mi>
+                    <mi>
+                     p
+                    </mi>
+                   </mfrac>
+                  </mrow>
+                  <msup>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                   <mrow class="MJX-TeXAtom-ORD">
+                    <msub>
+                     <mi>
+                      n
+                     </mi>
+                     <mrow class="MJX-TeXAtom-ORD">
+                      <mn>
+                       1
+                      </mn>
+                     </mrow>
+                    </msub>
+                    <mo>
+                     +
+                    </mo>
+                    <msub>
+                     <mi>
+                      n
+                     </mi>
+                     <mrow class="MJX-TeXAtom-ORD">
+                      <mn>
+                       2
+                      </mn>
+                     </mrow>
+                    </msub>
+                   </mrow>
+                  </msup>
+                 </mrow>
+                </mfrac>
+               </mrow>
+              </mtd>
+             </mtr>
+            </mtable>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\begin{aligned}P_{1}&amp;={\frac {1-({\frac {p}{q}})^{n_{2}}}{1-({\frac {p}{q}})^{n_{1}+n_{2}}}}\\[5pt]P_{2}&amp;={\frac {1-({\frac {q}{p}})^{n_{1}}}{1-({\frac {q}{p}})^{n_{1}+n_{2}}}}\end{aligned}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\begin{aligned}P_{1}&amp;={\frac {1-({\frac {p}{q}})^{n_{2}}}{1-({\frac {p}{q}})^{n_{1}+n_{2}}}}\\[5pt]P_{2}&amp;={\frac {1-({\frac {q}{p}})^{n_{1}}}{1-({\frac {q}{p}})^{n_{1}+n_{2}}}}\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8f0cc271af9205bc7548a6bec94e90a9978aa0a8" style="vertical-align: -8.338ex; width:19.854ex; height:17.676ex;"/>
+     </span>
+    </p>
+    <p>
+     An argument is that the expected hitting time is finite and so with a
+     <a href="/wiki/Martingale_(probability_theory)" title="Martingale (probability theory)">
+      martingale
+     </a>
+     , associating the value
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle \left({\frac {q}{p}}\right)^{l}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msup>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+               <mi>
+                q
+               </mi>
+               <mi>
+                p
+               </mi>
+              </mfrac>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              l
+             </mi>
+            </mrow>
+           </msup>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle \left({\frac {q}{p}}\right)^{l}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle \left({\frac {q}{p}}\right)^{l}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f492881d0c76f6deb11e33887d83e8954c4db38c" style="vertical-align: -2.505ex; width:6.149ex; height:6.676ex;"/>
+     </span>
+     with each state so that the expected value of the state is constant, this is the solution to the system of equations:
+    </p>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle {\begin{aligned}P_{1}+P_{2}&amp;=1\\[5pt]\left({\frac {q}{p}}\right)^{n_{1}}&amp;=P_{1}+P_{2}\left({\frac {q}{p}}\right)^{n_{1}+n_{2}}\end{aligned}}}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mrow class="MJX-TeXAtom-ORD">
+            <mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.8em 0.3em">
+             <mtr>
+              <mtd>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                +
+               </mo>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mtd>
+             </mtr>
+             <mtr>
+              <mtd>
+               <msup>
+                <mrow>
+                 <mo>
+                  (
+                 </mo>
+                 <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                   <mi>
+                    q
+                   </mi>
+                   <mi>
+                    p
+                   </mi>
+                  </mfrac>
+                 </mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <msub>
+                  <mi>
+                   n
+                  </mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mn>
+                    1
+                   </mn>
+                  </mrow>
+                 </msub>
+                </mrow>
+               </msup>
+              </mtd>
+              <mtd>
+               <mi>
+               </mi>
+               <mo>
+                =
+               </mo>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                +
+               </mo>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <msup>
+                <mrow>
+                 <mo>
+                  (
+                 </mo>
+                 <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                   <mi>
+                    q
+                   </mi>
+                   <mi>
+                    p
+                   </mi>
+                  </mfrac>
+                 </mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                 <msub>
+                  <mi>
+                   n
+                  </mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mn>
+                    1
+                   </mn>
+                  </mrow>
+                 </msub>
+                 <mo>
+                  +
+                 </mo>
+                 <msub>
+                  <mi>
+                   n
+                  </mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                   <mn>
+                    2
+                   </mn>
+                  </mrow>
+                 </msub>
+                </mrow>
+               </msup>
+              </mtd>
+             </mtr>
+            </mtable>
+           </mrow>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle {\begin{aligned}P_{1}+P_{2}&amp;=1\\[5pt]\left({\frac {q}{p}}\right)^{n_{1}}&amp;=P_{1}+P_{2}\left({\frac {q}{p}}\right)^{n_{1}+n_{2}}\end{aligned}}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle {\begin{aligned}P_{1}+P_{2}&amp;=1\\[5pt]\left({\frac {q}{p}}\right)^{n_{1}}&amp;=P_{1}+P_{2}\left({\frac {q}{p}}\right)^{n_{1}+n_{2}}\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eab21e6ddbe5e8d8bc6f4309086624ea9ae35fe9" style="vertical-align: -4.46ex; margin-bottom: -0.211ex; width:30.29ex; height:10.509ex;"/>
+     </span>
+    </p>
+    <p>
+     Alternately, this can be shown as follows: Consider the probability of player 1 experiencing gamblers ruin having started with
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle n&gt;1}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            n
+           </mi>
+           <mo>
+            &gt;
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle n&gt;1}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle n&gt;1}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ee74e1cc07e7041edf0fcbd4481f5cd32ad17b64" style="vertical-align: -0.338ex; width:5.656ex; height:2.176ex;"/>
+     </span>
+     amount of money,
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P(R_{n})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P(R_{n})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P(R_{n})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9ecc54febdfdb3e7f43f1b0c76b7a39ef70f9657" style="vertical-align: -0.838ex; width:6.537ex; height:2.843ex;"/>
+     </span>
+     . Then, using the Law of Total Probability, we have
+    </p>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P(R_{n})=P(R_{n}\mid W)P(W)+P(R_{n}\mid {\bar {W}})P({\bar {W}}),}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            ∣
+            <!-- ∣ -->
+           </mo>
+           <mi>
+            W
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            W
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            +
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            ∣
+            <!-- ∣ -->
+           </mo>
+           <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mover>
+              <mi>
+               W
+              </mi>
+              <mo stretchy="false">
+               ¯
+               <!-- ¯ -->
+              </mo>
+             </mover>
+            </mrow>
+           </mrow>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mover>
+              <mi>
+               W
+              </mi>
+              <mo stretchy="false">
+               ¯
+               <!-- ¯ -->
+              </mo>
+             </mover>
+            </mrow>
+           </mrow>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            ,
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P(R_{n})=P(R_{n}\mid W)P(W)+P(R_{n}\mid {\bar {W}})P({\bar {W}}),}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P(R_{n})=P(R_{n}\mid W)P(W)+P(R_{n}\mid {\bar {W}})P({\bar {W}}),}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/63a311905e9ae42d97f68bd1d8a22551f830c00f" style="vertical-align: -0.838ex; width:46.922ex; height:3.009ex;"/>
+     </span>
+    </p>
+    <p>
+     where W denotes the event that player 1 wins the first bet. Then clearly
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P(W)=p}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            W
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mi>
+            p
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P(W)=p}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P(W)=p}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c178c98b48b1372a6146acdb493c9815b8c1e724" style="vertical-align: -0.838ex; width:10.258ex; height:2.843ex;"/>
+     </span>
+     and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P({\bar {W}})=1-p=q}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mover>
+              <mi>
+               W
+              </mi>
+              <mo stretchy="false">
+               ¯
+               <!-- ¯ -->
+              </mo>
+             </mover>
+            </mrow>
+           </mrow>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+           <mo>
+            −
+            <!-- − -->
+           </mo>
+           <mi>
+            p
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mi>
+            q
+           </mi>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P({\bar {W}})=1-p=q}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P({\bar {W}})=1-p=q}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e0861568964fba1e57e3621efb93ce0731e3f110" style="vertical-align: -0.838ex; width:18.429ex; height:3.009ex;"/>
+     </span>
+     . Also
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P(R_{n+1}|W)=P(R_{n+1})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">
+             |
+            </mo>
+           </mrow>
+           <mi>
+            W
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P(R_{n+1}|W)=P(R_{n+1})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P(R_{n+1}|W)=P(R_{n+1})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f8b9bad956637e24aaa7d708aeff53c1daeed01f" style="vertical-align: -0.838ex; width:23.456ex; height:2.843ex;"/>
+     </span>
+     is the probability that player 1 experiences gambler's ruin having started with
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle n+1}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            n
+           </mi>
+           <mo>
+            +
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle n+1}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle n+1}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2a135e65a42f2d73cccbfc4569523996ca0036f1" style="vertical-align: -0.505ex; width:5.398ex; height:2.343ex;"/>
+     </span>
+     amount of money: and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle P(R_{n-1}+{\bar {W}})=P(R_{n-1})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+             <mo>
+              −
+              <!-- − -->
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+             <mover>
+              <mi>
+               W
+              </mi>
+              <mo stretchy="false">
+               ¯
+               <!-- ¯ -->
+              </mo>
+             </mover>
+            </mrow>
+           </mrow>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+             <mo>
+              −
+              <!-- − -->
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle P(R_{n-1}+{\bar {W}})=P(R_{n-1})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle P(R_{n-1}+{\bar {W}})=P(R_{n-1})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5fb44c5e3088a099bad00f7c82fb5310c30ec0fb" style="vertical-align: -0.838ex; width:25.65ex; height:3.009ex;"/>
+     </span>
+     is the probability that player 1 experiences gambler's ruin having started with
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle n-1}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            n
+           </mi>
+           <mo>
+            −
+            <!-- − -->
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle n-1}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle n-1}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fbd0b0f32b28f51962943ee9ede4fb34198a2521" style="vertical-align: -0.505ex; width:5.398ex; height:2.343ex;"/>
+     </span>
+     amount of money.
+Denoting
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle q_{n}=P(R_{n})}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mi>
+            P
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             R
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle q_{n}=P(R_{n})}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle q_{n}=P(R_{n})}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b60283da99df9289771be817456095ff9156f9c2" style="vertical-align: -0.838ex; width:11.891ex; height:2.843ex;"/>
+     </span>
+     , we get the linear homogeneous recurrence relation
+    </p>
+    <p>
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-display mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle q_{n}=q_{n+1}p+q_{n-1}q,}" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mi>
+            p
+           </mi>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              n
+             </mi>
+             <mo>
+              −
+              <!-- − -->
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mi>
+            q
+           </mi>
+           <mo>
+            ,
+           </mo>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle q_{n}=q_{n+1}p+q_{n-1}q,}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle q_{n}=q_{n+1}p+q_{n-1}q,}" aria-hidden="true" class="mwe-math-fallback-image-display mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6a1c42bcf49ed2e5a96c7f44f98b9466bec896c5" style="vertical-align: -0.671ex; width:19.792ex; height:2.343ex;"/>
+     </span>
+    </p>
+    <p>
+     which we can solve using the fact that
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle q_{0}=1}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              0
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle q_{0}=1}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle q_{0}=1}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5a5836030bd958f232367029235af92fac294d9c" style="vertical-align: -0.671ex; width:6.352ex; height:2.509ex;"/>
+     </span>
+     (i.e. the probability of gambler's ruin given that player 1 starts with no money is 1), and
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle q_{n_{1}+n_{2}}=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             q
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <msub>
+              <mi>
+               n
+              </mi>
+              <mrow class="MJX-TeXAtom-ORD">
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mi>
+               n
+              </mi>
+              <mrow class="MJX-TeXAtom-ORD">
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle q_{n_{1}+n_{2}}=0}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle q_{n_{1}+n_{2}}=0}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b43ec7dcd72d258a864b3fab08b410d007c7af8b" style="vertical-align: -1.005ex; width:10.444ex; height:2.843ex;"/>
+     </span>
+     (i.e. the probability of gambler's ruin given that player 1 starts with all the money is 0.) For a more detailed description of the method see e.g. Feller (1970),
+     <i>
+      An introduction to probability theory and its applications
+     </i>
+     , 3rd ed.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="N-player_ruin_problem">
+      <i>
+       N
+      </i>
+      -player ruin problem
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=6" title="Edit section: N-player ruin problem">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <p>
+     The above-described problem (2 players) is a special case of the so-called N-Player Ruin problem.
+     <sup class="reference" id="cite_ref-7">
+      <a href="#cite_note-7">
+       <span class="cite-bracket">
+        [
+       </span>
+       7
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     Here
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle N\geq 2}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            N
+           </mi>
+           <mo>
+            ≥
+            <!-- ≥ -->
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle N\geq 2}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle N\geq 2}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a366b1cf2a65d58e6be08fede1a447e0771926b" style="vertical-align: -0.505ex; width:6.325ex; height:2.343ex;"/>
+     </span>
+     players with  initial capital
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle x_{1},x_{2},\ldots ,x_{N}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             x
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi>
+             x
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <mo>
+            …
+            <!-- … -->
+           </mo>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi>
+             x
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mi>
+              N
+             </mi>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle x_{1},x_{2},\ldots ,x_{N}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle x_{1},x_{2},\ldots ,x_{N}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6ee10fdf382bbdff0a2817290bf8f15902f7b5d9" style="vertical-align: -0.671ex; width:14.001ex; height:2.009ex;"/>
+     </span>
+     dollars, respectively, play a sequence of (arbitrary) independent games and win and lose certain amounts of dollars from and to each other according to fixed rules.  The sequence of games ends as soon as at least one player is ruined. Standard
+     <a href="/wiki/Markov_chain" title="Markov chain">
+      Markov chain
+     </a>
+     methods can be applied to solve this more general problem in principle, but the computations quickly become prohibitive as soon as the number of players or their initial capitals increase. For
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle N=2}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            N
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle N=2}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle N=2}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/405d64b14536deffc3465f1e81b1b7fe9358ad2a" style="vertical-align: -0.338ex; width:6.325ex; height:2.176ex;"/>
+     </span>
+     and large initial capitals
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle x_{1},x_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <msub>
+            <mi>
+             x
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi>
+             x
+            </mi>
+            <mrow class="MJX-TeXAtom-ORD">
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle x_{1},x_{2}}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle x_{1},x_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/188263943645114e27e316cc1be787861e5b67be" style="vertical-align: -0.671ex; width:5.802ex; height:2.009ex;"/>
+     </span>
+     the solution can be well approximated by using two-dimensional
+     <a href="/wiki/Wiener_process" title="Wiener process">
+      Brownian motion
+     </a>
+     . (For
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle N\geq 3}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            N
+           </mi>
+           <mo>
+            ≥
+            <!-- ≥ -->
+           </mo>
+           <mn>
+            3
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle N\geq 3}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle N\geq 3}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80c4b031802faaf0e670460e78725391931e7329" style="vertical-align: -0.505ex; width:6.325ex; height:2.343ex;"/>
+     </span>
+     this is not possible.)
+In practice the true problem is to find the solution for the typical cases of
+     <span class="mwe-math-element">
+      <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+       <math alttext="{\displaystyle N\geq 3}" xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="true" scriptlevel="0">
+           <mi>
+            N
+           </mi>
+           <mo>
+            ≥
+            <!-- ≥ -->
+           </mo>
+           <mn>
+            3
+           </mn>
+          </mstyle>
+         </mrow>
+         <annotation encoding="application/x-tex">
+          {\displaystyle N\geq 3}
+         </annotation>
+        </semantics>
+       </math>
+      </span>
+      <img alt="{\displaystyle N\geq 3}" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80c4b031802faaf0e670460e78725391931e7329" style="vertical-align: -0.505ex; width:6.325ex; height:2.343ex;"/>
+     </span>
+     and limited initial capital.
+Swan (2006) proposed an algorithm based on matrix-analytic methods (Folding Algorithm for ruin problems) which significantly reduces the order of the computational task in such cases.
+    </p>
+    <div class="mw-heading mw-heading2">
+     <h2 id="See_also">
+      See also
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=7" title="Edit section: See also">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <style data-mw-deduplicate="TemplateStyles:r1239009302">
+     .mw-parser-output .portalbox{padding:0;margin:0.5em 0;display:table;box-sizing:border-box;max-width:175px;list-style:none}.mw-parser-output .portalborder{border:1px solid var(--border-color-base,#a2a9b1);padding:0.1em;background:var(--background-color-neutral-subtle,#f8f9fa)}.mw-parser-output .portalbox-entry{display:table-row;font-size:85%;line-height:110%;height:1.9em;font-style:italic;font-weight:bold}.mw-parser-output .portalbox-image{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portalbox-link{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}@media(min-width:720px){.mw-parser-output .portalleft{clear:left;float:left;margin:0.5em 1em 0.5em 0}.mw-parser-output .portalright{clear:right;float:right;margin:0.5em 0 0.5em 1em}}
+    </style>
+    <ul aria-label="Portals" class="noprint portalbox portalborder portalright" role="navigation">
+     <li class="portalbox-entry">
+      <span class="portalbox-image">
+       <span class="noviewer" typeof="mw:File">
+        <a class="mw-file-description" href="/wiki/File:Nuvola_apps_edu_mathematics_blue-p.svg">
+         <img alt="icon" class="mw-file-element" data-file-height="128" data-file-width="128" decoding="async" height="28" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/28px-Nuvola_apps_edu_mathematics_blue-p.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/42px-Nuvola_apps_edu_mathematics_blue-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/56px-Nuvola_apps_edu_mathematics_blue-p.svg.png 2x" width="28"/>
+        </a>
+       </span>
+      </span>
+      <span class="portalbox-link">
+       <a href="/wiki/Portal:Mathematics" title="Portal:Mathematics">
+        Mathematics portal
+       </a>
+      </span>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <a href="/wiki/Ergodicity#In_finance" title="Ergodicity">
+       Ergodicity § In finance
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Fixed-odds_betting" title="Fixed-odds betting">
+       Fixed-odds betting
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Gambler%27s_conceit" title="Gambler's conceit">
+       Gambler's conceit
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Gambling" title="Gambling">
+       Gambling
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Gambler%27s_fallacy" title="Gambler's fallacy">
+       Gambler's fallacy
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Impossibility_of_a_gambling_system" title="Impossibility of a gambling system">
+       Impossibility of a gambling system
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Kelly_criterion" title="Kelly criterion">
+       Kelly criterion
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Martingale_(betting_system)" title="Martingale (betting system)">
+       Martingale (betting system)
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Online_gambling" title="Online gambling">
+       Online gambling
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Risk_of_ruin" title="Risk of ruin">
+       Risk of ruin
+      </a>
+     </li>
+     <li>
+      <a href="/wiki/Volatility_tax" title="Volatility tax">
+       Volatility tax
+      </a>
+     </li>
+    </ul>
+    <div class="mw-heading mw-heading2">
+     <h2 id="Notes">
+      Notes
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=8" title="Edit section: Notes">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <style data-mw-deduplicate="TemplateStyles:r1239543626">
+     .mw-parser-output .reflist{margin-bottom:0.5em;list-style-type:decimal}@media screen{.mw-parser-output .reflist{font-size:90%}}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}
+    </style>
+    <div class="reflist reflist-columns references-column-width reflist-columns-2">
+     <ol class="references">
+      <li id="cite_note-1">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-1">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <style data-mw-deduplicate="TemplateStyles:r1238218222">
+         .mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain;padding:0 1em 0 0}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:var(--color-error,#d33)}.mw-parser-output .cs1-visible-error{color:var(--color-error,#d33)}.mw-parser-output .cs1-maint{display:none;color:#085;margin-left:0.3em}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}@media screen{.mw-parser-output .cs1-format{font-size:95%}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911f}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911f}}
+        </style>
+        <cite class="citation journal cs1" id="CITEREFCoolidge1909">
+         Coolidge, J. L. (1909).
+         <a class="external text" href="https://www.jstor.org/stable/1967408" rel="nofollow">
+          "The Gambler's Ruin"
+         </a>
+         .
+         <i>
+          Annals of Mathematics
+         </i>
+         .
+         <b>
+          10
+         </b>
+         (4): 181–192.
+         <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+          doi
+         </a>
+         :
+         <a class="external text" href="https://doi.org/10.2307%2F1967408" rel="nofollow">
+          10.2307/1967408
+         </a>
+         .
+         <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+          ISSN
+         </a>
+         <a class="external text" href="https://search.worldcat.org/issn/0003-486X" rel="nofollow">
+          0003-486X
+         </a>
+         .
+         <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">
+          JSTOR
+         </a>
+         <a class="external text" href="https://www.jstor.org/stable/1967408" rel="nofollow">
+          1967408
+         </a>
+         .
+        </cite>
+        <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Annals+of+Mathematics&amp;rft.atitle=The+Gambler%27s+Ruin&amp;rft.volume=10&amp;rft.issue=4&amp;rft.pages=181-192&amp;rft.date=1909&amp;rft.issn=0003-486X&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1967408%23id-name%3DJSTOR&amp;rft_id=info%3Adoi%2F10.2307%2F1967408&amp;rft.aulast=Coolidge&amp;rft.aufirst=J.+L.&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1967408&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+        </span>
+       </span>
+      </li>
+      <li id="cite_note-2">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-2">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+        <cite class="citation book cs1" id="CITEREFDavid1998">
+         David, Florence Nightingale (1998).
+         <i>
+          Games, Gods, and Gambling: A History of Probability and Statistical Ideas
+         </i>
+         . Courier Dover Publications.
+         <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+          ISBN
+         </a>
+         <a href="/wiki/Special:BookSources/978-0486400235" title="Special:BookSources/978-0486400235">
+          <bdi>
+           978-0486400235
+          </bdi>
+         </a>
+         .
+        </cite>
+        <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Games%2C+Gods%2C+and+Gambling%3A+A+History+of+Probability+and+Statistical+Ideas&amp;rft.pub=Courier+Dover+Publications&amp;rft.date=1998&amp;rft.isbn=978-0486400235&amp;rft.aulast=David&amp;rft.aufirst=Florence+Nightingale&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+        </span>
+       </span>
+      </li>
+      <li id="cite_note-3">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-3">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+        <cite class="citation journal cs1" id="CITEREFEdwards1983">
+         Edwards, J. W. F. (April 1983). "Pascal's Problem: The 'Gambler's Ruin'
+         <span class="cs1-kern-right">
+         </span>
+         ".
+         <i>
+          Revue Internationale de Statistique
+         </i>
+         .
+         <b>
+          51
+         </b>
+         (1): 73–79.
+         <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+          doi
+         </a>
+         :
+         <a class="external text" href="https://doi.org/10.2307%2F1402732" rel="nofollow">
+          10.2307/1402732
+         </a>
+         .
+         <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">
+          JSTOR
+         </a>
+         <a class="external text" href="https://www.jstor.org/stable/1402732" rel="nofollow">
+          1402732
+         </a>
+         .
+        </cite>
+        <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Revue+Internationale+de+Statistique&amp;rft.atitle=Pascal%27s+Problem%3A+The+%27Gambler%27s+Ruin%27&amp;rft.volume=51&amp;rft.issue=1&amp;rft.pages=73-79&amp;rft.date=1983-04&amp;rft_id=info%3Adoi%2F10.2307%2F1402732&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1402732%23id-name%3DJSTOR&amp;rft.aulast=Edwards&amp;rft.aufirst=J.+W.+F.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+        </span>
+       </span>
+      </li>
+      <li id="cite_note-4">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-4">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <a href="/wiki/Jan_Gullberg" title="Jan Gullberg">
+         Jan Gullberg
+        </a>
+        , Mathematics from the birth of numbers, W. W. Norton &amp; Company;
+        <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+        <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+         ISBN
+        </a>
+        <a href="/wiki/Special:BookSources/978-0-393-04002-9" title="Special:BookSources/978-0-393-04002-9">
+         978-0-393-04002-9
+        </a>
+       </span>
+      </li>
+      <li id="cite_note-5">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-5">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+        <cite class="citation journal cs1" id="CITEREFKaigh1979">
+         Kaigh, W. D. (April 1979). "An attrition problem of gambler's ruin".
+         <i>
+          Mathematics Magazine
+         </i>
+         .
+         <b>
+          52
+         </b>
+         : 22–25.
+         <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+          doi
+         </a>
+         :
+         <a class="external text" href="https://doi.org/10.1080%2F0025570X.1979.11976744" rel="nofollow">
+          10.1080/0025570X.1979.11976744
+         </a>
+         .
+        </cite>
+        <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Mathematics+Magazine&amp;rft.atitle=An+attrition+problem+of+gambler%27s+ruin&amp;rft.volume=52&amp;rft.pages=22-25&amp;rft.date=1979-04&amp;rft_id=info%3Adoi%2F10.1080%2F0025570X.1979.11976744&amp;rft.aulast=Kaigh&amp;rft.aufirst=W.+D.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+        </span>
+       </span>
+      </li>
+      <li id="cite_note-6">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-6">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+        <cite class="citation web cs1">
+         <a class="external text" href="https://stats.libretexts.org/Bookshelves/Probability_Theory/Book%3A_Introductory_Probability_(Grinstead_and_Snell)/12%3A_Random_Walks/12.02%3A_Gambler's_Ruin" rel="nofollow">
+          "12.2: Gambler's Ruin"
+         </a>
+         .
+         <i>
+          Statistics LibreTexts
+         </i>
+         . 2018-06-25
+         <span class="reference-accessdate">
+          . Retrieved
+          <span class="nowrap">
+           2023-10-28
+          </span>
+         </span>
+         .
+        </cite>
+        <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Statistics+LibreTexts&amp;rft.atitle=12.2%3A+Gambler%27s+Ruin&amp;rft.date=2018-06-25&amp;rft_id=https%3A%2F%2Fstats.libretexts.org%2FBookshelves%2FProbability_Theory%2FBook%253A_Introductory_Probability_%28Grinstead_and_Snell%29%2F12%253A_Random_Walks%2F12.02%253A_Gambler%27s_Ruin&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+        </span>
+       </span>
+      </li>
+      <li id="cite_note-7">
+       <span class="mw-cite-backlink">
+        <b>
+         <a href="#cite_ref-7">
+          ^
+         </a>
+        </b>
+       </span>
+       <span class="reference-text">
+        <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+        <cite class="citation journal cs1" id="CITEREFRochaStern1999">
+         Rocha, Amy L.; Stern, Frederick (1999-08-01).
+         <a class="external text" href="https://www.sciencedirect.com/science/article/abs/pii/S0167715298002958" rel="nofollow">
+          "The gambler's ruin problem with n players and asymmetric play"
+         </a>
+         .
+         <i>
+          Statistics &amp; Probability Letters
+         </i>
+         .
+         <b>
+          44
+         </b>
+         (1): 87–95.
+         <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+          doi
+         </a>
+         :
+         <a class="external text" href="https://doi.org/10.1016%2FS0167-7152%2898%2900295-8" rel="nofollow">
+          10.1016/S0167-7152(98)00295-8
+         </a>
+         .
+         <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+          ISSN
+         </a>
+         <a class="external text" href="https://search.worldcat.org/issn/0167-7152" rel="nofollow">
+          0167-7152
+         </a>
+         .
+        </cite>
+        <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Statistics+%26+Probability+Letters&amp;rft.atitle=The+gambler%27s+ruin+problem+with+n+players+and+asymmetric+play&amp;rft.volume=44&amp;rft.issue=1&amp;rft.pages=87-95&amp;rft.date=1999-08-01&amp;rft_id=info%3Adoi%2F10.1016%2FS0167-7152%2898%2900295-8&amp;rft.issn=0167-7152&amp;rft.aulast=Rocha&amp;rft.aufirst=Amy+L.&amp;rft.au=Stern%2C+Frederick&amp;rft_id=https%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fabs%2Fpii%2FS0167715298002958&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+        </span>
+       </span>
+      </li>
+     </ol>
+    </div>
+    <div class="mw-heading mw-heading2">
+     <h2 id="References">
+      References
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=9" title="Edit section: References">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <ul>
+     <li>
+      <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFR.1995">
+       R., Epstein (1995).
+       <i>
+        The Theory of Gambling and Statistical Logic
+       </i>
+       (Revised ed.). Academic Press.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Theory+of+Gambling+and+Statistical+Logic&amp;rft.edition=Revised&amp;rft.pub=Academic+Press&amp;rft.date=1995&amp;rft.aulast=R.&amp;rft.aufirst=Epstein&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+      </span>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <a href="/wiki/Thomas_S._Ferguson" title="Thomas S. Ferguson">
+       Ferguson T. S.
+      </a>
+      <i>
+       Gamblers Ruin in Three Dimensions
+      </i>
+      . Unpublished manuscript:
+      <a class="external free" href="https://www.math.ucla.edu/~tom/" rel="nofollow">
+       https://www.math.ucla.edu/~tom/
+      </a>
+     </li>
+     <li>
+      <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFM.1942">
+       M., Kraitchik (1942). "§6.20 : The Gambler's Ruin".
+       <i>
+        Mathematical Recreations
+       </i>
+       . New York: W. W. Norton. p. 140.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=%C2%A76.20+%3A+The+Gambler%27s+Ruin&amp;rft.btitle=Mathematical+Recreations&amp;rft.place=New+York&amp;rft.pages=140&amp;rft.pub=W.+W.+Norton&amp;rft.date=1942&amp;rft.aulast=M.&amp;rft.aufirst=Kraitchik&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+      </span>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFShoesmith1986">
+       Shoesmith, E (1986). "Huygens' solution to the gambler's ruin problem".
+       <i>
+        Historia Math
+       </i>
+       .
+       <b>
+        13
+       </b>
+       (2): 157–164.
+       <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+        doi
+       </a>
+       :
+       <a class="external text" href="https://doi.org/10.1016%2F0315-0860%2886%2990028-5" rel="nofollow">
+        10.1016/0315-0860(86)90028-5
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Historia+Math&amp;rft.atitle=Huygens%27+solution+to+the+gambler%27s+ruin+problem&amp;rft.volume=13&amp;rft.issue=2&amp;rft.pages=157-164&amp;rft.date=1986&amp;rft_id=info%3Adoi%2F10.1016%2F0315-0860%2886%2990028-5&amp;rft.aulast=Shoesmith&amp;rft.aufirst=E&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+      </span>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFStigler1990">
+       <a class="mw-redirect" href="/wiki/Stephen_M._Stigler" title="Stephen M. Stigler">
+        Stigler, Stephen M.
+       </a>
+       (1990).
+       <i>
+        The History of Statistics: The Measurement of Uncertainty before 1900
+       </i>
+       . Belknap Press.
+       <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+        ISBN
+       </a>
+       <a href="/wiki/Special:BookSources/978-0-674-40341-3" title="Special:BookSources/978-0-674-40341-3">
+        <bdi>
+         978-0-674-40341-3
+        </bdi>
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+History+of+Statistics%3A+The+Measurement+of+Uncertainty+before+1900&amp;rft.pub=Belknap+Press&amp;rft.date=1990&amp;rft.isbn=978-0-674-40341-3&amp;rft.aulast=Stigler&amp;rft.aufirst=Stephen+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+      </span>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <link href="mw-data:TemplateStyles:r1238218222" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFSwanBruss2006">
+       Swan, Yves C.;
+       <a class="mw-redirect" href="/wiki/F._Thomas_Bruss" title="F. Thomas Bruss">
+        Bruss, F. Thomas
+       </a>
+       (2006).
+       <a class="external text" href="https://doi.org/10.1017%2FS0021900200002084" rel="nofollow">
+        "A Matrix-Analytic Approach to the N-Player Ruin Problem"
+       </a>
+       .
+       <i>
+        Journal of Applied Probability
+       </i>
+       .
+       <b>
+        4
+       </b>
+       (3): 755–766.
+       <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+        doi
+       </a>
+       :
+       <span class="id-lock-free" title="Freely accessible">
+        <a class="external text" href="https://doi.org/10.1017%2FS0021900200002084" rel="nofollow">
+         10.1017/S0021900200002084
+        </a>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Applied+Probability&amp;rft.atitle=A+Matrix-Analytic+Approach+to+the+N-Player+Ruin+Problem&amp;rft.volume=4&amp;rft.issue=3&amp;rft.pages=755-766&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1017%2FS0021900200002084&amp;rft.aulast=Swan&amp;rft.aufirst=Yves+C.&amp;rft.au=Bruss%2C+F.+Thomas&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1017%252FS0021900200002084&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGambler%27s+ruin">
+      </span>
+     </li>
+    </ul>
+    <div class="mw-heading mw-heading2">
+     <h2 id="External_links">
+      External links
+     </h2>
+     <span class="mw-editsection">
+      <span class="mw-editsection-bracket">
+       [
+      </span>
+      <a href="/w/index.php?title=Gambler%27s_ruin&amp;action=edit&amp;section=10" title="Edit section: External links">
+       <span>
+        edit
+       </span>
+      </a>
+      <span class="mw-editsection-bracket">
+       ]
+      </span>
+     </span>
+    </div>
+    <ul>
+     <li>
+      <a class="external text" href="http://math.ucsd.edu/~anistat/gamblers_ruin.html" rel="nofollow">
+       Illustration of Gambler's Ruin
+      </a>
+     </li>
+     <li>
+      <a class="external text" href="http://www.mathpages.com/home/kmath084/kmath084.htm" rel="nofollow">
+       The Gambler's Ruin
+      </a>
+      at MathPages
+     </li>
+     <li>
+      <a class="external text" href="http://demonstrations.wolfram.com/TheGamblersRuin/" rel="nofollow">
+       The Gambler’s Ruin Simulation
+      </a>
+      at Wolfram Demonstration Project
+     </li>
+    </ul>
+    <!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.canary‐66f66674c8‐9kpnh
+Cached time: 20241101153654
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.312 seconds
+Real time usage: 0.497 seconds
+Preprocessor visited node count: 1294/1000000
+Post‐expand include size: 22537/2097152 bytes
+Template argument size: 998/2097152 bytes
+Highest expansion depth: 16/100
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 39032/5000000 bytes
+Lua time usage: 0.171/10.000 seconds
+Lua memory usage: 6140900/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+    <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  327.865      1 -total
+ 49.52%  162.349      1 Template:Reflist
+ 36.89%  120.960      6 Template:Cite_journal
+ 22.50%   73.777      1 Template:Short_description
+ 14.42%   47.291      2 Template:Pagetype
+  7.21%   23.639      4 Template:Cite_book
+  6.13%   20.083      1 Template:For
+  5.83%   19.128      1 Template:ISBN
+  5.56%   18.231      1 Template:Portal
+  5.19%   17.023      1 Template:Use_American_English
+-->
+    <!-- Saved in parser cache with key enwiki:pcache:idhash:453078-0!canonical and timestamp 20241101153654 and revision id 1248131103. Rendering was triggered because: page-view
+ -->
+   </meta>
+  </div>
+  <!--esi <esi:include src="/esitest-fa8a495983347898/content" /> -->
+  <noscript>
+   <img alt="" height="1" src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" width="1"/>
+  </noscript>
+  <div class="printfooter" data-nosnippet="">
+   Retrieved from "
+   <a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Gambler%27s_ruin&amp;oldid=1248131103">
+    https://en.wikipedia.org/w/index.php?title=Gambler%27s_ruin&amp;oldid=1248131103
+   </a>
+   "
+  </div>
+ </div>
+ <div class="catlinks" data-mw="interface" id="catlinks">
+  <div class="mw-normal-catlinks" id="mw-normal-catlinks">
+   <a href="/wiki/Help:Category" title="Help:Category">
+    Categories
+   </a>
+   :
+   <ul>
+    <li>
+     <a href="/wiki/Category:Gambling_terminology" title="Category:Gambling terminology">
+      Gambling terminology
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Probability_problems" title="Category:Probability problems">
+      Probability problems
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Causal_fallacies" title="Category:Causal fallacies">
+      Causal fallacies
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Variants_of_random_walks" title="Category:Variants of random walks">
+      Variants of random walks
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">
+   Hidden categories:
+   <ul>
+    <li>
+     <a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">
+      Articles with short description
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">
+      Short description matches Wikidata
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:Use_American_English_from_January_2019" title="Category:Use American English from January 2019">
+      Use American English from January 2019
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Category:All_Wikipedia_articles_written_in_American_English" title="Category:All Wikipedia articles written in American English">
+      All Wikipedia articles written in American English
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
