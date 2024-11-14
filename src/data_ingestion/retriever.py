@@ -1,13 +1,13 @@
 from langchain_community.vectorstores import FAISS
-from typing import Optional
+from typing import Optional, Callable, Any
 from langchain.docstore.document import Document
 
 
 class Retriever:
     def __init__(
         self,
-        embedding_model,
-        text_splitter,
+        embedding_model : Any,
+        text_splitter: Any,
         vector_store_path: str,
         documents: Optional[list[Document]] = None,
     ):
@@ -32,7 +32,7 @@ class Retriever:
         except RuntimeError:
             print("Could not load local FAISS VectorStore")
 
-    def save(self, documents):
+    def save(self, documents: list[Document]):
         splitted_docs = []
         print("Splitting into documents into chunks...")
         for doc in documents:
