@@ -14,7 +14,7 @@ jobs:
       uses: programmingwithalex/pylinter@main
       with:
         python-root: './src'
-        flake8-flags: '--ignore E203'
+        flake8-flags: '--ignore E203 --max-line-length=100'
         mypy-flags: ''
         fail-on-isort: false
         # skip-flake8: false
