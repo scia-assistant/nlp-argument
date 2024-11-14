@@ -6,3 +6,4 @@ boto3
 langchain_huggingface
 gpt4all
 unstructured
+datasets
