@@ -32,6 +32,14 @@ with advanced logic tools, we aim to create a powerful, cost-effective solution 
 ## Project background (~400 words)
 	This part explores what has been done by other people in the line of work of the project from a technical / industrial / research point of view. Stress out how your project is different/similar to these other works.
 
+- Logic
+	- Related works :
+		- https://github.com/ArgumentumGames/Argumentum/tree/semantic-kernel/Chatgpt-plugin : This is a project by an EPITA instructor who attempted to connect Chat-GPT4 to the "tweety" logic library implemented in Java. This project serves as the inspiration for our logic component. Our goal is similar—to enhance a language model’s understanding of rhetorical arguments by utilizing a logic-based language.
+		- https://shchegrikovich.substack.com/p/use-prolog-to-improve-llms-reasoning : This focuses on solving various simpler logic problems, like mathematical challenges, with the aim of improving an LLM's reasoning abilities. The article details connections between the LLM and logic-based language, connections which we also intend to explore.
+		- https://hackernoon.com/lang/fr/outil-d'exploration-raisonnement-int%C3%A9gr%C3%A9-innovation-ma%C3%AEtrise-des-math%C3%A9matiques-LLMs : This article presents open-source reasoning agents (TORA) and explains their operational methods.
+	- Differences:
+		- All of these articles rely on large models with many parameters (usually GPT-3 or GPT-4). Our work will focus on improving capacities of smaller LLMs.
+
 ## Project steps (Bullet points)
 - **Setting Up Continuous Integration (CI)** (dorian.penso)
 	- **Set Up Workflow Checks**: Use GitHub Actions to create workflows that automatically check the consistent code style and quality.
