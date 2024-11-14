@@ -9,4 +9,10 @@ unstructured
 datasets
 matplotlib
 ipywidgets
-black
+blackdatasets
+seaborn
+torch
+transformers
+types-tqdm
+accelerate>=0.26.0
+bitsandbytes
