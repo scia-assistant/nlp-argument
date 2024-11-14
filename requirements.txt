@@ -5,6 +5,8 @@ beautifulsoup4
 boto3
 langchain-huggingface
 gpt4all
+sphinx
+sphinx-autodoc-typehints
 unstructured
 datasets
 matplotlib
