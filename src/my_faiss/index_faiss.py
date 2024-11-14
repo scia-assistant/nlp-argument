@@ -38,6 +38,7 @@ def add_document_to_index(data_folder, db, index):
 
         if file_name.endswith(".pdf"):
             text, text_hash = get_pdf_text_hash(file_path)
+        # add other function for other type of files
         else:
             continue
 
@@ -69,6 +70,7 @@ def add_document_to_index(data_folder, db, index):
     return index
 
 
+# connection to the db
 username = "admin"
 password = "admin123"
 
@@ -81,7 +83,9 @@ client = MongoClient(uri)
 
 db = client["faiss_db"]
 
+# folder of the datas
 data_folder = "datas/"
+# file where we store the data
 index_path = "index.faiss"
 
 if os.path.exists(index_path):
