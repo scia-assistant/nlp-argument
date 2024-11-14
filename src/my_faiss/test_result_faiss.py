@@ -40,7 +40,7 @@ for i in range(k):
         {"faiss_id": int(faiss_id)}
     )  # Ensure faiss_id is an integer
     if result:
-        print(f"Result {i+1}:")
+        print(f"Result {i + 1}:")
         print(f"File: {result['file_name']}, Chunk: {result['file_hash']}")
         print(f"Text: {result['text']}")
         print(f"Distance: {distances[0][i]}\n")
