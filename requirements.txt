@@ -1,6 +1,6 @@
 langchain
 langchain-community
-faiss-cpu==1.7.4
+faiss-cpu
 beautifulsoup4
 boto3
 langchain-huggingface
@@ -9,7 +9,8 @@ unstructured
 datasets
 matplotlib
 ipywidgets
-blackdatasets
+black
+datasets
 seaborn
 torch
 transformers
