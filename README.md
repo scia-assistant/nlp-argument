@@ -67,14 +67,13 @@ So by integrating Retrieval-Augmented Generation with French jurisprudence, we a
 ## First results (min. 200 words)
 	This part presents the first results of the project. It can be negative results (“we made the whole pipeline and it does not work, we have errors X and problems Y”) or issues with a first version (“we made our application and it is slow / it does not solve problem X”). If your project is more R&D-like, it can be reproducing the results of a paper + a first experiment in the direction you would like to explore. Please include problems you faced with / are facing and ideas about how to tackle them.
 
+Initially, our project focused on developing a tool capable of analyzing arguments to determine whether they are fallacious and, if so, identifying the specific type of fallacy involved. The first part to achieve this, was utilizing a Retrieval-Augmented Generation (RAG) approach, combined with a comprehensive database of definitions and examples of various fallacious arguments.\
+After creating the database, and implementing the RAG we quickly encountered a significant issue. The retrieved documents were not relevant at all. For example when giving to the model the argument "Katherine is a bad choice for mayor because she didn’t grow up in this town." which is a Ad hominem logical fallacy, the system retrieved documents solely based on surface-level keyword matches, such as those containing the word “mayor”. Since the retrieval search focus either on semantic or syntaxic similarities between the query and the documents, it revealed a critical gap in the model’s ability to understand and process the deeper logical structure of the argument, rather than merely focusing on superficial lexical overlaps.\
+
 - Logic
 	- Results were not promising. In fact, the first hypothesis was that LLM was good to translate logic problem formulated in natural language into logic based language. That is true for big LLM, not for small one. It is already hard to generate a valid python code of the problem "How much does 1+5 ?".
 	- Fine-tuning may be a solution. Fine-tuning on a specific programming language might improve their capacities to translate natural language to this programming language.
 
-
-## Additional content (optional)
-Github repo:
-Project demo:
 
 ## 👥 Authors <a name="authors"></a>
 - Dorian Penso
