@@ -70,31 +70,20 @@ Our objective is to develop a model that either matches the performance of exist
 
 ## First results
 
-<<<<<<< HEAD
+Initially, our project focused on developing a tool capable of analyzing arguments to determine whether they are fallacious and, if so, identifying the specific type of fallacy involved. The first part to achieve this, was utilizing a Retrieval-Augmented Generation (RAG) approach, combined with a comprehensive database of definitions and examples of various fallacious arguments.\
+After creating the database, and implementing the RAG we quickly encountered a significant issue. The retrieved documents were not relevant at all. For example when giving to the model the argument "Katherine is a bad choice for mayor because she didn’t grow up in this town." which is a Ad hominem logical fallacy, the system retrieved documents solely based on surface-level keyword matches, such as those containing the word “mayor”. Since the retrieval search focus either on semantic or syntaxic similarities between the query and the documents, it revealed a critical gap in the model’s ability to understand and process the deeper logical structure of the argument, rather than merely focusing on superficial lexical overlaps.
+
+We then began exploring alternative subjects and datasets where implementing a RAG system would be both contextually appropriate and capable of delivering meaningful and insightful results. Seeking a highly specific and structured domain, we turned our attention to the field of law, recognizing its potential for meaningful application, and more specifically French jurisprudence. After identifying our dataset, we then divided the project into main branches:
+- **The Continuous Integration (CI)** which has been fully implemented in the environment. It enables automated checks for tests, workflow processes, and adherence to commit patterns. This ensures a streamlined and consistent development process, enhancing efficiency and reliability.
+- **The Jurisprudence Assistance System**
+	- For data storage, we have chosen FAISS as the indexing solution for effectively retrieving data in the RAG system. All indexes and corresponding text derived from our documents are stored in a MongoDB database, ensuring organized and accessible data management.
+	- After an initial implementation of our RAG, we tested it by posing general questions about jurisprudence such as "Qu'est-ce qu'un litige?" (a question a student may have). The model successfully provided a correct answer, supported by examples of legal cases to enhance understanding and offer more depth in its explanation.
+	- We have not yet conducted tests on the fact-checking component of our model.
 - **Develop Analytical Logic for Large Language Model (LLM)**
 	- Results were not promising. In fact, the first hypothesis was that LLM was good to translate logic problem formulated in natural language into logic based language. That is true for big LLM, not for small one (<2B parameters). It is already hard to generate a valid prolog (or even python) code of the problem "How much does 1+5 ?".
 	- Fine-tuning may be a solution. Fine-tuning on a specific programming language might improve their capacities to translate natural language to this programming language.
 	- Test were made on a local machine with few resources. A solution would be to use GPUs on google colab or azure resources to use bigger model (Llama with 7B parameters for example).  
-
-
-## Additional content (optional)
-Github repo:
-Project demo:
-=======
-Initially, our project focused on developing a tool capable of analyzing arguments to determine whether they are fallacious and, if so, identifying the specific type of fallacy involved. The first part to achieve this, was utilizing a Retrieval-Augmented Generation (RAG) approach, combined with a comprehensive database of definitions and examples of various fallacious arguments.\
-After creating the database, and implementing the RAG we quickly encountered a significant issue. The retrieved documents were not relevant at all. For example when giving to the model the argument "Katherine is a bad choice for mayor because she didn’t grow up in this town." which is a Ad hominem logical fallacy, the system retrieved documents solely based on surface-level keyword matches, such as those containing the word “mayor”. Since the retrieval search focus either on semantic or syntaxic similarities between the query and the documents, it revealed a critical gap in the model’s ability to understand and process the deeper logical structure of the argument, rather than merely focusing on superficial lexical overlaps.\
-
-We then began exploring alternative subjects and datasets where implementing a RAG system would be both contextually appropriate and capable of delivering meaningful and insightful results. Seeking a highly specific and structured domain, we turned our attention to the field of law, recognizing its potential for meaningful application, and more specifically French jurisprudence. After identifying our dataset, we then divided the project into main branches:
-- The Continuous Integration (CI) which has been fully implemented in the environment. It enables automated checks for tests, workflow processes, and adherence to commit patterns. This ensures a streamlined and consistent development process, enhancing efficiency and reliability.
-- The Jurisprudence Assistance System
-	- For data storage, we have chosen FAISS as the indexing solution for effectively retrieving data in the RAG system. All indexes and corresponding text derived from our documents are stored in a MongoDB database, ensuring organized and accessible data management.
-	- After an initial implementation of our RAG, we tested it by posing general questions about jurisprudence such as "Qu'est-ce qu'un litige?" (a question a student may have). The model successfully provided a correct answer, supported by examples of legal cases to enhance understanding and offer more depth in its explanation.
-	- We have not yet conducted tests on the fact-checking component of our model.
-- Logic
-	- Results were not promising. In fact, the first hypothesis was that LLM was good to translate logic problem formulated in natural language into logic based language. That is true for big LLM, not for small one. It is already hard to generate a valid python code of the problem "How much does 1+5 ?".
-	- Fine-tuning may be a solution. Fine-tuning on a specific programming language might improve their capacities to translate natural language to this programming language.
-- The User Interface, designed for interacting with the LLM, is currently in the prototype stage. At this point, it is not functional or ready for use, as further development and refinement are required.
->>>>>>> 3398ede30b3ecf4993a8406aaaa170142650f8a1
+- **The User Interface**, designed for interacting with the LLM, is currently in the prototype stage. At this point, it is not functional or ready for use, as further development and refinement are required.
 
 ## 👥 Authors <a name="authors"></a>
 - Dorian Penso
