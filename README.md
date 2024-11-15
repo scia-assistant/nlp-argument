@@ -67,9 +67,10 @@ So by integrating Retrieval-Augmented Generation with French jurisprudence, we a
 ## First results (min. 200 words)
 	This part presents the first results of the project. It can be negative results (“we made the whole pipeline and it does not work, we have errors X and problems Y”) or issues with a first version (“we made our application and it is slow / it does not solve problem X”). If your project is more R&D-like, it can be reproducing the results of a paper + a first experiment in the direction you would like to explore. Please include problems you faced with / are facing and ideas about how to tackle them.
 
-- Logic
-	- Results were not promising. In fact, the first hypothesis was that LLM was good to translate logic problem formulated in natural language into logic based language. That is true for big LLM, not for small one. It is already hard to generate a valid python code of the problem "How much does 1+5 ?".
+- **Develop Analytical Logic for Large Language Model (LLM)**
+	- Results were not promising. In fact, the first hypothesis was that LLM was good to translate logic problem formulated in natural language into logic based language. That is true for big LLM, not for small one (<2B parameters). It is already hard to generate a valid prolog (or even python) code of the problem "How much does 1+5 ?".
 	- Fine-tuning may be a solution. Fine-tuning on a specific programming language might improve their capacities to translate natural language to this programming language.
+	- Test were made on a local machine with few resources. A solution would be to use GPUs on google colab or azure resources to use bigger model (Llama with 7B parameters for example).  
 
 
 ## Additional content (optional)
