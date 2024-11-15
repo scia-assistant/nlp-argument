@@ -29,8 +29,14 @@ Our objective is to develop a model that either matches the performance of exist
 ## Project background (~400 words)
 - **The Jurisprudence Assistance System**
 	- Related works:
-		- https://arxiv.org/abs/2309.17050
-	- Differences: We will try different models and techniques to make the inference faster while maintaining good quality of answers.
+		- https://arxiv.org/pdf/2010.02559 - LEGAL-BERT: The Muppets straight out of Law School: LEGAL-BERT is a specialized adaptation of the Bidirectional Encoder Representations from Transformers (BERT) model, tailored specifically for the legal domain. This model aims to improve the model in the law domain without the use of RAG.
+		- https://arxiv.org/abs/2306.05685 - Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena: They use a strong LLMs as judges to evaluate models on more open-ended questions.
+	
+	- Differences: 
+		- Model Size: Focusing on open-source small language models can offer advantages in terms of computational efficiency and deployment feasibility, especially in resource-constrained environments.
+
+		- Specialized Legal Corpus: Utilizing a unique dataset, such as French Jurisprudence case law, can provide tailored insights not covered by existing models. Jurisprudenca cases happen everyday so it is good to update our database withouth having to retrain or finetune the models
+
 - **Develop Analytical Logic for Large Language Model (LLM)**
 	- Related works :
 		- https://github.com/ArgumentumGames/Argumentum/tree/semantic-kernel/Chatgpt-plugin : This is a project by an EPITA instructor who attempted to connect Chat-GPT4 to the "tweety" logic library implemented in Java. This project serves as the inspiration for our logic component. Our goal is similar—to enhance a language model’s understanding of rhetorical arguments by utilizing a logic-based language.
