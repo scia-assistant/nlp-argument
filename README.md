@@ -80,6 +80,8 @@ After creating the database, and implementing the RAG we quickly encountered a s
 	- Fine-tuning may be a solution. Fine-tuning on a specific programming language might improve their capacities to translate natural language to this programming language.
 
 
+The user interface for interacting with the LLM is currently in the prototype stage. At this point, it is not functional or ready for use, as further development and refinement are required.
+
 ## 👥 Authors <a name="authors"></a>
 - Dorian Penso
 - Léa Margery
