@@ -8,21 +8,25 @@
 
 ## 🚀 Description <a name="description"></a>
 
-French jurisprudence plays a critical role in interpreting and applying legal principles within the framework of the civil law system. Judges and legal practitioners rely on jurisprudence to navigate areas where statutes may be ambiguous, silent, or require contextual interpretation. In contemporary legal practice, jurisprudence is increasingly essential for addressing complex and evolving societal issues, such as digital rights, environmental law, and international disputes. With the proliferation of legal rulings across various courts, including the Cour de cassation and Conseil d’État, accessing and synthesizing relevant case law has become a challenge.\
-To address this challenge, this project aims to create a tool that not only efficiently retrieves relevant case law but also leverages this contextual data to generate accurate and comprehensive answers to user queries. By combining advanced retrieval techniques with contextualized response generation, the model ensures precise, actionable insights tailored to the complexities of French jurisprudence.\
-This tool will have a wide range of use cases across the legal ecosystem. Legal professionals, such as lawyers and judges, can use it to quickly identify relevant precedents and obtain summaries or explanations of case law tailored to specific legal arguments. Academics and students can leverage the system for research, enabling them to explore legal principles, analyze historical trends, or understand nuanced judicial decisions in depth. Finally, it can also empower citizens by offering transparent and easy-to-understand explanations of legal matters, fostering greater access to justice.
+Fact and consistency checker for law.
 
-The project has two primary focuses:
-- It will combine an open-source language model (LLM) with a Retrieval-Augmented Generation (RAG) to retrieve relevant French jurisprudence and provide sourced examples. This feature will be easily accessible through a user-friendly chatbot interface making it simple and intuitive to use.
-<!-- - It will enhance the logical reasoning abilities of the model through a logic-based language or library, which can also enhance the explainability of the model's results.
-This functionality can be divided into two sub-tasks:
-	- Decomposing natural language sentences into basic logical elements.
-	- Representing the logical structure of sentences or answering logical questions based on this structure. -->
+In French law, judges and legal practitioners rely significantly on structured argumentation to resolve cases where legal provisions may be ambiguous, incomplete, or require contextual interpretation. The capacity to construct, analyze, and validate legal arguments is essential to ensure fair and just outcomes. Addressing these challenges requires decisions grounded not only in statutory law but also in logically sound and valid arguments.
 
-Current open-source LLMs are more or less capable in generating coherent text and providing relevant responses. However, they often fall short when tasked with producing high-quality outputs in highly specific technical domains.
-Our project seeks to tackle this limitation by equipping the model with highly relevant contextual information, enabling them to generate significantly improved and more accurate text.
-Our goal is to develop a model that either has the same performance of current LLMs (such as GPT-4) with a smaller model (reducing computational costs) or exceeds their performance. 
-So by integrating Retrieval-Augmented Generation with French jurisprudence, we aim to create a powerful and cost-effective solution that revolutionizes access to legal knowledge, bringing clarity, efficiency, and precision to the complexities of case law analysis.
+Our goal is to develop a tool that helps checking the truthfulness of an assertion, an argument or even a speech in the law domain.
+Checking the truthfulness relies on two main things, checking the facts and checking the consistency.
+
+Thus, the project has two primary focuses:
+- Combines an open-source language model (LLM) with a Retrieval-Augmented Generation (RAG) to retrieve relevant French jurisprudence and provide sourced examples.
+- Combines an open-source language model (LLM) with a logic-based language/library to check the consistency of argument. This combination should be able to detect basic fallacious assertion and explain why an argument is consistent or not. LLM responses must be based on formal logic rules but convert it to human language for understanding purposes.
+
+
+Both of these features will be easily accessible through a user-friendly chatbot interface making it simple and intuitive to use.
+
+A practical use-case involves a legal practitioner faced with making a decision. In formulating a legal argument, the practitioner must have a thorough understanding of the law and the ability to structure the argument in a clear and logical manner. He would then use these models to be able to retrieve lawful information and be able to create a logical reasoning to construct his legal argument.
+Another use-case involves an average person who would just want to get answers from truthful sources.
+ 
+Current open-source LLMs demonstrate a reasonable ability to generate coherent text and provide relevant responses. However, they often struggle to deliver high-quality outputs in highly specialized technical domains. Additionally, their reasoning capabilities can be limited, depending on the specific LLM employed.
+Our objective is to develop a model that either matches the performance of existing LLMs with a smaller architecture (thus reducing computational costs) or surpasses their performance altogether.
 
 ## Project background (~400 words)
 	This part explores what has been done by other people in the line of work of the project from a technical / industrial / research point of view. Stress out how your project is different/similar to these other works.
