@@ -27,7 +27,7 @@ So by integrating Retrieval-Augmented Generation with French jurisprudence, we a
 ## Project background (~400 words)
 	This part explores what has been done by other people in the line of work of the project from a technical / industrial / research point of view. Stress out how your project is different/similar to these other works.
 
-- Logic
+- **Develop Analytical Logic for Large Language Model (LLM)**
 	- Related works :
 		- https://github.com/ArgumentumGames/Argumentum/tree/semantic-kernel/Chatgpt-plugin : This is a project by an EPITA instructor who attempted to connect Chat-GPT4 to the "tweety" logic library implemented in Java. This project serves as the inspiration for our logic component. Our goal is similar—to enhance a language model’s understanding of rhetorical arguments by utilizing a logic-based language.
 		- https://shchegrikovich.substack.com/p/use-prolog-to-improve-llms-reasoning : This focuses on solving various simpler logic problems, like mathematical challenges, with the aim of improving an LLM's reasoning abilities. The article details connections between the LLM and logic-based language, connections which we also intend to explore.
