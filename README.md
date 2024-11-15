@@ -65,6 +65,11 @@ So by integrating Retrieval-Augmented Generation with French jurisprudence, we a
 	- **Model Deployment**: Integrate the model with the UI, ensuring efficient loading and data handling.
 
 ## First results (min. 200 words)
+
+Continuous Integration (CI) has been fully implemented in the environment, enabling automated checks for tests, workflow processes, and adherence to commit patterns. This ensures a streamlined and consistent development process, enhancing efficiency and reliability.
+
+For data storage, FAISS has been chosen as the indexing solution for effectively retrieving data in the RAG system. All indexes and corresponding text derived from our documents are stored in a MongoDB database, ensuring organized and accessible data management.
+
 	This part presents the first results of the project. It can be negative results (“we made the whole pipeline and it does not work, we have errors X and problems Y”) or issues with a first version (“we made our application and it is slow / it does not solve problem X”). If your project is more R&D-like, it can be reproducing the results of a paper + a first experiment in the direction you would like to explore. Please include problems you faced with / are facing and ideas about how to tackle them.
 
 Initially, our project focused on developing a tool capable of analyzing arguments to determine whether they are fallacious and, if so, identifying the specific type of fallacy involved. The first part to achieve this, was utilizing a Retrieval-Augmented Generation (RAG) approach, combined with a comprehensive database of definitions and examples of various fallacious arguments.\
