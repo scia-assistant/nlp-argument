@@ -1,4 +1,4 @@
-# French jurisprudence RAG
+# Fact and consistency checker for law.
 
 <!-- TABLE OF CONTENTS -->
 
@@ -7,8 +7,6 @@
 - [👥 Authors](#authors)
 
 ## 🚀 Description <a name="description"></a>
-
-Fact and consistency checker for law.
 
 In French law, judges and legal practitioners rely significantly on structured argumentation to resolve cases where legal provisions may be ambiguous, incomplete, or require contextual interpretation. The capacity to construct, analyze, and validate legal arguments is essential to ensure fair and just outcomes. Addressing these challenges requires decisions grounded not only in statutory law but also in logically sound and valid arguments.
 
@@ -29,8 +27,10 @@ Current open-source LLMs demonstrate a reasonable ability to generate coherent t
 Our objective is to develop a model that either matches the performance of existing LLMs with a smaller architecture (thus reducing computational costs) or surpasses their performance altogether.
 
 ## Project background (~400 words)
-	This part explores what has been done by other people in the line of work of the project from a technical / industrial / research point of view. Stress out how your project is different/similar to these other works.
-
+- **The Jurisprudence Assistance System**
+	- Related works:
+		- https://arxiv.org/abs/2309.17050
+	- Differences: We will try different models and techniques to make the inference faster while maintaining good quality of answers.
 - **Develop Analytical Logic for Large Language Model (LLM)**
 	- Related works :
 		- https://github.com/ArgumentumGames/Argumentum/tree/semantic-kernel/Chatgpt-plugin : This is a project by an EPITA instructor who attempted to connect Chat-GPT4 to the "tweety" logic library implemented in Java. This project serves as the inspiration for our logic component. Our goal is similar—to enhance a language model’s understanding of rhetorical arguments by utilizing a logic-based language.
