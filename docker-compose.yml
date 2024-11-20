@@ -3,8 +3,8 @@ services:
     image: mongo:5.0  # Use the official MongoDB image from Docker Hub
     # container_name: mongodb_container
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin      # Set MongoDB root username
-      MONGO_INITDB_ROOT_PASSWORD: admin123   # Set MongoDB root password
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}   # Set MongoDB root password
       MONGO_INITDB_DATABASE: faiss_db
     ports:
       - "27017:27017"

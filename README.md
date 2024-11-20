@@ -58,3 +58,7 @@ To download commit checker and requirement:
 
 To check the unittest test suite:
 - `make check`
+
+## start DB
+- docker-compose --env-file .env up --build -d
+
