@@ -24,7 +24,7 @@ def add_documents(data_path, db, index_path, chunk_size=200):
         chunk_size: number of word per embedding
     """
 
-    # model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
+    model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
     chunks_collection = db["chunks"]
 
     # load or create index
@@ -52,10 +52,10 @@ def add_documents(data_path, db, index_path, chunk_size=200):
 
         # Process each chunk
         for chunk_num, chunk in enumerate(chunks):
-            # embedding = model.encode([chunk]).astype(np.float32)
-            embedding = np.random.rand(384).reshape(
-                1, -1
-            )  # for dorian because with model it's not working for me
+            embedding = model.encode([chunk]).astype(np.float32)
+            # embedding = np.random.rand(384).reshape(
+            #     1, -1
+            # )  # for dorian because with model it's not working for me
 
             faiss_id = index.ntotal
             index.add(embedding)
@@ -87,17 +87,17 @@ def search_neighbors(db, query_text: str, index_path, nb_neighbors=5):
         an array of nb_neighbors elements of the indexes closest to the query
     """
 
-    # model = SentenceTransformer("all-MiniLM-L6-v2")
+    model = SentenceTransformer("all-MiniLM-L6-v2")
 
     if os.path.exists(index_path):
         index = faiss.read_index(index_path)
     else:
         raise Exception("the index_path doesn't exist")
 
-    # query_embedding = model.encode([query_text]).astype(np.float32)
-    query_embedding = np.random.rand(384).reshape(
-        1, -1
-    )  # for me because with model it's not working for me
+    query_embedding = model.encode([query_text]).astype(np.float32)
+    # query_embedding = np.random.rand(384).reshape(
+    #     1, -1
+    # )  # for me because with model it's not working for me
 
     distances, indices = index.search(query_embedding, nb_neighbors)
     chunks_collection = db["chunks"]
