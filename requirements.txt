@@ -6,3 +6,10 @@ pdfplumber
 pymongo
 sentence-transformers 
 python-dotenv
+datasets
+seaborn
+torch
+transformers
+types-tqdm
+accelerate>=0.26.0
+bitsandbytes
