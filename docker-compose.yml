@@ -1,0 +1,17 @@
+services:
+  mongodb:
+    image: mongo:5.0  # Use the official MongoDB image from Docker Hub
+    # container_name: mongodb_container
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}   # Set MongoDB root password
+      MONGO_INITDB_DATABASE: faiss_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+      - ./init.js:/docker-entrypoint-initdb.d/init.js
+
+volumes:
+  mongo-data:
+
