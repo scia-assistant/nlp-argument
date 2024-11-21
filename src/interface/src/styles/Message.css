@@ -1,0 +1,22 @@
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+  border-radius: 30px 30px 5px 30px;
+  margin-left: 30px;
+}
+
+.bot-message {
+  background-color: gray;
+  color: white;
+  align-self: flex-start;
+  border-radius: 30px 30px 30px 5px;
+  margin-right: 30px;
+}

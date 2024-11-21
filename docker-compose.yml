@@ -1,0 +1,13 @@
+services:
+  my_web_service:
+    build: ./src/my_api
+    ports:
+      - "8085:8085"
+
+  interface:
+    build: ./src/interface
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_MY_API_URI=http://localhost:8085
+

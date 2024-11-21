@@ -106,3 +106,8 @@ To download commit checker and requirement:
 
 To check the unittest test suite:
 - `make check`
+
+## How to start
+- docker compose up
+- go to localhost:3000
+- talk with the AI
