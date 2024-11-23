@@ -1,0 +1,37 @@
+name: Deploy to VM
+
+on:
+  push:
+    branches:
+      - main
+      - 22-deploy-automatically-with-ci
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Install rsync
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y rsync openssh-client sshpass
+    - name: Debug Secrets
+      run: |
+        echo "User: ${{ secrets.SSH_USER }}"
+        echo "Host: ${{ secrets.SSH_HOST }}"
+
+    - name: Copy Project to Server
+      run: |
+        sshpass -p ${{secrets.SSH_PWD}} rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}"@[${{secrets.SSH_HOST}}]:./nlp-argument/"
+
+
+    - name: Deploy with Docker Compose
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
+          cd nlp-argument
+          docker-compose down
+          docker-compose up -d --build
+        EOF
