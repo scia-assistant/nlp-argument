@@ -15,6 +15,7 @@ jobs:
             echo "::set-output name=status::running"
           else
             echo "::set-output name=status::not-running"
+          fi
 
   deploy:
     runs-on: ubuntu-latest
