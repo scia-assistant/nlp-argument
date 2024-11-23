@@ -16,8 +16,8 @@ jobs:
 
     - name: Install rsync
       run: |
-        sudo apt-get update
-        sudo apt-get install -y rsync openssh-client sshpass
+        apt-get update
+        apt-get install -y rsync openssh-client sshpass
     - name: Debug Secrets
       run: |
         echo "User: ${{ secrets.SSH_USER }}"
@@ -25,7 +25,7 @@ jobs:
 
     - name: Copy Project to Server
       run: |
-        sshpass -p ${{secrets.SSH_PWD}} rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}@[${{secrets.SSH_HOST}}]:./nlp-argument/"
+        sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}@[${{secrets.SSH_HOST}}]:./nlp-argument/"
 
 
     - name: Deploy with Docker Compose
