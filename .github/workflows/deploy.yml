@@ -16,8 +16,8 @@ jobs:
 
     - name: Install rsync
       run: |
-        apt-get update
-        apt-get install -y rsync openssh-client sshpass
+        sudo apt-get update
+        sudo apt-get install -y rsync openssh-client sshpass
     - name: Debug Secrets
       run: |
         echo "User: ${{ secrets.SSH_USER }}"
