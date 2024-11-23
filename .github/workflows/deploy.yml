@@ -18,10 +18,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y rsync openssh-client sshpass
-    - name: Debug Secrets
+    - name: Debug
       run: |
-        echo "User: ${{ secrets.SSH_USER }}"
-        echo "Host: ${{ secrets.SSH_HOST }}"
+        sshpass -p 'toto1234' ssh -o StrictHostKeyChecking=no toto@2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3 "echo 'Connected successfully!'"
 
     - name: Copy Project to Server
       run: |
