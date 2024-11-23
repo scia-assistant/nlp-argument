@@ -2,9 +2,24 @@ name: CI-Workflow
 on: [push, pull_request]
 
 jobs:
+  check-vm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if VM is running
+        id: check-vm
+        run: |
+          VM_IP="${{secrets.SSH_HOST}}"
+          if ping -c 1 $VM_IP &> /dev/null; then
+            echo "VM is running."
+            echo "::set-output name=vm_running::true"
+          else
+            echo "VM is not running. Aborting CI."
+            echo "::set-output name=vm_running::false"
+            exit 0
+          fi
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.head_commit.message, 'deploy-on-vm') }}
+    if: needs.check-vm.outputs.vm_running == 'true'
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
