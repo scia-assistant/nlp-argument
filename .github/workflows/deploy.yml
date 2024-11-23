@@ -1,4 +1,4 @@
-name: Deploy to VM via IPv6
+name: Deploy to VM
 
 on:
   push:
@@ -11,57 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+    - name: Checkout Code
+      uses: actions/checkout@v4
 
-      - name: Install Tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y rsync openssh-client sshpass
-      - name: Check IPv6 Connectivity
-        run: |
-          ping6 -c 4 google.com
+    - name: Install rsync
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y rsync openssh-client sshpass iputils-ping netcat
 
+    - name: Copy Project to Server
+      run: |
+        sshpass -p 'toto1234' rsync -avz --exclude='.git' -e "ssh -vvv -o StrictHostKeyChecking=no" ./ "toto@92.151.13.238:./nlp-argument"
 
-      - name: Test IPv6 Connectivity
-        run: |
-          ping6 -c 4 2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3
-
-      - name: Deploy Code to VM
-        run: |
-          sshpass -p 'your_password' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -6" ./Makefile "user@[2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3]:./"
-
-#
-# name: Deploy to VM
-#
-# on:
-#   push:
-#     branches:
-#       - main
-#       - 22-deploy-automatically-with-ci
-#
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#
-#     steps:
-#     - name: Checkout Code
-#       uses: actions/checkout@v4
-#
-#     - name: Install rsync
-#       run: |
-#         sudo apt-get update
-#         sudo apt-get install -y rsync openssh-client sshpass iputils-ping netcat
-#
-#     - name: Copy Project to Server
-#       run: |
-#         sshpass -p 'toto1234' rsync -avz --exclude='.git' -e "ssh -vvv -o StrictHostKeyChecking=no" ./Makefile "toto@192.168.1.52:./"
-#
-#
-#     - name: Deploy with Docker Compose
-#       run: |
-#         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
-#           cd nlp-argument
-#           docker-compose down
-#           docker-compose up -d --build
-#         EOF
+    - name: Deploy with Docker Compose
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
+          cd nlp-argument
+          docker-compose down
+          docker-compose up -d --build
+        EOF
