@@ -17,18 +17,18 @@ jobs:
     - name: Install rsync
       run: |
         sudo apt-get update
-        sudo apt-get install -y rsync openssh-client sshpass
+        sudo apt-get install -y rsync openssh-client sshpass iputils-ping netcat
 
-    - name: SSH into remote server and pull image
+
+    - name: Debug Connectivity
       run: |
-        sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no toto@192.168.1.52 \
-        "touch toto"
-      env:
-        SSH_PASSWORD: ${{secrets.SSH_PWD}}
+        echo "Testing connectivity..."
+        ping -c 4 <server-ip> || echo "Ping failed"
+        nc -zv <server-ip> 22 || echo "Port 22 unreachable"
 
     - name: Copy Project to Server
       run: |
-        sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./Makefile "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:./nlp-argument/"
+        sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -vvv -o StrictHostKeyChecking=no" ./Makefile "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:./nlp-argument/"
 
 
     - name: Deploy with Docker Compose
