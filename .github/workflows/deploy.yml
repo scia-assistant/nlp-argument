@@ -20,7 +20,10 @@ jobs:
         sudo apt-get install -y rsync openssh-client sshpass
     - name: Debug
       run: |
-        sshpass -p 'toto1234' ssh -o StrictHostKeyChecking=no toto@2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3 "echo 'Connected successfully!'"
+        echo "Testing IPv6 connectivity..."
+        ping6 -c 4 2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3 || echo "Ping failed"
+        echo "Testing SSH port availability..."
+        nc -zv -6 2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3 22 || echo "Port 22 unreachable"
 
     - name: Copy Project to Server
       run: |
