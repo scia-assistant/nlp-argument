@@ -20,11 +20,11 @@ jobs:
 
       - name: Test IPv6 Connectivity
         run: |
-          ping6 -c 4 [your-ipv6-address]
+          ping6 -c 4 2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3
 
       - name: Deploy Code to VM
         run: |
-          sshpass -p 'your_password' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -6" ./Makefile "user@[your-ipv6-address]:~/"
+          sshpass -p 'your_password' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -6" ./Makefile "user@[2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3]:~/"
 
 #
 # name: Deploy to VM
