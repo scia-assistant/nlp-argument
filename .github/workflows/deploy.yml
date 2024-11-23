@@ -1,12 +1,6 @@
 name: CI-Workflow
 on: [push, pull_request]
 
-on:
-  push:
-    branches:
-      - main
-      - 22-deploy-automatically-with-ci
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
