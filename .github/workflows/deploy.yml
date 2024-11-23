@@ -19,9 +19,16 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y rsync openssh-client sshpass
 
+    - name: SSH into remote server and pull image
+        run: |
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no toto@192.168.1.52 \
+          "touch toto"
+        env:
+          SSH_PASSWORD: ${{secrets.SSH_PWD}}
+
     - name: Copy Project to Server
       run: |
-        sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -v -o StrictHostKeyChecking=no" ./Makefile "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:./nlp-argument/"
+        sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./Makefile "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:./nlp-argument/"
 
 
     - name: Deploy with Docker Compose
