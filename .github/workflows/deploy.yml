@@ -25,7 +25,7 @@ jobs:
 
     - name: Copy Project to Server
       run: |
-        sshpass -p ${{secrets.SSH_PWD}} rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}"@[${{secrets.SSH_HOST}}]:./nlp-argument/"
+        sshpass -p ${{secrets.SSH_PWD}} rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}@[${{secrets.SSH_HOST}}]:./nlp-argument/"
 
 
     - name: Deploy with Docker Compose
