@@ -18,6 +18,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y rsync openssh-client sshpass
+      - name: Check IPv6 Connectivity
+        run: |
+          ping6 -c 4 google.com
+
 
       - name: Test IPv6 Connectivity
         run: |
