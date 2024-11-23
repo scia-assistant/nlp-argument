@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - 22-deploy-automatically-with-ci
 
 jobs:
   deploy:
@@ -24,7 +25,7 @@ jobs:
 
       - name: Deploy Code to VM
         run: |
-          sshpass -p 'your_password' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -6" ./Makefile "user@[2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3]:~/"
+          sshpass -p 'your_password' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no -6" ./Makefile "user@[2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3]:./"
 
 #
 # name: Deploy to VM
