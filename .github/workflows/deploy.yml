@@ -25,7 +25,6 @@ jobs:
 
     - name: Copy Project to Server
       run: |
-        # sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}@[${{secrets.SSH_HOST}}]:./nlp-argument/"
         sshpass -p 'toto1234' rsync -avz --exclude='.git' -e "ssh -6 -v -o StrictHostKeyChecking=no" ./ "toto@[2a01:cb00:dd6:dd00:a00:27ff:fe1c:a3d3]:./nlp-argument/"
 
 
