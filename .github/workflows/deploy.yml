@@ -21,6 +21,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: check-vm
     if: needs.check-vm.outputs.vm-status == 'running'
     steps:
     - name: Checkout Code
