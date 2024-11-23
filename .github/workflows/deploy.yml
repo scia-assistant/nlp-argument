@@ -1,25 +1,24 @@
 name: CI-Workflow
-on: [push, pull_request]
+on: [push]
 
 jobs:
   check-vm:
     runs-on: ubuntu-latest
+    outputs:
+      vm-status: ${{ steps.check-vm-status.outputs.status }}
     steps:
-      - name: Check if VM is running
-        id: check-vm
+      # 1. Check if VM is reachable
+      - name: Check if VM is reachable
+        id: check-vm-status
         run: |
-          VM_IP="${{secrets.SSH_HOST}}"
-          if ping -c 1 $VM_IP &> /dev/null; then
-            echo "VM is running."
-            echo "::set-output name=vm_running::true"
+          if nc -z -v -w5 '${{secrets.SSH_HOST}}' 22; then
+            echo "::set-output name=status::running"
           else
-            echo "VM is not running. Aborting CI."
-            echo "::set-output name=vm_running::false"
-            exit 0
-          fi
+            echo "::set-output name=status::not-running"
+
   deploy:
     runs-on: ubuntu-latest
-    if: needs.check-vm.outputs.vm_running == 'true'
+    if: needs.check-vm.outputs.vm-status == 'running' # Conditional run based on VM status
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
