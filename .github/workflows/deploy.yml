@@ -1,4 +1,5 @@
-name: Deploy to VM
+name: CI-Workflow
+on: [push, pull_request]
 
 on:
   push:
@@ -9,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    if: ${{ contains(github.event.head_commit.message, 'deploy-on-vm') }}
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
