@@ -11,7 +11,7 @@ jobs:
       - name: Check if VM is reachable
         id: check-vm-status
         run: |
-          if timeout 5 nc -z -v '***' 22; then
+          if timeout 5 nc -z -v '${{secrets.SSH_HOST}}' 22; then
             echo "status=running" >> $GITHUB_ENV
             echo "::set-output name=status::running" # Legacy compatibility
           else
