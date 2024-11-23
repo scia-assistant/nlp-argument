@@ -19,7 +19,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: needs.check-vm.outputs.vm-status == 'running' # Conditional run based on VM status
+    if: env.status == 'running'
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
