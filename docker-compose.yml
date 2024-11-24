@@ -4,7 +4,7 @@ services:
     volumes:
       - ./src/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
-      - "8087:80" # To start localy
+      - "8085:80" # To start localy
       #- "80:80"  # Deploy on the vm
     depends_on:
       - my_web_service
@@ -13,8 +13,6 @@ services:
   my_web_service:
     build: ./src/my_api
     container_name: my_web_service
-    ports:
-      - "8085:8080"  # Deploy on the vm
 
   my_interface:
     build: ./src/interface

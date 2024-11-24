@@ -13,14 +13,6 @@ SECRET_KEY = "your_secret_key_here"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-fake_users_db = {
-    "testuser": {
-        "username": "testuser",
-        "hashed_password": "fakehashedpassword",
-        "disabled": False,
-    }
-}
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Replace "*" with your frontend URL in production
@@ -41,7 +33,7 @@ class Token(BaseModel):
 
 # Fonction pour vérifier l'utilisateur
 def verify_user(username: str, password: str):
-    if username == "boobies" and password == "gamin":  # Remplacez par un vrai hash
+    if username == "contextor" and password == "robot":  # Remplacez par un vrai hash
         return username
     return None
 

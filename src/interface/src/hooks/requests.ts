@@ -15,7 +15,7 @@ async function postRequest(question: string): Promise<string> {
   }
 
   const apiResp = await axios.post<ApiResponse>(
-    'http://127.0.0.1:8086/question',
+    '/question',
     { question: question },
     {
       headers: {
