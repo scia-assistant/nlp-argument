@@ -1,19 +1,31 @@
 import axios from "axios"
 
-axios.defaults.baseURL = process.env.REACT_APP_MY_API_URI;
+axios.defaults.baseURL = "/api";
 
 interface ApiResponse {
   response: string;
 }
 
 async function postRequest(question: string): Promise<string> {
-  try {
-    console.log(`the process.env.MY_API_URI = ${process.env.MY_API_URI}.`)
-    const apiResp = await axios.post<ApiResponse>('/question', { question: question });
-    return apiResp.data.response;
-  } catch (error) {
-    return "error, I can't ask the question to the llm."
+  const token = localStorage.getItem('token');
+  console.log(token)
+
+  if (!token) {
+    throw new Error("Unauthorized: Token not found.");
   }
+
+  const apiResp = await axios.post<ApiResponse>(
+    '/question',
+    { question: question },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+  console.log(apiResp)
+
+  return apiResp.data.response;
 }
 
 export default postRequest
