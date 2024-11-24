@@ -15,7 +15,6 @@ function useChat() {
       { text: botResponse, isBot: true },
     ]);
   };
-
   return { messages, sendMessage };
 };
 

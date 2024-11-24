@@ -4,7 +4,7 @@ WORKDIR /my_api
 
 COPY my_api.py /my_api
 
-RUN pip install fastapi uvicorn mlflow
+RUN pip install fastapi uvicorn mlflow jose
 
 EXPOSE 8085
 
