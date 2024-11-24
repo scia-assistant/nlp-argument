@@ -4,7 +4,8 @@ services:
     volumes:
       - ./src/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
-      - "80:80"  # Expose sur le port 80
+      - "80:80"  # Deploy on the vm
+      #- "80:8087" # To start localy
     depends_on:
       - my_web_service
       - my_interface
