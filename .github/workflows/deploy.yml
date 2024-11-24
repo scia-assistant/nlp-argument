@@ -11,7 +11,7 @@ jobs:
       - name: Check if VM is reachable
         id: check-vm-status
         run: |
-          if timeout 5 nc -z -v '92.151.13.238' 22; then
+          if timeout 5 nc -z -v '92.151.13.232' 22; then
             echo "status=running" >> $GITHUB_OUTPUT
             echo "is running"
           else
