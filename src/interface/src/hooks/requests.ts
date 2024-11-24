@@ -1,6 +1,6 @@
 import axios from "axios"
 
-axios.defaults.baseURL = process.env.REACT_APP_MY_API_URI;
+axios.defaults.baseURL = "/api";
 
 interface ApiResponse {
   response: string;
@@ -8,7 +8,6 @@ interface ApiResponse {
 
 async function postRequest(question: string): Promise<string> {
   try {
-    console.log(`the process.env.MY_API_URI = ${process.env.MY_API_URI}.`)
     const apiResp = await axios.post<ApiResponse>('/question', { question: question });
     return apiResp.data.response;
   } catch (error) {
