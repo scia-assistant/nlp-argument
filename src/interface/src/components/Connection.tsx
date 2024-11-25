@@ -32,6 +32,7 @@ const Connect: React.FC = () => {
       <form onSubmit={handleLogin}>
         <div>
           <input
+            data-testid="login-username"
             className='login-input'
             type="text"
             placeholder="Username"
@@ -39,6 +40,7 @@ const Connect: React.FC = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
+            data-testid="login-password"
             className='login-input'
             type="password"
             placeholder="Password"
@@ -46,9 +48,9 @@ const Connect: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className='login-button'>Login</button>
+        <button type="submit" data-testid="login-button" className='login-button'>Login</button>
       </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p data-testid="login-error-display" style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };

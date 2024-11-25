@@ -25,13 +25,14 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
   return (
     <form className="chat-input" onSubmit={handleSubmit}>
       <input
+        data-testid="chat-input"
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Type your message"
         className="chat-input-field"
       />
-      <button type="submit" className="chat-input-button">Send</button>
+      <button type="submit" data-testid="chat-button" className="chat-input-button">Send</button>
     </form>
   );
 };

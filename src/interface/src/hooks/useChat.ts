@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import { MessageProps } from 'components/Message'
 import postRequest from './requests';
+
+export interface MessageProps {
+  text: string;
+  isBot: boolean;
+}
 
 function useChat() {
   const [messages, setMessages] = useState<MessageProps[]>([]);
