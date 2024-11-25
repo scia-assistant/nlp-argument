@@ -1,0 +1,45 @@
+name: CI-Workflow
+on: [push]
+
+jobs:
+  check-vm:
+    runs-on: ubuntu-latest
+    outputs:
+      vm-status: ${{ steps.check-vm-status.outputs.status }}
+    steps:
+      # 1. Check if VM is reachable
+      - name: Check if VM is reachable
+        id: check-vm-status
+        run: |
+          if timeout 5 nc -z -v '${{secrets.SSH_HOST}}' 22; then
+            echo "status=running" >> $GITHUB_OUTPUT
+            echo "is running"
+          else
+            echo "status=not-running" >> $GITHUB_OUTPUT
+            echo "is not running"
+          fi
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: check-vm
+    if: needs.check-vm.outputs.vm-status == 'running'
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Install rsync
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y rsync openssh-client sshpass iputils-ping netcat
+
+    - name: Copy Project to Server
+      run: |
+        sshpass -p '${{secrets.SSH_PWD}}' rsync -avz --exclude='.git' -e "ssh -vvv -o StrictHostKeyChecking=no" ./ "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:./nlp-argument"
+
+    - name: Deploy with Docker Compose
+      run: |
+        sshpass -p '${{secrets.SSH_PWD}}' ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
+          cd nlp-argument
+          docker-compose down
+          docker-compose up -d --build
+        EOF
