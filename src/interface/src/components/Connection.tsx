@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import 'styles/Login.css'
 
 
-
 const Connect: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,15 +13,13 @@ const Connect: React.FC = () => {
   const handleLogin = async (event: React.FormEvent) => {
     setError("")
     event.preventDefault();
-    try {
-      await tryToLog(username, password)
+    const statusLoged = await tryToLog(username, password)
+    if (statusLoged === 200)
       navigate("/chat");
-    } catch (error: any) {
-      if (error.status === 401)
-        setError("Login or Password incorrect !")
-      else
-        setError("Problem server...")
-    }
+    else if (statusLoged === 401)
+      setError("Login or Password incorrect !")
+    else
+      setError("Problem server...")
   };
 
   return (
