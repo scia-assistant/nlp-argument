@@ -1,0 +1,15 @@
+{
+  "name": "interface",
+  "version": "1.0.0",
+  "main": "test-react.cy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.16.0"
+  }
+}

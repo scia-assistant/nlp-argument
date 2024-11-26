@@ -11,7 +11,7 @@ const ChatWindow: React.FC = () => {
     <div className="chat-window">
       <div className="scrollable">
         {messages.map((msg, index) => (
-          <Message key={index} text={msg.text} isBot={msg.isBot} />
+          <Message key={index} text={msg.text} isBot={msg.isBot} dataTestid={`message-${index}`} />
         ))}
       </div>
       <ChatInput onSend={sendMessage} />
