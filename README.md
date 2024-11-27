@@ -108,6 +108,33 @@ To check the unittest test suite:
 - `make check`
 
 ## How to start
+- go to docker-compose.yml and check if the port of nginx is good for local start
 - docker compose up
-- go to localhost:3000
+- go to http://localhost:8087
 - talk with the AI
+
+## CI/CD Workflow Steps
+
+### Linting
+- Perform code linting with the following checks:
+    - flake8 for code style compliance.
+    - mypy for type checking.
+    - Allow lines up to 100 characters in length.
+
+### Testing
+- Run tests on all Python files prefixed with test_ located in the tests folder.
+- Ensure the testing environment is configured to use Python 3.10.
+
+### Deployment
+- Deployment relies on GitHub Actions' Secret Variables for configuration:
+    - SSH_HOST: Host address of the virtual machine (VM).
+    - SSH_USER: Username for SSH connection to the VM.
+    - SSH_PWD: Password for the SSH user.
+- Pre-deployment Checks:
+    - Verify that the VM is running. If the VM is not running, the CI pipeline skips the deployment process.
+
+- Deployment Process:
+    - The CI pipeline begins by copying the entire project to the VM in the nlp-argument folder using rsync.
+    - Establish an SSH connection to the VM.
+    - Stop the currently running Docker container for the project.
+    - Restart the container with the updated project files, applying the necessary changes.
