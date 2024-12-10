@@ -18,6 +18,7 @@ from data_ingestion.retriever import Retriever
 from rag.rag import RAG
 EMBEDDING_MODEL_NAME = "thenlper/gte-small"
 READER_MODEL_NAME = "HuggingFaceH4/zephyr-7b-beta"
+EMBEDDING_DIR = "embeddings_dir"
 
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -27,15 +28,17 @@ embedding_model = HuggingFaceEmbeddings(
     encode_kwargs={"normalize_embeddings": True},  # Set `True` for cosine similarity
 )
 
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_use_double_quant=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.bfloat16,
-)
+# bnb_config = BitsAndBytesConfig(
+#     load_in_4bit=True,
+#     bnb_4bit_use_double_quant=True,
+#     bnb_4bit_quant_type="nf4",
+#     bnb_4bit_compute_dtype=torch.bfloat16,
+# )
 
-model = AutoModelForCausalLM.from_pretrained(READER_MODEL_NAME, quantization_config=bnb_config)
-tokenizer = AutoTokenizer.from_pretrained(READER_MODEL_NAME)
+# model = AutoModelForCausalLM.from_pretrained(READER_MODEL_NAME, quantization_config=bnb_config)
+# tokenizer = AutoTokenizer.from_pretrained(READER_MODEL_NAME)
+
+model = LLMWrapper(llm_pretrained=LLMPretrained.TINY_LLAMA)
 
 dataset = load_dataset("antoinejeannot/jurisprudence", "tribunal_judiciaire")
 
@@ -50,8 +53,9 @@ text_splitter = RecursiveCharacterTextSplitter(
     strip_whitespace=True  # If `True`, strips whitespace from the start and end of every document
 )
 
-retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="faiss_index")
+retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path=f"faiss_index")
 
-rag = RAG(vector_store=retriever.vector_store, model_name=LLMPretrained.TINY_LLAMA)
+rag = RAG(vector_store=retriever.vector_store, model=model)
 
-rag.generate_answer(k=5, query="Qu'est-ce qu'un litige?", model=model, tokenizer=tokenizer)
+# rag.generate_answer(k=5, query="Qu'est-ce qu'un litige?", model=model, tokenizer=tokenizer)
+rag.generate_answer(k=5, query="Qu'est-ce qu'un litige?")
