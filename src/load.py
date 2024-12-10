@@ -13,7 +13,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.vectorstores.utils import DistanceStrategy
 from load_llm.load_llm import LLMPretrained, LLMWrapper
-
+from sentence_transformers import SentenceTransformer
+from transformers import CamembertModel, CamembertTokenizer
+import sentencepiece
 from data_ingestion.retriever import Retriever
 from rag.rag import RAG
 EMBEDDING_MODEL_NAME = "thenlper/gte-small"
@@ -24,38 +26,37 @@ import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 embedding_model = HuggingFaceEmbeddings(
-    model_name=EMBEDDING_MODEL_NAME,
-    encode_kwargs={"normalize_embeddings": True},  # Set `True` for cosine similarity
+    model_name="Lajavaness/sentence-camembert-large",
+    encode_kwargs={"normalize_embeddings": True}
 )
-
-# bnb_config = BitsAndBytesConfig(
-#     load_in_4bit=True,
-#     bnb_4bit_use_double_quant=True,
-#     bnb_4bit_quant_type="nf4",
-#     bnb_4bit_compute_dtype=torch.bfloat16,
-# )
-
-# model = AutoModelForCausalLM.from_pretrained(READER_MODEL_NAME, quantization_config=bnb_config)
-# tokenizer = AutoTokenizer.from_pretrained(READER_MODEL_NAME)
 
 model = LLMWrapper(llm_pretrained=LLMPretrained.TINY_LLAMA)
 
-dataset = load_dataset("antoinejeannot/jurisprudence", "tribunal_judiciaire")
+dataset = load_dataset("antoinejeannot/jurisprudence", "cour_de_cassation")
 
 RAW_KNOWLEDGE_BASE = [
-    LangchainDocument(page_content=doc["text"], metadata={"source": doc["id"]}) for doc in tqdm(dataset['train'].take(100))
+    LangchainDocument(page_content=doc["text"], metadata={"source": doc["id"]}) for doc in tqdm(dataset['train'].take(1000))
 ]
 
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=512,  # The maximum number of characters in a chunk: we selected this value arbitrarily
-    chunk_overlap=50,  # The number of characters to overlap between chunks (10%)
-    add_start_index=True,  # If `True`, includes chunk's start index in metadata
-    strip_whitespace=True  # If `True`, strips whitespace from the start and end of every document
+    chunk_size=512,
+    chunk_overlap=50,
+    add_start_index=True,
+    strip_whitespace=True
 )
 
-retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path=f"faiss_index")
+retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="faiss_index")#, documents=RAW_KNOWLEDGE_BASE)
 
 rag = RAG(vector_store=retriever.vector_store, model=model)
 
-# rag.generate_answer(k=5, query="Qu'est-ce qu'un litige?", model=model, tokenizer=tokenizer)
-rag.generate_answer(k=5, query="Qu'est-ce qu'un litige?")
+# query = "Quelles sont les principales erreurs de droit que la Cour de cassation identifie dans ses décisions ?"
+query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"
+res_similarity, answer = rag.generate_answer(k=5, query=query)
+print("================QUESTION====================")
+print(query)
+print("================RETRIEVED TEXTS====================")
+for doc, score in res_similarity:
+    print(doc)
+    print(f"Score {score}")
+print("================ANSWER====================")
+print(answer)

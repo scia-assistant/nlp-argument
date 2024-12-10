@@ -1,6 +1,7 @@
 from langchain_community.vectorstores import FAISS
 from typing import Optional, Callable, Any
 from langchain.docstore.document import Document
+from langchain_community.vectorstores.utils import DistanceStrategy
 
 
 class Retriever:
@@ -38,7 +39,7 @@ class Retriever:
         for doc in documents:
             splitted_docs += self.text_splitter.split_documents([doc])
         print("Creating FAISS VectorStore")
-        vector_store = FAISS.from_documents(documents=splitted_docs, embedding=self.embedding_model)
+        vector_store = FAISS.from_documents(documents=splitted_docs, embedding=self.embedding_model, distance_strategy=DistanceStrategy.COSINE)
         print("Saving local FAISS VectorStore...")
         vector_store.save_local(self.vector_store_path)
         print("Saving successful !")
