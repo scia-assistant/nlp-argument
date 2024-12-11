@@ -40,8 +40,6 @@ if assistant B is better, and "[[C]]" for a tie.
 [The End of Assistant B’s Answer]"""
 
 
-
-
 class LLMJudge:
     """Class to judge the output of two LLMs"""
 
