@@ -110,7 +110,10 @@ To check the unittest test suite:
 ## How to start
 - go to docker-compose.yml and check if the port of nginx is good for local start
 - docker compose up
-- go to http://localhost:8087
+- go to http://localhost:8085
+- connect with
+    - username: contextor
+    - pwd: robot
 - talk with the AI
 
 ## CI/CD Workflow Steps

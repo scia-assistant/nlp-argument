@@ -19,3 +19,5 @@ transformers
 types-tqdm
 accelerate>=0.26.0
 bitsandbytes
+python-jose
+python-multipart
