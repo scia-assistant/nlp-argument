@@ -11,8 +11,14 @@ services:
       - my_interface
 
   my_web_service:
-    build: ./src/my_api
+    build: ./src
     container_name: my_web_service
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface
+    deploy:
+      resources:
+          limits:
+            memory: 10g
 
   my_interface:
     build: ./src/interface

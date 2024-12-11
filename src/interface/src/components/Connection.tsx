@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import tryToLog from 'hooks/login';
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 import 'styles/Login.css'
+
+interface ApiResponse {
+  response: string;
+}
+
+axios.defaults.baseURL = "/api";
 
 
 const Connect: React.FC = () => {
@@ -15,7 +22,33 @@ const Connect: React.FC = () => {
     event.preventDefault();
     const statusLoged = await tryToLog(username, password)
     if (statusLoged === 200)
-      navigate("/chat");
+    {
+    
+      const token = localStorage.getItem('token');
+  console.log(token)
+
+  if (!token) {
+    throw new Error("Unauthorized: Token not found.");
+  }
+try{
+  const apiResp = await axios.post<ApiResponse>(
+    '/model',
+    { question: "toto" },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+  console.log(apiResp)
+  navigate("/chat");
+}
+catch(e){
+  console.log(e)
+}
+
+    }
+
     else if (statusLoged === 401)
       setError("Login or Password incorrect !")
     else

@@ -1,17 +1,28 @@
 from datetime import datetime, timedelta
-
+import joblib
+import torch
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from pydantic import BaseModel
+import sys
+from rag.rag import RAG
+from load_llm.load_llm import LLMPretrained, LLMWrapper
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_huggingface import HuggingFaceEmbeddings
+from data_ingestion.retriever import Retriever
 
+sys.path.append("/my_api")
 app = FastAPI()
 
 # Secret key et configuration du token
 SECRET_KEY = "your_secret_key_here"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+rag = None
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -76,10 +87,42 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
 async def root(current_user: str = Depends(get_current_user)):
     return {"message": "Hello World"}
 
+@app.post("/model")
+async def get_model(question: Question, current_user: str = Depends(get_current_user)):
+    global rag
+    try:
+        print("Starting to load the model...")
+        embedding_model = HuggingFaceEmbeddings(
+        model_name="Lajavaness/sentence-camembert-large",
+        encode_kwargs={"normalize_embeddings": True}
+        )
+
+        model = LLMWrapper(llm_pretrained=LLMPretrained.TINY_LLAMA)
+
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=512,
+            chunk_overlap=50,
+            add_start_index=True,
+            strip_whitespace=True
+        )
+
+        retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="./faiss_index")#, documents=RAW_KNOWLEDGE_BASE)
+        rag = RAG(vector_store=retriever.vector_store, model=model)
+        rag.model.model.to("cpu")
+        print("Model loaded successfully")
+        return {"message": "Model loaded"}
+    except Exception as e:
+        print(f"Error loading model: {e}")
+        raise e
 
 @app.post("/question")
-def create_item(question: Question, current_user: str = Depends(get_current_user)):
-    if question.question == "hello":
-        return {"response": "hello my boy"}
-    else:
-        return {"response": "I don't understand"}
+async def create_item(question: Question, current_user: str = Depends(get_current_user)):
+    print("get rag api")
+    global rag
+    query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"
+    print("start generation api")
+    #res_similarity, answer = rag.generate_answer(k=5, query=query)
+    answer = rag.generate_answer(k=5, query=query)
+
+    print("done generation api")
+    return {"response": answer}
