@@ -47,14 +47,17 @@ Réponse:"""
 
         return PROMPT_TEMPLATE.format(question=query, context=context)
     
-    def get_formated_answer(self, retrieved_docs, answer: str) -> str:
-        RESULT = """{answer}\n
-        Sources:\n{sources}"""
+    def get_formated_answer(self, retrieved_tops, answer: str) -> str:
+        
+        RESULT = """{answer}\nSources:\n{sources}"""
         sources = ""
-        for doc, score in retrieved_docs:
-            sources.
-            print(f"Score {score}")
-        return RESULT
+        sources += "".join(
+        [
+            f">>>>>>>{doc.metadata['source']} - SCORE = {score}:<<<<<<<\n" + doc.page_content.rstrip() + "\n"
+            for doc, score in retrieved_tops
+        ]
+        )
+        return RESULT.format(answer=answer.rstrip(), sources=sources)
 
     def generate_answer(self, k: int, query: str):
         # inputs = self.tokenizer(query, return_tensors="pt").to(self.device)

@@ -45,7 +45,7 @@ rag = RAG(vector_store=retriever.vector_store, model=model)
 rag.model.model.to("cpu")
 
 # query = "Quelles sont les principales erreurs de droit que la Cour de cassation identifie dans ses décisions ?"
-query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?\nAnswer:"
+query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"
 answer = rag.generate_answer(k=5, query=query)
 print("================QUESTION====================")
 print(query)

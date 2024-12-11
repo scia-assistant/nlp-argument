@@ -120,6 +120,6 @@ async def create_item(question: Question, current_user: str = Depends(get_curren
     print("Post question...")
     global rag
     print("Start answer generation...")
-    res_similarity, answer = rag.generate_answer(k=5, query=question.question)
+    answer = rag.generate_answer(k=5, query=question.question)
     print("Done generating answer!")
     return {"response": answer}

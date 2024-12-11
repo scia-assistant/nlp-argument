@@ -21,26 +21,26 @@ class Retriever:
             self.vector_store = self.save(documents=documents)
 
     def load(self):
-        print("Loading local FAISS VectorStore...")
+        print("[RETRIEVER] : Loading local FAISS VectorStore...")
         try:
             vector_store = FAISS.load_local(
                 self.vector_store_path,
                 embeddings=self.embedding_model,
                 allow_dangerous_deserialization=True,
             )
-            print("Loading successful !")
+            print("[RETRIEVER] : Loading successful !")
             return vector_store
         except RuntimeError:
-            print("Could not load local FAISS VectorStore")
+            print("[RETRIEVER] : Could not load local FAISS VectorStore")
 
     def save(self, documents: list[Document]):
         splitted_docs = []
-        print("Splitting into documents into chunks...")
+        print("[RETRIEVER] : Splitting into documents into chunks...")
         for doc in documents:
             splitted_docs += self.text_splitter.split_documents([doc])
-        print("Creating FAISS VectorStore")
+        print("[RETRIEVER] : Creating FAISS VectorStore")
         vector_store = FAISS.from_documents(documents=splitted_docs, embedding=self.embedding_model, distance_strategy=DistanceStrategy.COSINE)
-        print("Saving local FAISS VectorStore...")
+        print("[RETRIEVER] : Saving local FAISS VectorStore...")
         vector_store.save_local(self.vector_store_path)
-        print("Saving successful !")
+        print("[RETRIEVER] : Saving successful !")
         return vector_store
