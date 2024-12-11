@@ -19,5 +19,6 @@ transformers
 types-tqdm
 accelerate>=0.26.0
 bitsandbytes
+openapi
 python-jose
 python-multipart
