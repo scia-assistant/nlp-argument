@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'styles/ChatInput.css';
+import { useNavigate } from "react-router-dom";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
@@ -7,25 +8,31 @@ interface ChatInputProps {
 
 const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
   const [inputValue, setInputValue] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (inputValue.trim()) {
-      onSend(inputValue);
-      setInputValue('');
+      try {
+        await onSend(inputValue);
+        setInputValue('');
+      } catch (error) {
+        navigate("/");
+      }
     }
   };
 
   return (
     <form className="chat-input" onSubmit={handleSubmit}>
       <input
+        data-testid="chat-input"
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Type your message"
         className="chat-input-field"
       />
-      <button type="submit" className="chat-input-button">Send</button>
+      <button type="submit" data-testid="chat-button" className="chat-input-button">Send</button>
     </form>
   );
 };

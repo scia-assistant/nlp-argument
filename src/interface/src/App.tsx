@@ -1,14 +1,19 @@
 
 import React from 'react';
-import ChatWindow from 'components/ChatWindow';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import ChatWindow from 'pages/ChatWindow';
+import Login from 'pages/login';
 import 'styles/App.css'; // Import global styles if needed
 
 const App: React.FC = () => {
   return (
-    <div className="app">
-      <h1 className="app-title">Chat Interface</h1>
-      <ChatWindow />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/chat" element={<ChatWindow />} />
+      </Routes>
+    </Router>
   );
 };
 
