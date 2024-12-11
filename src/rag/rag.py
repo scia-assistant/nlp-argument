@@ -14,19 +14,17 @@ class RAG:
             self.tokenizer = self.model.tokenizer
         else:
             self.tokenizer = tokenizer
-        print("creating pipeline")
-        # self.READER_LLM = pipeline(
-        #     model=self.model.model,
-        #     tokenizer=self.tokenizer,
-        #     task="text-generation",
-        #     # do_sample=True,
-        #     # temperature=0.3,
-        #     repetition_penalty=1.2,
-        #     return_full_text=False,
-        #     max_new_tokens=500,
-        #     device=self.device
-        # )
-        print("done creating pipeline")
+        self.READER_LLM = pipeline(
+            model=self.model.model,
+            tokenizer=self.tokenizer,
+            task="text-generation",
+            # do_sample=True,
+            # temperature=0.3,
+            repetition_penalty=1.2,
+            return_full_text=False,
+            max_new_tokens=500,
+            device=self.device
+        )
 
 
     def retrieve_k_top(self, k: int, query: str):
@@ -48,32 +46,35 @@ Réponse:"""
         )
 
         return PROMPT_TEMPLATE.format(question=query, context=context)
+    
+    def get_formated_answer(self, retrieved_docs, answer: str) -> str:
+        RESULT = """{answer}\n
+        Sources:\n{sources}"""
+        sources = ""
+        for doc, score in retrieved_docs:
+            sources.
+            print(f"Score {score}")
+        return RESULT
 
     def generate_answer(self, k: int, query: str):
-        print("retriving documents...")
-        inputs = self.tokenizer(query, return_tensors="pt").to(self.device)
-        output = self.model.model.generate(
-            inputs["input_ids"],
-            max_new_tokens=500,             # Maximum number of tokens to generate
-            do_sample=True,                 # Enable sampling for more diverse output
-            temperature=0.7,                # Sampling temperature (lower for more focused, higher for more random)
-            repetition_penalty=1.2,         # Penalize repetitive sequences
-            pad_token_id=self.tokenizer.eos_token_id  # Set pad token to avoid warnings for some models
-        )
-        generated_text = self.tokenizer.decode(output[0], skip_special_tokens=True)
+        # inputs = self.tokenizer(query, return_tensors="pt").to(self.device)
+        # output = self.model.model.generate(
+        #     inputs["input_ids"],
+        #     max_new_tokens=500,             # Maximum number of tokens to generate
+        #     do_sample=True,                 # Enable sampling for more diverse output
+        #     temperature=0.7,                # Sampling temperature (lower for more focused, higher for more random)
+        #     repetition_penalty=1.2,         # Penalize repetitive sequences
+        #     pad_token_id=self.tokenizer.eos_token_id  # Set pad token to avoid warnings for some models
+        # )
+        # generated_text = self.tokenizer.decode(output[0], skip_special_tokens=True)
 
-        return generated_text
-        #res_similarity = self.retrieve_k_top(k, query)
-
-        #retrieved_docs_text = [doc.page_content for doc, _  in res_similarity]
-
-        # print("documents retrived generating response")
-        # # RAG_PROMPT_TEMPLATE = self.get_formatted_prompt(query, retrieved_docs_text)
-        # prompt = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?\nAnswer:"
-
-
-        # #answer = self.READER_LLM(RAG_PROMPT_TEMPLATE)[0]["generated_text"]
-        # answer = self.READER_LLM(prompt)[0]["generated_text"]
-
-        #return answer
-        #return res_similarity, answer
+        # return generated_text
+        print("[RAG] : Retriving documents...")
+        res_similarity = self.retrieve_k_top(k, query)
+        retrieved_docs_text = [doc.page_content for doc, _  in res_similarity]
+        print("[RAG] : Documents retrieved generating response...")
+        RAG_PROMPT_TEMPLATE = self.get_formatted_prompt(query, retrieved_docs_text)
+        answer = self.READER_LLM(RAG_PROMPT_TEMPLATE)[0]["generated_text"]
+        response = self.get_formated_answer(retrieved_tops=res_similarity, answer=answer)
+        print("[RAG] : Response generated!")
+        return response

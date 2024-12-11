@@ -117,12 +117,9 @@ async def get_model(question: Question, current_user: str = Depends(get_current_
 
 @app.post("/question")
 async def create_item(question: Question, current_user: str = Depends(get_current_user)):
-    print("get rag api")
+    print("Post question...")
     global rag
-    query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"
-    print("start generation api")
-    #res_similarity, answer = rag.generate_answer(k=5, query=query)
-    answer = rag.generate_answer(k=5, query=query)
-
-    print("done generation api")
+    print("Start answer generation...")
+    res_similarity, answer = rag.generate_answer(k=5, query=question.question)
+    print("Done generating answer!")
     return {"response": answer}

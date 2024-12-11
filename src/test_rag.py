@@ -20,9 +20,6 @@ EMBEDDING_DIR = "embeddings_dir"
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-
-
-
 embedding_model = HuggingFaceEmbeddings(
     model_name="Lajavaness/sentence-camembert-large",
     encode_kwargs={"normalize_embeddings": True}
@@ -47,18 +44,10 @@ retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitt
 rag = RAG(vector_store=retriever.vector_store, model=model)
 rag.model.model.to("cpu")
 
-
-save_directory = "./src/model/llm"
-
-
 # query = "Quelles sont les principales erreurs de droit que la Cour de cassation identifie dans ses décisions ?"
 query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?\nAnswer:"
 answer = rag.generate_answer(k=5, query=query)
 print("================QUESTION====================")
 print(query)
-print("================RETRIEVED TEXTS====================")
-# for doc, score in res_similarity:
-#     print(doc)
-#     print(f"Score {score}")
 print("================ANSWER====================")
 print(answer)
