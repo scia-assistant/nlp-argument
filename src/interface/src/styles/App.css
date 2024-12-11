@@ -1,0 +1,23 @@
+/* global.css */
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f8;
+}
+
+.app-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
