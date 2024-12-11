@@ -7,12 +7,25 @@ interface ApiResponse {
 }
 
 async function postRequest(question: string): Promise<string> {
-  try {
-    const apiResp = await axios.post<ApiResponse>('/question', { question: question });
-    return apiResp.data.response;
-  } catch (error) {
-    return "error, I can't ask the question to the llm."
+  const token = localStorage.getItem('token');
+  console.log(token)
+
+  if (!token) {
+    throw new Error("Unauthorized: Token not found.");
   }
+
+  const apiResp = await axios.post<ApiResponse>(
+    '/question',
+    { question: question },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+  console.log(apiResp)
+
+  return apiResp.data.response;
 }
 
 export default postRequest
