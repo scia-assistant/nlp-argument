@@ -3,6 +3,8 @@
   margin: 10px 0;
   max-width: 100%;
   word-wrap: break-word;
+  white-space: pre-wrap;
+
 }
 
 .user-message {
