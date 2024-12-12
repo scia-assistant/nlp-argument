@@ -12,7 +12,6 @@ from data_ingestion.retriever import Retriever
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel, LlamaForCausalLM
 from langchain_community.vectorstores import FAISS
 
-
 from rag.rag import RAG
 EMBEDDING_MODEL_NAME = "thenlper/gte-small"
 READER_MODEL_NAME = "HuggingFaceH4/zephyr-7b-beta"
@@ -40,14 +39,21 @@ text_splitter = RecursiveCharacterTextSplitter(
     strip_whitespace=True
 )
 
-retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="src/faiss_index")#, documents=RAW_KNOWLEDGE_BASE)
-rag = RAG(vector_store=retriever.vector_store, model=model)
-rag.model.model.to("cpu")
+def main(create_faiss : bool = False):
+    if not create_faiss:
+        retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="src/faiss_index")
+    else:
+        retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="src/faiss_index", documents=RAW_KNOWLEDGE_BASE)
+    rag = RAG(vector_store=retriever.vector_store, model=model)
+    rag.model.model.to("cpu")
 
-# query = "Quelles sont les principales erreurs de droit que la Cour de cassation identifie dans ses décisions ?"
-query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"
-answer = rag.generate_answer(k=5, query=query)
-print("================QUESTION====================")
-print(query)
-print("================ANSWER====================")
-print(answer)
+    # query = "Quelles sont les principales erreurs de droit que la Cour de cassation identifie dans ses décisions ?"
+    query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"
+    answer = rag.generate_answer(k=5, query=query)
+    print("================QUESTION====================")
+    print(query)
+    print("================ANSWER====================")
+    print(answer)
+
+if __name__ == "__main__":
+    main()
