@@ -11,7 +11,7 @@ class PrologWrapper:
         self.prolog = Prolog()
 
     def consult(self, pathfile: str) -> Optional[str]:
-        # Execute a shell command
+        # Execute a shell command to check errors
         result = subprocess.run(
             ["swipl", "-s", pathfile, "-g", "true", "-t", "halt."],
             capture_output=True,
@@ -19,11 +19,17 @@ class PrologWrapper:
             check=False,
         )
 
-        return result.stderr
+        if result.stderr != "":
+            return result.stderr
 
-    def query(self, query: str) -> Tuple[List[dict], Optional[str]]:
+        self.prolog.consult(pathfile)
+        return None
+
+    def query(self, query: str) -> Tuple[Optional[dict], Optional[str]]:
         try:
             query_result = list(self.prolog.query(query))
-            return (query_result, None)
-        except PrologError as e:
-            return ([], str(e))
+            if len(query_result) == 0:
+                return None, "Wrong query"
+            return (query_result[0], None)
+        except (PrologError, KeyError) as e:
+            return (None, str(e))
