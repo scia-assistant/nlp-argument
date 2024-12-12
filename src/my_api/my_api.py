@@ -94,7 +94,8 @@ async def get_model(question: Question, current_user: str = Depends(get_current_
         print("Starting to load the model...")
         embedding_model = HuggingFaceEmbeddings(
         model_name="Lajavaness/sentence-camembert-large",
-        encode_kwargs={"normalize_embeddings": True}
+        encode_kwargs={"normalize_embeddings": True},
+        model_kwargs = {'device': 'cuda'}
         )
 
         model = LLMWrapper(llm_pretrained=LLMPretrained.TINY_LLAMA)
@@ -108,7 +109,7 @@ async def get_model(question: Question, current_user: str = Depends(get_current_
 
         retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="./faiss_index")#, documents=RAW_KNOWLEDGE_BASE)
         rag = RAG(vector_store=retriever.vector_store, model=model)
-        rag.model.model.to("cpu")
+        # rag.model.model.to("cpu")
         print("Model loaded successfully")
         return {"message": "Model loaded"}
     except Exception as e:

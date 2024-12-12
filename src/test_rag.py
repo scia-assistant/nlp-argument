@@ -17,15 +17,17 @@ from rag.rag import RAG
 EMBEDDING_MODEL_NAME = "thenlper/gte-small"
 READER_MODEL_NAME = "HuggingFaceH4/zephyr-7b-beta"
 EMBEDDING_DIR = "embeddings_dir"
-
+print("test_rag.py")
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 embedding_model = HuggingFaceEmbeddings(
     model_name="Lajavaness/sentence-camembert-large",
-    encode_kwargs={"normalize_embeddings": True}
+    encode_kwargs={"normalize_embeddings": True},
+    model_kwargs = {'device': 'cuda'}
 )
 
 model = LLMWrapper(llm_pretrained=LLMPretrained.TINY_LLAMA)
+
 
 dataset = load_dataset("antoinejeannot/jurisprudence", "cour_de_cassation")
 
@@ -42,7 +44,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 
 retriever = Retriever(embedding_model=embedding_model, text_splitter=text_splitter, vector_store_path="src/faiss_index")#, documents=RAW_KNOWLEDGE_BASE)
 rag = RAG(vector_store=retriever.vector_store, model=model)
-rag.model.model.to("cpu")
+# rag.model.model.to("cpu")
 
 # query = "Quelles sont les principales erreurs de droit que la Cour de cassation identifie dans ses décisions ?"
 query = "Quels sont les critères pris en compte par la Cour de cassation pour reconnaître une faute inexcusable de l'employeur en matière de droit du travail ?"

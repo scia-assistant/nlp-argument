@@ -19,6 +19,10 @@ services:
       resources:
           limits:
             memory: 10g
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
 
   my_interface:
     build: ./src/interface

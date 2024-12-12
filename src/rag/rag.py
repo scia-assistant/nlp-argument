@@ -22,7 +22,7 @@ class RAG:
             # temperature=0.3,
             repetition_penalty=1.2,
             return_full_text=False,
-            max_new_tokens=500,
+            max_new_tokens=200,
             device=self.device
         )
 
@@ -58,6 +58,7 @@ Réponse:"""
         ]
         )
         return RESULT.format(answer=answer.rstrip(), sources=sources)
+
 
     def generate_answer(self, k: int, query: str):
         # inputs = self.tokenizer(query, return_tensors="pt").to(self.device)
