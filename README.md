@@ -4,6 +4,10 @@
 
 # 📗 Table of Contents
 - [🚀 Description](#description)
+- [🗂️ Project background](#background)
+- [🪜 Project steps](#steps)
+- [🔬 First results](#first_results)
+- [⚙️ Setup](#setup)
 - [👥 Authors](#authors)
 
 ## 🚀 Description <a name="description"></a>
@@ -26,7 +30,7 @@ Another use-case involves an average person who would just want to get answers f
 Current open-source LLMs demonstrate a reasonable ability to generate coherent text and provide relevant responses. However, they often struggle to deliver high-quality outputs in highly specialized technical domains. Additionally, their reasoning capabilities can be limited, depending on the specific LLM employed.
 Our objective is to develop a model that either matches the performance of existing LLMs with a smaller architecture (thus reducing computational costs) or surpasses their performance altogether.
 
-## Project background (~400 words)
+## 🗂️ Project background <a name="background"></a>
 - **The Jurisprudence Assistance System**
 	- Related works:
 		- https://arxiv.org/pdf/2010.02559 - LEGAL-BERT: The Muppets straight out of Law School: LEGAL-BERT is a specialized adaptation of the Bidirectional Encoder Representations from Transformers (BERT) model, tailored specifically for the legal domain. This model aims to improve the model in the law domain without the use of RAG.
@@ -45,7 +49,7 @@ Our objective is to develop a model that either matches the performance of exist
 	- Differences:
 		- All of these articles rely on large models with many parameters (usually GPT-3 or GPT-4). Our work will focus on improving capacities of smaller LLMs.
 
-## Project steps
+## 🪜 Project steps <a name="steps"></a>
 - **Setting Up Continuous Integration (CI)** (dorian.penso)
 	- **Set Up Workflow Checks**: Use GitHub Actions to create workflows that automatically check the consistent code style and quality.
 	- **Automate Tests**: Configure GitHub Actions to run automated tests on every commit or pull request to ensure code reliability.
@@ -74,8 +78,7 @@ Our objective is to develop a model that either matches the performance of exist
 	- **Develop the Interface**: Build and integrate the UI, ensuring it communicates seamlessly with the LLM and backend.
 	- **Model Deployment**: Integrate the model with the UI, ensuring efficient loading and data handling.
 
-## First results
-
+## 🔬 First results <a name="first_results"></a>
 Initially, our project focused on developing a tool capable of analyzing arguments to determine whether they are fallacious and, if so, identifying the specific type of fallacy involved. The first part to achieve this, was utilizing a Retrieval-Augmented Generation (RAG) approach, combined with a comprehensive database of definitions and examples of various fallacious arguments.\
 After creating the database, and implementing the RAG we quickly encountered a significant issue. The retrieved documents were not relevant at all. For example when giving to the model the argument "Katherine is a bad choice for mayor because she didn’t grow up in this town." which is a Ad hominem logical fallacy, the system retrieved documents solely based on surface-level keyword matches, such as those containing the word “mayor”. Since the retrieval search focus either on semantic or syntaxic similarities between the query and the documents, it revealed a critical gap in the model’s ability to understand and process the deeper logical structure of the argument, rather than merely focusing on superficial lexical overlaps.
 
@@ -91,44 +94,58 @@ We then began exploring alternative subjects and datasets where implementing a R
 	- Test were made on a local machine with few resources. A solution would be to use GPUs on google colab or azure resources to use bigger model (Llama with 7B parameters for example).  
 - **The User Interface**, designed for interacting with the LLM, is currently in the prototype stage. At this point, it is not functional or ready for use, as further development and refinement are required.
 
-## 👥 Authors <a name="authors"></a>
-- Dorian Penso
-- Léa Margery
-- Maxime Buisson
-- Sacha Hibon
 
-## Setup
+
+## ⚙️ Setup <a name="setup"></a>
 
 To download commit checker and requirement:
 - `make dev-setup`
 
-## Check Test
-
 To check the unittest test suite:
 - `make check`
 
-## How to start
-- go to docker-compose.yml and check if the port of nginx is good for local start
-- docker compose up
-- go to http://localhost:8085
-- connect with
-    - username: contextor
-    - pwd: robot
-- talk with the AI
+### How to start
 
-## CI/CD Workflow Steps
 
-### Linting
+
+
+
+**To test the RAG locally**, do the following instructions:
+If it is the first time you are running the project, go to the `src/test_rag.py` file and set the `create_faiss` boolean to `True`. Then run the following command:
+```sh
+$ python src/test_rag.py
+```
+This command takes a bit of time, but you just have to it once. This will create a directory `src/faiss_index`.
+Then the code inside the `main` function will be executed (with the given query).
+
+Before running it again with another query make sure you change back the `create_faiss` boolean to `False`.
+
+**To test the RAG inside the chatbot**:
+1. Make sure you have the `src/faiss_index` directory created (check the part "To test the RAG locally" for more instructions)
+2. Loof at the `docker-compose.yml` file and check if the port of `nginx` is set up for local start
+3. Run the following command
+```sh
+$ docker compose up
+```
+4.  Go to http://localhost:8085
+5.  Connect with the following credentials:
+    - Username: `contextor`
+    - Password: `robot`
+6.  Chat with the AI
+
+### CI/CD Workflow Steps
+
+#### Linting
 - Perform code linting with the following checks:
     - flake8 for code style compliance.
     - mypy for type checking.
     - Allow lines up to 100 characters in length.
 
-### Testing
+#### Testing
 - Run tests on all Python files prefixed with test_ located in the tests folder.
 - Ensure the testing environment is configured to use Python 3.10.
 
-### Deployment
+#### Deployment
 - Deployment relies on GitHub Actions' Secret Variables for configuration:
     - SSH_HOST: Host address of the virtual machine (VM).
     - SSH_USER: Username for SSH connection to the VM.
@@ -141,3 +158,9 @@ To check the unittest test suite:
     - Establish an SSH connection to the VM.
     - Stop the currently running Docker container for the project.
     - Restart the container with the updated project files, applying the necessary changes.
+
+## 👥 Authors <a name="authors"></a>
+- Dorian Penso
+- Léa Margery
+- Maxime Buisson
+- Sacha Hibon
