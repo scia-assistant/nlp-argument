@@ -72,11 +72,25 @@ Réponse:"""
         # generated_text = self.tokenizer.decode(output[0], skip_special_tokens=True)
 
         # return generated_text
+
+        
         print("[RAG] : Retriving documents...")
         res_similarity = self.retrieve_k_top(k, query)
         retrieved_docs_text = [doc.page_content for doc, _  in res_similarity]
         print("[RAG] : Documents retrieved generating response...")
-        RAG_PROMPT_TEMPLATE = self.get_formatted_prompt(query, retrieved_docs_text)
+        context_text = "\n".join(retrieved_docs_text)
+        if self.tokenizer.chat_template is not None:
+            messages = [
+                {
+                    "role": "system",
+                    "content": f"Vous êtes un chatbot. En utilisant uniquement les textes fournis dans la partie contexte, donnez une réponse complète à la question, en citant les passages des textes qui vous ont permis de répondre.\nContext: {context_text}"
+                },
+                {"role": "user", "content": f"{query}"},
+            ]
+            RAG_PROMPT_TEMPLATE = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        else:
+            RAG_PROMPT_TEMPLATE = self.get_formatted_prompt(query, retrieved_docs_text)
+        #RAG_PROMPT_TEMPLATE = self.get_formatted_prompt(query, retrieved_docs_text)
         answer = self.READER_LLM(RAG_PROMPT_TEMPLATE)[0]["generated_text"]
         response = self.get_formated_answer(retrieved_tops=res_similarity, answer=answer)
         print("[RAG] : Response generated!")

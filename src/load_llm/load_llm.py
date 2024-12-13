@@ -46,6 +46,7 @@ class LLMPretrained(Enum):
     OLMO = "allenai/OLMo-1B-0724-hf"
     # TinyLlama
     TINY_LLAMA = "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T"
+    TINY_LLAMA_CHAT = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
 
 class LLMWrapper:  # pylint: disable=too-few-public-methods
